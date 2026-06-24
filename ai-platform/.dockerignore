@@ -1,0 +1,48 @@
+# Dependencies
+**/__pycache__
+**/.venv
+**/.pytest_cache
+**/*.pyc
+**/*.pyo
+**/*.egg-info
+
+# Version control
+.git
+.gitignore
+.gitattributes
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# Environment
+.env
+.env.local
+*.env
+
+# Docker
+Dockerfile
+Dockerfile.*
+
+# Documentation
+README.md
+*.md
+
+# Tests (not needed in production image)
+**/tests/
+**/test_*
+
+# Infrastructure (not needed in service image)
+infrastructure/
+docker-compose.yml
+Makefile
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temp
+/tmp/
+*.log

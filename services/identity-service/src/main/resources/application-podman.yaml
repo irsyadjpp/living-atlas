@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://postgres:5432/living_atlas
+    username: ${LA_PG_USER:-living_atlas}
+    password: ${LA_PG_PASSWORD:-living_atlas}
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        default_schema: auth
+  flyway:
+    enabled: true
+    schemas: auth, iam, tenant, governance
+    default-schema: auth
+
+server:
+  port: 8080
+
+jwt:
+  secret: ${JWT_SECRET:404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970337336763979244226452948404D635166546A576E5A7234753778214125442A47}
+  expiration: 86400000
+  refresh-expiration: 2592000000
+
+logging:
+  level:
+    id.livingatlas: INFO

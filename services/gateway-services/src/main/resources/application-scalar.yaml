@@ -1,0 +1,103 @@
+
+
+
+
+spring:
+  application:
+    name: gateway-services
+
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: false
+      routes:
+        # OpenAPI Docs Routes
+        - id: identity-docs
+          uri: http://identity-service:8080
+          predicates:
+            - Path=/api-docs/identity
+          filters:
+            - RewritePath=/api-docs/identity,/v3/api-docs
+        - id: content-docs
+          uri: http://content-service:8080
+          predicates:
+            - Path=/api-docs/content
+          filters:
+            - RewritePath=/api-docs/content,/v3/api-docs
+        - id: knowledge-docs
+          uri: http://knowledge-service:8080
+          predicates:
+            - Path=/api-docs/knowledge
+          filters:
+            - RewritePath=/api-docs/knowledge,/v3/api-docs
+        - id: research-docs
+          uri: http://research-service:8080
+          predicates:
+            - Path=/api-docs/research
+          filters:
+            - RewritePath=/api-docs/research,/v3/api-docs
+        - id: workflow-docs
+          uri: http://workflow-service:8080
+          predicates:
+            - Path=/api-docs/workflow
+          filters:
+            - RewritePath=/api-docs/workflow,/v3/api-docs
+        # Identity Service - Public auth endpoints (no JWT needed)
+        - id: identity-auth
+          uri: http://localhost:8081
+          predicates:
+            - Path=/api/v1/auth/register,/api/v1/auth/login,/api/v1/auth/refresh
+
+        # Identity Service - Protected endpoints
+        - id: identity-service
+          uri: http://localhost:8081
+          predicates:
+            - Path=/api/v1/auth/logout,/api/v1/auth/**,/api/v1/users/**,/api/v1/tenants/**,/api/v1/roles/**,/api/v1/permissions/**,/api/v1/policies/**,/api/v1/access/**,/api/v1/audit/**,/api/v1/lineage/**
+
+        # Content Service
+        - id: content-service
+          uri: http://localhost:8082
+          predicates:
+            - Path=/api/v1/stories/**,/api/v1/articles/**,/api/v1/sources/**
+
+        # Knowledge Service
+        - id: knowledge-service
+          uri: http://localhost:8083
+          predicates:
+            - Path=/api/v1/knowledge/**,/api/v1/knowledge/claims/**
+
+        # Research Service
+        - id: research-service
+          uri: http://localhost:8084
+          predicates:
+            - Path=/api/v1/research/**
+
+        # Workflow Service
+        - id: workflow-service
+          uri: http://localhost:8085
+          predicates:
+            - Path=/api/v1/workflow/**
+
+server:
+  port: 8080
+
+jwt:
+  secret: ${JWT_SECRET:TGluZ29NYWthblNlY3JldEtleUZvckxpdmVuZ0F0bGFzUE9TVEdSU1FMUHJvZHVjdGlvbjIwMjY=}
+
+redpanda:
+  bootstrap-servers: ${REDPANDA_BROKERS:localhost:9092}
+
+logging:
+  level:
+    root: INFO
+    id.livingatlas.gateway: DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: always

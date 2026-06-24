@@ -1,0 +1,514 @@
+# ============================================================
+# Living Atlas — Podman Compose
+# ============================================================
+# Usage: podman-compose -f infrastructure/compose.yml up -d
+# Context: . = root repo (living-atlas/)
+# dockerfile: relative to compose.yml directory (infrastructure/)
+# ============================================================
+version: "3.8"
+
+networks:
+  living-atlas:
+    driver: bridge
+
+volumes:
+  postgres_data:
+  redpanda_data:
+  redis_data:
+  weaviate_data:
+  prometheus_data:
+  grafana_data:
+  loki_data:
+  tempo_data:
+
+services:
+  postgres:
+    image: docker.io/postgres:17-alpine
+    container_name: living-postgres
+    networks:
+      - living-atlas
+    ports:
+      - "6432:5432"
+    environment:
+      POSTGRES_USER: ${LA_PG_USER:-living_atlas}
+      POSTGRES_PASSWORD: ${LA_PG_PASSWORD:-living_atlas}
+      POSTGRES_DB: ${LA_PG_DATABASE:-living_atlas}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./config/postgres/postgresql.conf:/etc/postgresql/postgresql.conf:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${LA_PG_USER:-living_atlas}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redpanda:
+    image: docker.io/redpandadata/redpanda:v24.2.1
+    container_name: living-redpanda
+    networks:
+      - living-atlas
+    ports:
+      - "9092:9092"
+      - "9644:9644"
+    command:
+      - redpanda
+      - start
+      - --kafka-addr internal://0.0.0.0:9092
+      - --advertise-kafka-addr internal://redpanda:9092
+      - --pandaproxy-addr internal://0.0.0.0:8082
+      - --schema-registry-addr internal://0.0.0.0:8081
+      - --rpc-addr internal://0.0.0.0:33145
+      - --mode dev-container
+    volumes:
+      - redpanda_data:/var/lib/redpanda/data
+    healthcheck:
+      test: ["CMD-SHELL", "rpk cluster info | grep -qi brokers"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+
+  redis:
+    image: docker.io/redis:7-alpine
+    container_name: living-redis
+    networks:
+      - living-atlas
+    ports:
+      - "7379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+  weaviate:
+    image: docker.io/semitechnologies/weaviate:1.28.0
+    container_name: living-weaviate
+    networks:
+      - living-atlas
+    ports:
+      - "8080:8080"
+    environment:
+      QUERY_DEFAULTS_LIMIT: 25
+      AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: "true"
+      PERSISTENCE_DATA_PATH: /var/lib/weaviate
+      DEFAULT_VECTORIZER_MODULE: text2vec-openai
+      ENABLE_MODULES: text2vec-openai
+      CLUSTER_HOSTNAME: node1
+    volumes:
+      - weaviate_data:/var/lib/weaviate
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "http://localhost:8080/v1/.well-known/ready"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+
+  otel-collector:
+    image: docker.io/otel/opentelemetry-collector-contrib:0.110.0
+    container_name: living-otel
+    networks:
+      - living-atlas
+    ports:
+      - "4317:4317"
+      - "8889:8889"
+    volumes:
+      - ./config/otel/otel-collector.yml:/etc/otel/config.yaml:ro
+    command: ["--config", "/etc/otel/config.yaml"]
+
+  prometheus:
+    image: docker.io/prom/prometheus:v2.55.0
+    container_name: living-prometheus
+    networks:
+      - living-atlas
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./config/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ./config/prometheus/rules:/etc/prometheus/rules:ro
+      - prometheus_data:/prometheus
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+      - "--storage.tsdb.path=/prometheus"
+      - "--storage.tsdb.retention.time=30d"
+
+  grafana:
+    image: docker.io/grafana/grafana:11.3.0
+    container_name: living-grafana
+    networks:
+      - living-atlas
+    ports:
+      - "3001:3000"
+    environment:
+      GF_SECURITY_ADMIN_USER: ${GF_SECURITY_ADMIN_USER:-admin}
+      GF_SECURITY_ADMIN_PASSWORD: ${GF_SECURITY_ADMIN_PASSWORD:-admin}
+    volumes:
+      - ./grafana/datasources:/etc/grafana/provisioning/datasources:ro
+      - grafana_data:/var/lib/grafana
+
+  loki:
+    image: docker.io/grafana/loki:3.2.0
+    container_name: living-loki
+    networks:
+      - living-atlas
+    ports:
+      - "3100:3100"
+    volumes:
+      - ./config/loki/loki.yml:/etc/loki/config.yaml:ro
+      - loki_data:/loki
+    command: ["-config.file=/etc/loki/config.yaml"]
+
+  tempo:
+    image: docker.io/grafana/tempo:2.6.0
+    container_name: living-tempo
+    networks:
+      - living-atlas
+    ports:
+      - "3200:3200"
+    volumes:
+      - ./config/tempo/tempo.yml:/etc/tempo/config.yaml:ro
+      - tempo_data:/tmp/tempo
+    command: ["-config.file=/etc/tempo/config.yaml"]
+
+  ########################################
+  # AI PLATFORM — Python Services
+  ########################################
+
+  ingestion-service:
+    build:
+      context: ../
+      dockerfile: docker/python.Dockerfile
+      args:
+        SERVICE_DIR: ingestion-service
+    container_name: ai-ingestion
+    networks:
+      - living-atlas
+    ports:
+      - "8001:8000"
+    env_file:
+      - ./.env
+    environment:
+      LA_SERVICE_NAME: ingestion-service
+      LA_SERVICE_PORT: 8000
+      LA_PG_HOST: postgres
+      LA_KAFKA_BOOTSTRAP_SERVERS: redpanda:9092
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redpanda:
+        condition: service_healthy
+
+  extraction-service:
+    build:
+      context: ../
+      dockerfile: docker/python.Dockerfile
+      args:
+        SERVICE_DIR: extraction-service
+    container_name: ai-extraction
+    networks:
+      - living-atlas
+    ports:
+      - "8002:8000"
+    env_file:
+      - ./.env
+    environment:
+      LA_SERVICE_NAME: extraction-service
+      LA_SERVICE_PORT: 8000
+      LA_PG_HOST: postgres
+      LA_KAFKA_BOOTSTRAP_SERVERS: redpanda:9092
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redpanda:
+        condition: service_healthy
+
+  normalization-service:
+    build:
+      context: ../
+      dockerfile: docker/python.Dockerfile
+      args:
+        SERVICE_DIR: normalization-service
+    container_name: ai-normalization
+    networks:
+      - living-atlas
+    ports:
+      - "8003:8000"
+    env_file:
+      - ./.env
+    environment:
+      LA_SERVICE_NAME: normalization-service
+      LA_SERVICE_PORT: 8000
+      LA_PG_HOST: postgres
+      LA_KAFKA_BOOTSTRAP_SERVERS: redpanda:9092
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redpanda:
+        condition: service_healthy
+
+  validation-service:
+    build:
+      context: ../
+      dockerfile: docker/python.Dockerfile
+      args:
+        SERVICE_DIR: validation-service
+    container_name: ai-validation
+    networks:
+      - living-atlas
+    ports:
+      - "8004:8000"
+    env_file:
+      - ./.env
+    environment:
+      LA_SERVICE_NAME: validation-service
+      LA_SERVICE_PORT: 8000
+      LA_PG_HOST: postgres
+      LA_KAFKA_BOOTSTRAP_SERVERS: redpanda:9092
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redpanda:
+        condition: service_healthy
+
+  enrichment-service:
+    build:
+      context: ../
+      dockerfile: docker/python.Dockerfile
+      args:
+        SERVICE_DIR: enrichment-service
+    container_name: ai-enrichment
+    networks:
+      - living-atlas
+    ports:
+      - "8005:8000"
+    env_file:
+      - ./.env
+    environment:
+      LA_SERVICE_NAME: enrichment-service
+      LA_SERVICE_PORT: 8000
+      LA_PG_HOST: postgres
+      LA_KAFKA_BOOTSTRAP_SERVERS: redpanda:9092
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redpanda:
+        condition: service_healthy
+
+  article-service:
+    build:
+      context: ../
+      dockerfile: docker/python.Dockerfile
+      args:
+        SERVICE_DIR: article-service
+    container_name: ai-article
+    networks:
+      - living-atlas
+    ports:
+      - "8006:8000"
+    env_file:
+      - ./.env
+    environment:
+      LA_SERVICE_NAME: article-service
+      LA_SERVICE_PORT: 8000
+      LA_PG_HOST: postgres
+      LA_KAFKA_BOOTSTRAP_SERVERS: redpanda:9092
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redpanda:
+        condition: service_healthy
+
+  embedding-service:
+    build:
+      context: ../
+      dockerfile: docker/python.Dockerfile
+      args:
+        SERVICE_DIR: embedding-service
+    container_name: ai-embedding
+    networks:
+      - living-atlas
+    ports:
+      - "8007:8000"
+    env_file:
+      - ./.env
+    environment:
+      LA_SERVICE_NAME: embedding-service
+      LA_SERVICE_PORT: 8000
+      LA_PG_HOST: postgres
+      LA_KAFKA_BOOTSTRAP_SERVERS: redpanda:9092
+      LA_WEAVIATE_URL: http://weaviate:8080
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redpanda:
+        condition: service_healthy
+      weaviate:
+        condition: service_healthy
+
+  orchestration-service:
+    build:
+      context: ../
+      dockerfile: docker/python.Dockerfile
+      args:
+        SERVICE_DIR: orchestration-service
+    container_name: ai-orchestration
+    networks:
+      - living-atlas
+    ports:
+      - "8008:8000"
+    env_file:
+      - ./.env
+    environment:
+      LA_SERVICE_NAME: orchestration-service
+      LA_SERVICE_PORT: 8000
+      LA_PG_HOST: postgres
+      LA_KAFKA_BOOTSTRAP_SERVERS: redpanda:9092
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redpanda:
+        condition: service_healthy
+
+  ########################################
+  # BACKEND — Spring Boot Services
+  ########################################
+
+  identity-service:
+    build:
+      context: ..
+      dockerfile: docker/spring.Dockerfile
+      args:
+        SERVICE_DIR: identity-service
+    container_name: svc-identity
+    networks:
+      - living-atlas
+    ports:
+      - "8081:8080"
+    environment:
+      SPRING_PROFILES_ACTIVE: podman
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/${LA_PG_DATABASE:-living_atlas}
+      SPRING_DATASOURCE_USERNAME: ${LA_PG_USER:-living_atlas}
+      SPRING_DATASOURCE_PASSWORD: ${LA_PG_PASSWORD:-living_atlas}
+      SPRING_KAFKA_BOOTSTRAP_SERVERS: redpanda:9092
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redpanda:
+        condition: service_healthy
+
+  content-service:
+    build:
+      context: ..
+      dockerfile: docker/spring.Dockerfile
+      args:
+        SERVICE_DIR: content-service
+    container_name: svc-content
+    networks:
+      - living-atlas
+    ports:
+      - "8082:8080"
+    environment:
+      SPRING_PROFILES_ACTIVE: podman
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/${LA_PG_DATABASE:-living_atlas}
+      SPRING_DATASOURCE_USERNAME: ${LA_PG_USER:-living_atlas}
+      SPRING_DATASOURCE_PASSWORD: ${LA_PG_PASSWORD:-living_atlas}
+      SPRING_KAFKA_BOOTSTRAP_SERVERS: redpanda:9092
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redpanda:
+        condition: service_healthy
+
+  knowledge-service:
+    build:
+      context: ..
+      dockerfile: docker/spring.Dockerfile
+      args:
+        SERVICE_DIR: knowledge-service
+    container_name: svc-knowledge
+    networks:
+      - living-atlas
+    ports:
+      - "8083:8080"
+    environment:
+      SPRING_PROFILES_ACTIVE: podman
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/${LA_PG_DATABASE:-living_atlas}
+      SPRING_DATASOURCE_USERNAME: ${LA_PG_USER:-living_atlas}
+      SPRING_DATASOURCE_PASSWORD: ${LA_PG_PASSWORD:-living_atlas}
+      SPRING_KAFKA_BOOTSTRAP_SERVERS: redpanda:9092
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redpanda:
+        condition: service_healthy
+
+  research-service:
+    build:
+      context: ..
+      dockerfile: docker/spring.Dockerfile
+      args:
+        SERVICE_DIR: research-service
+    container_name: svc-research
+    networks:
+      - living-atlas
+    ports:
+      - "8084:8080"
+    environment:
+      SPRING_PROFILES_ACTIVE: podman
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/${LA_PG_DATABASE:-living_atlas}
+      SPRING_DATASOURCE_USERNAME: ${LA_PG_USER:-living_atlas}
+      SPRING_DATASOURCE_PASSWORD: ${LA_PG_PASSWORD:-living_atlas}
+      SPRING_KAFKA_BOOTSTRAP_SERVERS: redpanda:9092
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redpanda:
+        condition: service_healthy
+
+  workflow-service:
+    build:
+      context: ..
+      dockerfile: docker/spring.Dockerfile
+      args:
+        SERVICE_DIR: workflow-service
+    container_name: svc-workflow
+    networks:
+      - living-atlas
+    ports:
+      - "8085:8080"
+    environment:
+      SPRING_PROFILES_ACTIVE: podman
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/${LA_PG_DATABASE:-living_atlas}
+      SPRING_DATASOURCE_USERNAME: ${LA_PG_USER:-living_atlas}
+      SPRING_DATASOURCE_PASSWORD: ${LA_PG_PASSWORD:-living_atlas}
+      SPRING_KAFKA_BOOTSTRAP_SERVERS: redpanda:9092
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redpanda:
+        condition: service_healthy
+
+  gateway-services:
+    build:
+      context: ..
+      dockerfile: docker/spring.Dockerfile
+      args:
+        SERVICE_DIR: gateway-services
+    container_name: svc-gateway
+    networks:
+      - living-atlas
+    ports:
+      - "8086:8080"
+    environment:
+      SPRING_PROFILES_ACTIVE: podman
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/${LA_PG_DATABASE:-living_atlas}
+      SPRING_DATASOURCE_USERNAME: ${LA_PG_USER:-living_atlas}
+      SPRING_DATASOURCE_PASSWORD: ${LA_PG_PASSWORD:-living_atlas}
+      SPRING_KAFKA_BOOTSTRAP_SERVERS: redpanda:9092
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redpanda:
+        condition: service_healthy

@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Exec(source)",
+      "Exec(python3)",
+      "Exec(chmod)",
+      "Exec(mkdir)",
+      "Exec(cp)",
+      "Exec(./scripts/deploy_unified.sh)",
+      "Exec(bash)",
+      "Exec(podman ps)",
+      "Exec(podman logs)",
+      "Exec(podman rm)",
+      "Exec(podman run)"
+    ]
+  }
+}

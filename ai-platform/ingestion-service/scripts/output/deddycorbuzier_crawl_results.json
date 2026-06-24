@@ -1,0 +1,271 @@
+{
+  "channel": {
+    "handle": "https://www.youtube.com/@deddycorbuzier",
+    "name": "deddycorbuzier",
+    "channel_id": "UCaE0iH4KmJl_JoomVP02fsw",
+    "channel_url": "https://www.youtube.com/channel/UCaE0iH4KmJl_JoomVP02fsw",
+    "subscriber_count": 0,
+    "video_count": 0,
+    "description": ""
+  },
+  "crawl_timestamp": "2026-06-19T08:03:45.620055",
+  "videos": [
+    {
+      "index": 1,
+      "video_id": "E5ctwVEl4KM",
+      "title": "torn and restore hankie",
+      "error": "ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+    },
+    {
+      "index": 2,
+      "video_id": "23nu_Smhpqs",
+      "title": "mentalist - metamorph",
+      "error": "ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+    },
+    {
+      "index": 3,
+      "video_id": "nT2g137c9as",
+      "title": "mentalist - vanishing bottle",
+      "error": "ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+    },
+    {
+      "index": 4,
+      "video_id": "Qnb9_4D8aZ0",
+      "title": "mentalist - egg transfer",
+      "description": "deddy corbuzier magically transfer one egg into another...",
+      "duration_seconds": 93,
+      "duration_string": "1:33",
+      "upload_date": "20070819",
+      "view_count": 39679,
+      "like_count": 65,
+      "comment_count": null,
+      "channel_name": "deddycorbuzier",
+      "channel_id": "UCaE0iH4KmJl_JoomVP02fsw",
+      "webpage_url": "https://www.youtube.com/watch?v=Qnb9_4D8aZ0",
+      "thumbnail_url": "https://i.ytimg.com/vi/Qnb9_4D8aZ0/hqdefault.jpg?sqp=-oaymwEmCOADEOgC8quKqQMa8AEB-AG-AoAC8AGKAgwIABABGGUgTShAMA8=&rs=AOn4CLCGRGxktVESi_U8H4MM1rOPBkmmSA",
+      "tags": [
+        "deddy",
+        "corbuzier",
+        "transfer",
+        "egg",
+        "magic",
+        "sulap",
+        "indonesia",
+        "jakarta",
+        "mental",
+        "mentalist",
+        "mind",
+        "power"
+      ],
+      "categories": [
+        "Entertainment"
+      ],
+      "language": null,
+      "availability": "public",
+      "has_subtitles": false,
+      "subtitle_languages": [],
+      "subtitle_segments": {},
+      "subtitle_preview": {},
+      "raw_payload": {
+        "id": "Qnb9_4D8aZ0",
+        "title": "mentalist - egg transfer",
+        "description": "deddy corbuzier magically transfer one egg into another...",
+        "duration": 93,
+        "view_count": 39679,
+        "like_count": 65,
+        "comment_count": null,
+        "channel_id": "UCaE0iH4KmJl_JoomVP02fsw",
+        "channel": "deddycorbuzier",
+        "uploader": "deddycorbuzier",
+        "upload_date": "20070819",
+        "tags": [
+          "deddy",
+          "corbuzier",
+          "transfer",
+          "egg",
+          "magic",
+          "sulap",
+          "indonesia",
+          "jakarta",
+          "mental",
+          "mentalist",
+          "mind",
+          "power"
+        ],
+        "categories": [
+          "Entertainment"
+        ],
+        "webpage_url": "https://www.youtube.com/watch?v=Qnb9_4D8aZ0",
+        "thumbnail": "https://i.ytimg.com/vi/Qnb9_4D8aZ0/hqdefault.jpg?sqp=-oaymwEmCOADEOgC8quKqQMa8AEB-AG-AoAC8AGKAgwIABABGGUgTShAMA8=&rs=AOn4CLCGRGxktVESi_U8H4MM1rOPBkmmSA"
+      }
+    },
+    {
+      "index": 5,
+      "video_id": "ALCgFy_GdSs",
+      "title": "mentalist - key bending",
+      "description": "deddy corbuzier bent someone else's key visually, no camera edit, no invicible thread, no wax, no stooges",
+      "duration_seconds": 114,
+      "duration_string": "1:54",
+      "upload_date": "20070819",
+      "view_count": 26477,
+      "like_count": 38,
+      "comment_count": 1,
+      "channel_name": "deddycorbuzier",
+      "channel_id": "UCaE0iH4KmJl_JoomVP02fsw",
+      "webpage_url": "https://www.youtube.com/watch?v=ALCgFy_GdSs",
+      "thumbnail_url": "https://i.ytimg.com/vi/ALCgFy_GdSs/hqdefault.jpg?sqp=-oaymwEmCOADEOgC8quKqQMa8AEB-AG-AoAC8AGKAgwIABABGGUgXChVMA8=&rs=AOn4CLBErptojMIlDVENo4lLEwH9hIS-KA",
+      "tags": [
+        "metal",
+        "key",
+        "bending",
+        "deddy",
+        "corbuzier",
+        "jakarta",
+        "sulap",
+        "magic",
+        "mentalist",
+        "mental",
+        "bent",
+        "psychokinetic",
+        "power",
+        "cool",
+        "visual"
+      ],
+      "categories": [
+        "Entertainment"
+      ],
+      "language": null,
+      "availability": "public",
+      "has_subtitles": false,
+      "subtitle_languages": [],
+      "subtitle_segments": {},
+      "subtitle_preview": {},
+      "raw_payload": {
+        "id": "ALCgFy_GdSs",
+        "title": "mentalist - key bending",
+        "description": "deddy corbuzier bent someone else's key visually, no camera edit, no invicible thread, no wax, no stooges",
+        "duration": 114,
+        "view_count": 26477,
+        "like_count": 38,
+        "comment_count": 1,
+        "channel_id": "UCaE0iH4KmJl_JoomVP02fsw",
+        "channel": "deddycorbuzier",
+        "uploader": "deddycorbuzier",
+        "upload_date": "20070819",
+        "tags": [
+          "metal",
+          "key",
+          "bending",
+          "deddy",
+          "corbuzier",
+          "jakarta",
+          "sulap",
+          "magic",
+          "mentalist",
+          "mental",
+          "bent",
+          "psychokinetic",
+          "power",
+          "cool",
+          "visual"
+        ],
+        "categories": [
+          "Entertainment"
+        ],
+        "webpage_url": "https://www.youtube.com/watch?v=ALCgFy_GdSs",
+        "thumbnail": "https://i.ytimg.com/vi/ALCgFy_GdSs/hqdefault.jpg?sqp=-oaymwEmCOADEOgC8quKqQMa8AEB-AG-AoAC8AGKAgwIABABGGUgXChVMA8=&rs=AOn4CLBErptojMIlDVENo4lLEwH9hIS-KA"
+      }
+    },
+    {
+      "index": 6,
+      "video_id": "nzZ3CbH43iA",
+      "title": "serial number prediction",
+      "description": "deddy corbuzier mentally predict the bill's serial number taken out randomly from the atm...",
+      "duration_seconds": 170,
+      "duration_string": "2:50",
+      "upload_date": "20070809",
+      "view_count": 15243,
+      "like_count": 16,
+      "comment_count": null,
+      "channel_name": "deddycorbuzier",
+      "channel_id": "UCaE0iH4KmJl_JoomVP02fsw",
+      "webpage_url": "https://www.youtube.com/watch?v=nzZ3CbH43iA",
+      "thumbnail_url": "https://i.ytimg.com/vi/nzZ3CbH43iA/hqdefault.jpg?sqp=-oaymwEmCOADEOgC8quKqQMa8AEB-AG-AoAC8AGKAgwIABABGGUgZChYMA8=&rs=AOn4CLDC9yM1zyLTeQgHvAroFk_6FnK6rA",
+      "tags": [
+        "serial",
+        "number",
+        "prediction",
+        "bill",
+        "atm",
+        "deddy",
+        "corbuzier",
+        "mental",
+        "mentalist",
+        "magic",
+        "sulap",
+        "indonesia",
+        "jakarta"
+      ],
+      "categories": [
+        "Entertainment"
+      ],
+      "language": null,
+      "availability": "public",
+      "has_subtitles": false,
+      "subtitle_languages": [],
+      "subtitle_segments": {},
+      "subtitle_preview": {},
+      "raw_payload": {
+        "id": "nzZ3CbH43iA",
+        "title": "serial number prediction",
+        "description": "deddy corbuzier mentally predict the bill's serial number taken out randomly from the atm...",
+        "duration": 170,
+        "view_count": 15243,
+        "like_count": 16,
+        "comment_count": null,
+        "channel_id": "UCaE0iH4KmJl_JoomVP02fsw",
+        "channel": "deddycorbuzier",
+        "uploader": "deddycorbuzier",
+        "upload_date": "20070809",
+        "tags": [
+          "serial",
+          "number",
+          "prediction",
+          "bill",
+          "atm",
+          "deddy",
+          "corbuzier",
+          "mental",
+          "mentalist",
+          "magic",
+          "sulap",
+          "indonesia",
+          "jakarta"
+        ],
+        "categories": [
+          "Entertainment"
+        ],
+        "webpage_url": "https://www.youtube.com/watch?v=nzZ3CbH43iA",
+        "thumbnail": "https://i.ytimg.com/vi/nzZ3CbH43iA/hqdefault.jpg?sqp=-oaymwEmCOADEOgC8quKqQMa8AEB-AG-AoAC8AGKAgwIABABGGUgZChYMA8=&rs=AOn4CLDC9yM1zyLTeQgHvAroFk_6FnK6rA"
+      }
+    },
+    {
+      "index": 7,
+      "video_id": "ZRxlTVVzxJw",
+      "title": "enchanted cube",
+      "error": "ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+    },
+    {
+      "index": 8,
+      "video_id": "Qqsv6kxNPVY",
+      "title": "paper to money",
+      "error": "ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+    }
+  ],
+  "summary": {
+    "total_videos": 3,
+    "with_subtitles": 0,
+    "without_subtitles": 3,
+    "total_subtitle_segments": 0
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "channel": {
+    "handle": "GitaGutawaOfficial",
+    "name": "Gita Gutawa official ",
+    "channel_id": "UCJV2FF26gUSYABqf3YM5Tww",
+    "channel_url": "https://www.youtube.com/channel/UCJV2FF26gUSYABqf3YM5Tww",
+    "subscriber_count": 0,
+    "video_count": 0,
+    "description": "Untuk hiburan dan edukasi "
+  },
+  "crawl_timestamp": "2026-06-19T07:44:18.868912",
+  "videos": [
+    {
+      "index": 1,
+      "video_id": "3jlVUyU5Mjs",
+      "title": "sahabat lisan bumi Xll-2",
+      "error": "ERROR: [youtube] 3jlVUyU5Mjs: This video is not available"
+    },
+    {
+      "index": 2,
+      "video_id": "l5N_vBXxRkM",
+      "title": "detik-detik proklamasi kemerdekaan Indonesia",
+      "error": "ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+    }
+  ],
+  "summary": {
+    "total_videos": 0,
+    "with_subtitles": 0,
+    "without_subtitles": 0,
+    "total_subtitle_segments": 0
+  }
+}

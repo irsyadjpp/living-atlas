@@ -1,0 +1,1 @@
+"""Extraction Service — Convert video to transcript with speaker diarization."""

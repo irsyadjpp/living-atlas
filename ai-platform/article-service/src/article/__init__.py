@@ -1,0 +1,1 @@
+"""Article Service — Generate narrative, knowledge, news, and creative articles."""

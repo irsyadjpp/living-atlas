@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Living Atlas API Portal</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@scalar/api-reference@latest/dist/default.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference@latest/dist/browser/standalone.min.js"></script>
+  </head>
+  <body>
+    <div id="scalar-container"></div>
+    <script>
+      Scalar.createApiReference('#scalar-container', {
+        url: '/api-docs/identity',
+        pageTitle: 'Living Atlas API Portal',
+        theme: 'moon',
+        layout: 'modern',
+        darkMode: true,
+        showSidebar: true,
+        hideModels: false,
+        hideSearch: false,
+        hideTestRequestButton: false,
+        persistAuth: true,
+        servers: [
+          {
+            url: window.location.origin,
+            description: 'Gateway Server'
+          }
+        ],
+        sources: [
+          {
+            title: 'Identity Service',
+            slug: 'identity',
+            url: '/api-docs/identity',
+            isDefault: true
+          },
+          {
+            title: 'Content Service',
+            slug: 'content',
+            url: '/api-docs/content'
+          },
+          {
+            title: 'Knowledge Service',
+            slug: 'knowledge',
+            url: '/api-docs/knowledge'
+          },
+          {
+            title: 'Research Service',
+            slug: 'research',
+            url: '/api-docs/research'
+          },
+          {
+            title: 'Workflow Service',
+            slug: 'workflow',
+            url: '/api-docs/workflow'
+          }
+        ]
+      })
+    </script>
+  </body>
+</html>

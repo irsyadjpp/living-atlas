@@ -1,0 +1,1 @@
+"""Embedding Service — Create vector embeddings and sync to Weaviate."""

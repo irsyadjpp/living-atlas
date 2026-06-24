@@ -1,0 +1,23 @@
+[project]
+name = "enrichment-service"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "ai-shared",
+    "fastapi>=0.110",
+    "uvicorn[standard]>=0.27",
+    "google-genai>=1.0",
+    "anthropic>=0.30",
+    "openai>=1.12",
+    "jinja2>=3.1",
+    "asyncpg>=0.29",
+    "redis>=5.0",
+    "tenacity>=8.2",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]

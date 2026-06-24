@@ -1,0 +1,147 @@
+name: AI Platform CI/CD
+
+on:
+  push:
+    branches: [main, develop]
+    paths:
+      - 'ai-platform/**'
+      - '.github/workflows/ci.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'ai-platform/**'
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_TAG: ${{ github.sha }}
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ai-platform
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+      - name: Install dependencies
+        run: |
+          pip install -e ./shared
+          pip install ruff
+      - name: Run lint
+        run: make lint
+
+  test:
+    name: Test
+    needs: lint
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ai-platform
+    services:
+      postgres:
+        image: pgvector/pgvector:pg18
+        env:
+          POSTGRES_DB: living_atlas
+          POSTGRES_USER: living_atlas
+          POSTGRES_PASSWORD: living_atlas
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+      redpanda:
+        image: docker.redpanda.com/redpandadata/redpanda:latest
+        ports:
+          - 9092:9092
+        options: >-
+          --health-cmd "rpk cluster health --exit-when-healthy"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+      - name: Install dependencies
+        run: |
+          pip install -e ./shared
+          for dir in ingestion-service extraction-service enrichment-service embedding-service article-service orchestration-service; do
+            pip install -e ./$dir
+          done
+          pip install pytest-asyncio
+      - name: Run tests
+        env:
+          LA_PG_HOST: localhost
+          LA_KAFKA_BOOTSTRAP_SERVERS: localhost:9092
+          LA_REDIS_URL: redis://localhost:6379/0
+        run: make test
+
+  build:
+    name: Build Docker Images
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    defaults:
+      run:
+        working-directory: ai-platform
+    strategy:
+      matrix:
+        service:
+          - ingestion-service
+          - extraction-service
+          - enrichment-service
+          - embedding-service
+          - article-service
+          - orchestration-service
+    steps:
+      - uses: actions/checkout@v4
+      - name: Log in to registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+          context: ./ai-platform
+          file: ./ai-platform/infrastructure/docker/Dockerfile.python
+          push: true
+          tags: |
+            ${{ env.REGISTRY }}/${{ github.repository }}/${{ matrix.service }}:${{ env.IMAGE_TAG }}
+            ${{ env.REGISTRY }}/${{ github.repository }}/${{ matrix.service }}:latest
+          build-args: |
+            SERVICE_DIR=${{ matrix.service }}
+
+  deploy:
+    name: Deploy to Staging
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy with docker compose
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_KEY: ${{ secrets.SSH_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh -o StrictHostKeyChecking=no $SSH_USER@$SSH_HOST "
+            cd /opt/living-atlas/ai-platform && \
+            git pull && \
+            docker compose pull && \
+            docker compose up -d --remove-orphans && \
+            docker system prune -f
+          "

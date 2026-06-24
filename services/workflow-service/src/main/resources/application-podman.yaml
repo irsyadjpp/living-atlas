@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: workflow-service
+  datasource:
+    url: jdbc:postgresql://postgres:5432/living_atlas
+    username: ${LA_PG_USER:-living_atlas}
+    password: ${LA_PG_PASSWORD:-living_atlas}
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        default_schema: workflow
+
+server:
+  port: 8080
+
+kafka:
+  bootstrap-servers: ${SPRING_KAFKA_BOOTSTRAP_SERVERS:-redpanda:9092}
+  consumer:
+    group-id: workflow-service
+    auto-offset-reset: earliest
