@@ -1,4 +1,5 @@
 package id.livingatlas.workflowservice.review.application;
+import id.livingatlas.sharedweb.exception.ApiException;
 
 import id.livingatlas.workflowservice.review.domain.Review;
 import id.livingatlas.workflowservice.review.infrastructure.ReviewRepository;
@@ -31,7 +32,7 @@ public class ReviewService {
     @Transactional(readOnly = true)
     public Review getReview(UUID id) {
         return reviewRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("Review not found: " + id));
+                .orElseThrow(() -> ApiException.notFound("Review not found: " + id));
     }
 
     @Transactional(readOnly = true)

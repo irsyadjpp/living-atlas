@@ -1,4 +1,5 @@
 package id.livingatlas.researchservice.annotation.application;
+import id.livingatlas.sharedweb.exception.ApiException;
 
 import id.livingatlas.researchservice.annotation.domain.Annotation;
 import id.livingatlas.researchservice.annotation.infrastructure.AnnotationRepository;
@@ -28,7 +29,7 @@ public class AnnotationService {
     @Transactional(readOnly = true)
     public Annotation getAnnotation(UUID id) {
         return annotationRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("Annotation not found: " + id));
+                .orElseThrow(() -> ApiException.notFound("Annotation not found: " + id));
     }
 
     @Transactional(readOnly = true)

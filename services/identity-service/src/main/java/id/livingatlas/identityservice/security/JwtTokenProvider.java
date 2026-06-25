@@ -31,7 +31,7 @@ public class JwtTokenProvider {
      * Generate minimal JWT access token (OWASP ASVS 3.2, UU PDP minimization).
      * Only stores userId - personal data (email, name) looked up from DB when needed.
      */
-    public String generateAccessToken(UUID userId, List<String> roles, UUID tenantId) {
+    public String generateAccessToken(UUID userId, List<String> roles, UUID tenantId, UUID workspaceId) {
         Date now = new Date();
         Date expiryDate = new Date(now.getTime() + expiration);
 
@@ -39,6 +39,7 @@ public class JwtTokenProvider {
                 .subject(userId.toString())
                 .claim("roles", roles)
                 .claim("tenant_id", tenantId != null ? tenantId.toString() : null)
+                .claim("workspace_id", workspaceId != null ? workspaceId.toString() : null)
                 .issuedAt(now)
                 .expiration(expiryDate)
                 .signWith(secretKey)
@@ -67,6 +68,18 @@ public class JwtTokenProvider {
     public List<String> getRolesFromToken(String token) {
         Claims claims = parseToken(token);
         return claims.get("roles", List.class);
+    }
+
+    public UUID getTenantIdFromToken(String token) {
+        Claims claims = parseToken(token);
+        String tenantId = claims.get("tenant_id", String.class);
+        return tenantId != null ? UUID.fromString(tenantId) : null;
+    }
+
+    public UUID getWorkspaceIdFromToken(String token) {
+        Claims claims = parseToken(token);
+        String workspaceId = claims.get("workspace_id", String.class);
+        return workspaceId != null ? UUID.fromString(workspaceId) : null;
     }
 
     public long getRefreshExpiration() {

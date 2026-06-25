@@ -1,4 +1,5 @@
 package id.livingatlas.contentservice.article.application;
+import id.livingatlas.sharedweb.exception.ApiException;
 
 import id.livingatlas.contentservice.article.domain.Article;
 import id.livingatlas.contentservice.article.infrastructure.ArticleRepository;
@@ -29,7 +30,7 @@ public class ArticleService {
     @Transactional(readOnly = true)
     public Article getArticle(UUID id) {
         return articleRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("Article not found: " + id));
+                .orElseThrow(() -> ApiException.notFound("Article not found: " + id));
     }
 
     @Transactional(readOnly = true)
@@ -49,5 +50,23 @@ public class ArticleService {
     public void deleteArticle(UUID id) {
         articleRepository.deleteById(id);
         log.info("Article soft-deleted: id={}", id);
+    }
+
+    @Transactional
+    public Article publishArticle(UUID id) {
+        Article article = getArticle(id);
+        article.setStatus("published");
+        Article published = articleRepository.save(article);
+        log.info("Article published: id={}", id);
+        return published;
+    }
+
+    @Transactional
+    public Article updateArticleStatus(UUID id, String status) {
+        Article article = getArticle(id);
+        article.setStatus(status);
+        Article updated = articleRepository.save(article);
+        log.info("Article status updated: id={}, status={}", id, status);
+        return updated;
     }
 }

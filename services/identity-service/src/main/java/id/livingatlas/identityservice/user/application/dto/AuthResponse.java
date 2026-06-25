@@ -19,6 +19,8 @@ public class AuthResponse {
     private String username;
     private String displayName;
     private List<String> roles;
+    private UUID tenantId;
+    private UUID workspaceId;
     private String accessToken;
     private String refreshToken;
     private String tokenType;

@@ -48,6 +48,9 @@ public class KnowledgeObject {
     @Column(name = "tenant_id")
     private UUID tenantId;
 
+    @Column(name = "workspace_id")
+    private UUID workspaceId;
+
     @JdbcTypeCode(SqlTypes.JSON)
     @Column(columnDefinition = "jsonb", nullable = false)
     private Map<String, Object> metadata;

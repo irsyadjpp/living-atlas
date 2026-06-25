@@ -32,10 +32,10 @@ public class AuthController {
     public ResponseEntity<ApiResponse<AuthResponse>> register(@Valid @RequestBody RegisterRequest request) {
         if (!registerBucket.tryConsume(1)) throw ApiException.rateLimited("Too many registration attempts");
         var user = userService.register(request);
-        var userRoles = List.of("viewer");
-        String accessToken = jwtTokenProvider.generateAccessToken(user.getId(), userRoles, null);
+        var userRoles = List.of("researcher");
+        String accessToken = jwtTokenProvider.generateAccessToken(user.getId(), userRoles, user.getTenantId(), user.getWorkspaceId());
         String refreshToken = jwtTokenProvider.generateRefreshToken(user.getId());
-        var response = AuthResponse.builder().userId(user.getId()).email(user.getEmail()).username(user.getUsername()).roles(userRoles).accessToken(accessToken).refreshToken(refreshToken).tokenType("Bearer").build();
+        var response = AuthResponse.builder().userId(user.getId()).email(user.getEmail()).username(user.getUsername()).roles(userRoles).tenantId(user.getTenantId()).workspaceId(user.getWorkspaceId()).accessToken(accessToken).refreshToken(refreshToken).tokenType("Bearer").build();
         return ResponseEntity.status(HttpStatus.CREATED).body(ApiResponse.created(response));
     }
 
@@ -44,9 +44,9 @@ public class AuthController {
         if (!loginBucket.tryConsume(1)) throw ApiException.rateLimited("Too many login attempts");
         var auth = userService.authenticate(request);
         List<String> roles = auth.getRoles();
-        String accessToken = jwtTokenProvider.generateAccessToken(auth.getUserId(), roles, null);
+        String accessToken = jwtTokenProvider.generateAccessToken(auth.getUserId(), roles, auth.getTenantId(), auth.getWorkspaceId());
         String refreshToken = jwtTokenProvider.generateRefreshToken(auth.getUserId());
-        var response = AuthResponse.builder().userId(auth.getUserId()).email(auth.getEmail()).username(auth.getUsername()).displayName(auth.getDisplayName()).roles(roles).accessToken(accessToken).refreshToken(refreshToken).tokenType("Bearer").build();
+        var response = AuthResponse.builder().userId(auth.getUserId()).email(auth.getEmail()).username(auth.getUsername()).displayName(auth.getDisplayName()).roles(roles).tenantId(auth.getTenantId()).workspaceId(auth.getWorkspaceId()).accessToken(accessToken).refreshToken(refreshToken).tokenType("Bearer").build();
         return ResponseEntity.ok(ApiResponse.success(response));
     }
 
@@ -57,11 +57,13 @@ public class AuthController {
         if (!jwtTokenProvider.validateToken(token)) throw ApiException.unauthorized("Invalid refresh token");
         UUID userId = jwtTokenProvider.getUserIdFromToken(token);
         List<String> roles = jwtTokenProvider.getRolesFromToken(token);
+        UUID tenantId = jwtTokenProvider.getTenantIdFromToken(token);
+        UUID workspaceId = jwtTokenProvider.getWorkspaceIdFromToken(token);
         tokenBlacklistService.blacklist(token, jwtTokenProvider.getRefreshExpiration());
-        String newAccessToken = jwtTokenProvider.generateAccessToken(userId, roles, null);
+        String newAccessToken = jwtTokenProvider.generateAccessToken(userId, roles, tenantId, workspaceId);
         String newRefreshToken = jwtTokenProvider.generateRefreshToken(userId);
         var profile = userService.getProfile(userId);
-        var response = AuthResponse.builder().userId(userId).email(profile.getEmail()).username(profile.getUsername()).roles(roles).accessToken(newAccessToken).refreshToken(newRefreshToken).tokenType("Bearer").build();
+        var response = AuthResponse.builder().userId(userId).email(profile.getEmail()).username(profile.getUsername()).roles(roles).tenantId(tenantId).workspaceId(workspaceId).accessToken(newAccessToken).refreshToken(newRefreshToken).tokenType("Bearer").build();
         return ResponseEntity.ok(ApiResponse.success(response));
     }
 

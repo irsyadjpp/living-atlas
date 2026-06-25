@@ -1,12 +1,13 @@
 package id.livingatlas.identityservice.abac.application;
+import id.livingatlas.sharedweb.exception.ApiException;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import id.livingatlas.identityservice.abac.domain.PolicyRepository;
 import id.livingatlas.identityservice.abac.domain.PolicyRuleRepository;
 import id.livingatlas.identityservice.abac.domain.model.AccessDecision;
-import id.livingatlas.identityservice.model.Policy;
-import id.livingatlas.identityservice.model.PolicyRule;
+import id.livingatlas.identityservice.abac.domain.model.Policy;
+import id.livingatlas.identityservice.abac.domain.model.PolicyRule;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -34,7 +35,7 @@ public class AbacService {
     @Transactional
     public Policy updatePolicy(UUID policyId, String name, String description) {
         Policy policy = policyRepository.findById(policyId)
-                .orElseThrow(() -> new IllegalArgumentException("Policy not found: " + policyId));
+                .orElseThrow(() -> ApiException.notFound("Policy not found: " + policyId));
         if (name != null) policy.setName(name);
         if (description != null) policy.setDescription(description);
         return policyRepository.save(policy);
@@ -43,7 +44,7 @@ public class AbacService {
     @Transactional
     public void togglePolicy(UUID policyId, boolean enabled) {
         Policy policy = policyRepository.findById(policyId)
-                .orElseThrow(() -> new IllegalArgumentException("Policy not found: " + policyId));
+                .orElseThrow(() -> ApiException.notFound("Policy not found: " + policyId));
         policy.setEnabled(enabled);
         policyRepository.save(policy);
     }
@@ -51,7 +52,7 @@ public class AbacService {
     @Transactional
     public PolicyRule addRuleToPolicy(UUID policyId, Integer ruleOrder, String ruleExpression) {
         Policy policy = policyRepository.findById(policyId)
-                .orElseThrow(() -> new IllegalArgumentException("Policy not found: " + policyId));
+                .orElseThrow(() -> ApiException.notFound("Policy not found: " + policyId));
         PolicyRule rule = new PolicyRule(policy, ruleOrder, ruleExpression);
         return policyRuleRepository.save(rule);
     }
@@ -64,7 +65,7 @@ public class AbacService {
     @Transactional(readOnly = true)
     public Policy getPolicy(UUID policyId) {
         return policyRepository.findById(policyId)
-                .orElseThrow(() -> new IllegalArgumentException("Policy not found: " + policyId));
+                .orElseThrow(() -> ApiException.notFound("Policy not found: " + policyId));
     }
 
     @Transactional(readOnly = true)
@@ -119,7 +120,8 @@ public class AbacService {
                                   Map<String, Object> additionalAttributes) throws Exception {
 
         Map<String, Object> expression = objectMapper.readValue(
-                rule.getRuleExpression(), new TypeReference<Map<String, Object>>() {});
+                rule.getRuleExpression(), new TypeReference<>() {
+                });
 
         for (Map.Entry<String, Object> entry : expression.entrySet()) {
             String key = entry.getKey();

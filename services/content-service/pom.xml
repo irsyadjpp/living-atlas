@@ -3,14 +3,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>4.0.7</version>
-        <relativePath/>
+        <groupId>id.livingatlas</groupId>
+        <artifactId>living-atlas</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
-    <groupId>id.livingatlas</groupId>
     <artifactId>content-service</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
     <properties>
         <java.version>25</java.version>
     </properties>
@@ -18,7 +16,6 @@
         <dependency>
             <groupId>id.livingatlas</groupId>
             <artifactId>shared-web</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -39,7 +36,6 @@
         <dependency>
             <groupId>id.livingatlas</groupId>
             <artifactId>shared-events</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.postgresql</groupId>
@@ -62,7 +58,6 @@
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-            <version>3.0.2</version>
         </dependency>
     </dependencies>
     <build>

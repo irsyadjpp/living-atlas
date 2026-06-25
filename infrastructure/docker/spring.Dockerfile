@@ -2,7 +2,7 @@
 # Living Atlas — Spring Boot Service (Generic)
 # ============================================================
 # Build:
-#   podman build -f infrastructure/docker/spring.Dockerfile \
+#   docker build -f infrastructure/docker/spring.Dockerfile \
 #     --build-arg SERVICE_DIR=content-service \
 #     -t living-atlas/content-service .
 #
@@ -10,7 +10,7 @@
 #                         knowledge-service, research-service,
 #                         workflow-service, gateway-services
 # ============================================================
-# Builder: Maven 3.9.9 + Eclipse Temurin JDK 24 (compile)
+# Builder: Maven 3.9.16 + Amazon Corretto JDK 25 (compile)
 # Runtime: Eclipse Temurin JRE 25 (run)
 # ============================================================
 

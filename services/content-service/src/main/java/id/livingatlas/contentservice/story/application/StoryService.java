@@ -1,4 +1,5 @@
 package id.livingatlas.contentservice.story.application;
+import id.livingatlas.sharedweb.exception.ApiException;
 
 import id.livingatlas.contentservice.story.domain.Story;
 import id.livingatlas.contentservice.story.domain.StoryEvidence;
@@ -36,7 +37,7 @@ public class StoryService {
     @Transactional(readOnly = true)
     public Story getStory(UUID id) {
         return storyRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("Story not found: " + id));
+                .orElseThrow(() -> ApiException.notFound("Story not found: " + id));
     }
 
     @Transactional(readOnly = true)

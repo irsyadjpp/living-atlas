@@ -1,6 +1,6 @@
 package id.livingatlas.identityservice.abac.domain;
 
-import id.livingatlas.identityservice.model.Policy;
+import id.livingatlas.identityservice.abac.domain.model.Policy;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

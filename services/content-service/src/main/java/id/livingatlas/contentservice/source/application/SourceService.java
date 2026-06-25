@@ -1,4 +1,5 @@
 package id.livingatlas.contentservice.source.application;
+import id.livingatlas.sharedweb.exception.ApiException;
 
 import id.livingatlas.contentservice.infrastructure.AiEventPublisher;
 import id.livingatlas.contentservice.source.domain.Channel;
@@ -69,7 +70,7 @@ public class SourceService {
     @Transactional(readOnly = true)
     public Channel getChannel(UUID id) {
         return channelRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("Channel not found: " + id));
+                .orElseThrow(() -> ApiException.notFound("Channel not found: " + id));
     }
 
     @Transactional(readOnly = true)
@@ -88,7 +89,7 @@ public class SourceService {
     @Transactional(readOnly = true)
     public Source getSource(UUID id) {
         return sourceRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("Source not found: " + id));
+                .orElseThrow(() -> ApiException.notFound("Source not found: " + id));
     }
 
     @Transactional(readOnly = true)

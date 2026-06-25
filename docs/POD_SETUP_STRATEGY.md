@@ -1,8 +1,8 @@
-# Podman Setup Strategy
+# Docker Setup Strategy
 
 ## 📋 Overview
 
-All infrastructure and service containers run via Podman Compose using the root-level `infrastructure/` directory. This strategy supports both AI Platform (Python) and Backend (Spring Boot) services in a single unified deployment.
+All infrastructure and service containers run via Docker Compose using the root-level `infrastructure/` directory. This strategy supports both AI Platform (Python) and Backend (Spring Boot) services in a single unified deployment.
 
 ---
 
@@ -12,7 +12,7 @@ All infrastructure and service containers run via Podman Compose using the root-
 
 ```
 infrastructure/
-├── compose.yml              # Main Podman Compose file (24 services)
+├── compose.yml              # Main Docker Compose file (24 services)
 ├── .env.example              # Environment variable template
 ├── docker/
 │   ├── python.Dockerfile     # Generic Dockerfile for 8 AI Python services
@@ -50,7 +50,7 @@ cp infrastructure/.env.example infrastructure/.env
 cd ai-platform && make dev
 
 # Or directly from root:
-podman-compose -f infrastructure/compose.yml up -d
+Docker-compose -f infrastructure/compose.yml up -d
 ```
 
 ### 3. Start Only Infrastructure (Database + Queue)
@@ -115,7 +115,7 @@ cd ai-platform && make clean
 
 **Usage:**
 ```bash
-podman build -f infrastructure/docker/python.Dockerfile \
+Docker build -f infrastructure/docker/python.Dockerfile \
   --build-arg SERVICE_DIR=ingestion-service \
   -t living-atlas/ingestion-service .
 ```
@@ -128,7 +128,7 @@ podman build -f infrastructure/docker/python.Dockerfile \
 
 **Usage:**
 ```bash
-podman build -f infrastructure/docker/spring.Dockerfile \
+Docker build -f infrastructure/docker/spring.Dockerfile \
   --build-arg SERVICE_DIR=content-service \
   -t living-atlas/content-service .
 ```
@@ -139,7 +139,7 @@ podman build -f infrastructure/docker/spring.Dockerfile \
 
 ## 📁 Volume Structure
 
-Podman volumes are managed automatically by compose:
+Docker volumes are managed automatically by compose:
 ```
 postgres_data   → /var/lib/docker/volumes/postgres_data
 redpanda_data   → /var/lib/docker/volumes/redpanda_data
@@ -234,14 +234,14 @@ All datasources are pre-configured in Grafana. The stack provides:
 
 ### Check Container Status
 ```bash
-podman ps --all
-podman logs living-postgres
-podman logs ai-ingestion
+Docker ps --all
+Docker logs living-postgres
+Docker logs ai-ingestion
 ```
 
 ### Check Redpanda Topics
 ```bash
-podman exec living-redpanda rpk topic list
+Docker exec living-redpanda rpk topic list
 ```
 
 ### Run Migrations
@@ -276,11 +276,11 @@ cd ai-platform && make dev
 ### Testing Individual Services
 ```bash
 # Test a specific service
-podman build -f infrastructure/docker/python.Dockerfile \
+Docker build -f infrastructure/docker/python.Dockerfile \
   --build-arg SERVICE_DIR=normalization-service \
   -t living-atlas/normalization-service .
 
-podman run --rm -p 8003:8000 living-atlas/normalization-service
+Docker run --rm -p 8003:8000 living-atlas/normalization-service
 ```
 
 ---

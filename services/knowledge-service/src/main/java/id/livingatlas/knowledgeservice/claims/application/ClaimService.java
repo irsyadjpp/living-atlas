@@ -1,4 +1,5 @@
 package id.livingatlas.knowledgeservice.claims.application;
+import id.livingatlas.sharedweb.exception.ApiException;
 
 import id.livingatlas.knowledgeservice.claims.domain.Claim;
 import id.livingatlas.knowledgeservice.claims.infrastructure.ClaimRepository;
@@ -29,7 +30,7 @@ public class ClaimService {
     @Transactional(readOnly = true)
     public Claim getClaim(UUID id) {
         return claimRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("Claim not found: " + id));
+                .orElseThrow(() -> ApiException.notFound("Claim not found: " + id));
     }
 
     @Transactional(readOnly = true)

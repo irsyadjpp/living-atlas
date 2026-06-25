@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Environment variables for Pod 1 (Development)
+# Environment variables for Environment (Development)
 # Source this file before running applications in Dev environment
 
 export POD_ENV="development"

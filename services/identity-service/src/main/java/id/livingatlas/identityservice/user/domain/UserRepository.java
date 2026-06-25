@@ -1,7 +1,7 @@
 package id.livingatlas.identityservice.user.domain;
 
-import id.livingatlas.identityservice.model.User;
-import id.livingatlas.identityservice.model.UserStatus;
+import id.livingatlas.identityservice.user.domain.model.User;
+import id.livingatlas.identityservice.user.domain.model.UserStatus;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

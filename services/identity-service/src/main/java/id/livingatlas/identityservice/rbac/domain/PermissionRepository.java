@@ -1,6 +1,6 @@
 package id.livingatlas.identityservice.rbac.domain;
 
-import id.livingatlas.identityservice.model.Permission;
+import id.livingatlas.identityservice.rbac.domain.model.Permission;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

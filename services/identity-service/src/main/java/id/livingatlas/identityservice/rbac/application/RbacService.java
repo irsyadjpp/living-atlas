@@ -1,10 +1,22 @@
 package id.livingatlas.identityservice.rbac.application;
+import id.livingatlas.sharedweb.exception.ApiException;
 
-import id.livingatlas.identityservice.model.*;
-import id.livingatlas.identityservice.rbac.domain.*;
+import id.livingatlas.identityservice.rbac.domain.model.Permission;
+import id.livingatlas.identityservice.rbac.domain.model.Role;
+import id.livingatlas.identityservice.rbac.domain.model.RolePermission;
+import id.livingatlas.identityservice.rbac.domain.model.RolePermissionId;
+import id.livingatlas.identityservice.rbac.domain.PermissionRepository;
+import id.livingatlas.identityservice.rbac.domain.RolePermissionRepository;
+import id.livingatlas.identityservice.rbac.domain.RoleRepository;
+import id.livingatlas.identityservice.rbac.domain.UserRoleRepository;
 import id.livingatlas.identityservice.tenant.domain.TenantRepository;
 import id.livingatlas.identityservice.tenant.domain.WorkspaceRepository;
+import id.livingatlas.identityservice.tenant.domain.model.Tenant;
+import id.livingatlas.identityservice.tenant.domain.model.Workspace;
 import id.livingatlas.identityservice.user.domain.UserRepository;
+import id.livingatlas.identityservice.user.domain.model.User;
+import id.livingatlas.identityservice.user.domain.model.UserRole;
+import id.livingatlas.identityservice.user.domain.model.UserRoleId;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -35,7 +47,7 @@ public class RbacService {
     @Transactional
     public Role updateRole(UUID roleId, String name, String description) {
         Role role = roleRepository.findById(roleId)
-                .orElseThrow(() -> new IllegalArgumentException("Role not found: " + roleId));
+                .orElseThrow(() -> ApiException.notFound("Role not found: " + roleId));
         if (name != null) role.setName(name);
         if (description != null) role.setDescription(description);
         return roleRepository.save(role);
@@ -49,7 +61,7 @@ public class RbacService {
     @Transactional(readOnly = true)
     public Role getRole(UUID roleId) {
         return roleRepository.findById(roleId)
-                .orElseThrow(() -> new IllegalArgumentException("Role not found: " + roleId));
+                .orElseThrow(() -> ApiException.notFound("Role not found: " + roleId));
     }
 
     @Transactional
@@ -67,9 +79,9 @@ public class RbacService {
     @Transactional
     public void assignPermissionToRole(UUID roleId, UUID permissionId) {
         Role role = roleRepository.findById(roleId)
-                .orElseThrow(() -> new IllegalArgumentException("Role not found"));
+                .orElseThrow(() -> ApiException.notFound("Role not found"));
         Permission permission = permissionRepository.findById(permissionId)
-                .orElseThrow(() -> new IllegalArgumentException("Permission not found"));
+                .orElseThrow(() -> ApiException.notFound("Permission not found"));
 
         if (rolePermissionRepository.findById(new RolePermissionId(roleId, permissionId)).isEmpty()) {
             rolePermissionRepository.save(new RolePermission(role, permission));
@@ -84,9 +96,9 @@ public class RbacService {
     @Transactional
     public void assignRoleToUser(UUID userId, UUID roleId, UUID tenantId, UUID workspaceId) {
         User user = userRepository.findById(userId)
-                .orElseThrow(() -> new IllegalArgumentException("User not found"));
+                .orElseThrow(() -> ApiException.notFound("User not found"));
         Role role = roleRepository.findById(roleId)
-                .orElseThrow(() -> new IllegalArgumentException("Role not found"));
+                .orElseThrow(() -> ApiException.notFound("Role not found"));
 
         Tenant tenant = tenantId != null ? tenantRepository.findById(tenantId).orElse(null) : null;
         Workspace workspace = workspaceId != null ? workspaceRepository.findById(workspaceId).orElse(null) : null;
@@ -124,7 +136,7 @@ public class RbacService {
         List<UUID> roleIds = userRoles.stream()
                 .map(ur -> ur.getRole().getId())
                 .distinct()
-                .collect(Collectors.toList());
+                .toList();
 
         return roleIds.stream()
                 .flatMap(rid -> rolePermissionRepository.findAllByRoleId(rid).stream())

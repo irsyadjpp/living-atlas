@@ -1,7 +1,7 @@
 package id.livingatlas.identityservice.tenant.domain;
 
-import id.livingatlas.identityservice.model.Tenant;
-import id.livingatlas.identityservice.model.TenantStatus;
+import id.livingatlas.identityservice.tenant.domain.model.Tenant;
+import id.livingatlas.identityservice.tenant.domain.model.TenantStatus;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

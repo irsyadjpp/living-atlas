@@ -1,6 +1,6 @@
 package id.livingatlas.identityservice.tenant.domain;
 
-import id.livingatlas.identityservice.model.Workspace;
+import id.livingatlas.identityservice.tenant.domain.model.Workspace;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

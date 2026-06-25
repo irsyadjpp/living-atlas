@@ -3,9 +3,11 @@ package id.livingatlas.contentservice.story.domain;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.JdbcTypeCode;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.SQLRestriction;
+import org.hibernate.annotations.UpdateTimestamp;
 import org.hibernate.type.SqlTypes;
 
 import java.math.BigDecimal;
@@ -45,8 +47,9 @@ public class Story {
     @Column(name = "canonical_source_video_id")
     private UUID canonicalSourceVideoId;
 
-    @Column(length = 50)
-    private String status;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "status", nullable = false, columnDefinition = "content.story_status")
+    private StoryStatus status;
 
     @Column(name = "language_code", length = 20)
     private String languageCode;
@@ -64,13 +67,17 @@ public class Story {
     @Column(columnDefinition = "jsonb")
     private Map<String, Object> metadata;
 
-    @Column(name = "created_at")
+    @Setter(AccessLevel.NONE)
+    @Column(name = "created_at", nullable = false, updatable = false)
+    @CreationTimestamp
     private OffsetDateTime createdAt;
 
     @Column(name = "created_by")
     private UUID createdBy;
 
-    @Column(name = "updated_at")
+    @Setter(AccessLevel.NONE)
+    @Column(name = "updated_at", nullable = false)
+    @UpdateTimestamp
     private OffsetDateTime updatedAt;
 
     @Column(name = "updated_by")
@@ -82,6 +89,7 @@ public class Story {
     @Column(name = "deleted_by")
     private UUID deletedBy;
 
+    @Setter(AccessLevel.NONE)
     @Version
     @Column(nullable = false)
     private Long version = 1L;

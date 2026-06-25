@@ -1,8 +1,11 @@
 package id.livingatlas.knowledgeservice.knowledge.application;
+import id.livingatlas.sharedweb.exception.ApiException;
 
 import id.livingatlas.knowledgeservice.knowledge.domain.KnowledgeObject;
 import id.livingatlas.knowledgeservice.knowledge.infrastructure.KnowledgeObjectRepository;
 import id.livingatlas.knowledgeservice.shared.event.KnowledgeDomainEvent;
+import id.livingatlas.knowledgeservice.themes.domain.Theme;
+import id.livingatlas.knowledgeservice.themes.infrastructure.ThemeRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
@@ -10,6 +13,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.UUID;
 
 @Service
@@ -18,6 +22,7 @@ import java.util.UUID;
 public class KnowledgeObjectService {
 
     private final KnowledgeObjectRepository knowledgeObjectRepository;
+    private final ThemeRepository themeRepository;
 
     @Transactional
     public KnowledgeObject createKnowledgeObject(KnowledgeObject obj) {
@@ -31,7 +36,7 @@ public class KnowledgeObjectService {
     @Transactional(readOnly = true)
     public KnowledgeObject getKnowledgeObject(UUID id) {
         return knowledgeObjectRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("Knowledge object not found: " + id));
+                .orElseThrow(() -> ApiException.notFound("Knowledge object not found: " + id));
     }
 
     @Transactional(readOnly = true)
@@ -66,16 +71,33 @@ public class KnowledgeObjectService {
     }
 
     @Transactional(readOnly = true)
-    public Page<Object> listThemes(int page, int size) {
-        // TODO: Implement theme listing logic
-        // For now, return empty page to fix compilation
-        return Page.empty();
+    public Page<Theme> listThemes(int page, int size) {
+        return themeRepository.findAll(PageRequest.of(page, size));
     }
 
     @Transactional(readOnly = true)
-    public Page<Object> search(String query, String type, int page, int size) {
-        // TODO: Implement search logic
-        // For now, return empty page to fix compilation
-        return Page.empty();
+    public Page<KnowledgeObject> search(String query, String type, int page, int size) {
+        // TODO: Implement full-text search logic
+        // For now, return all knowledge objects (in production, use PostgreSQL full-text search or Weaviate)
+        if (query == null || query.isEmpty()) {
+            return knowledgeObjectRepository.findAll(PageRequest.of(page, size));
+        }
+        
+        // Simple LIKE search as placeholder
+        // In production, this should use PostgreSQL tsvector or Weaviate vector search
+        List<KnowledgeObject> results = knowledgeObjectRepository.findAll();
+        List<KnowledgeObject> filtered = results.stream()
+                .filter(obj -> obj.getCanonicalName().toLowerCase().contains(query.toLowerCase()) ||
+                              (obj.getSummary() != null && obj.getSummary().toLowerCase().contains(query.toLowerCase())))
+                .toList();
+        
+        int start = Math.min(page * size, filtered.size());
+        int end = Math.min(start + size, filtered.size());
+        
+        return new org.springframework.data.domain.PageImpl<>(
+            filtered.subList(start, end),
+            PageRequest.of(page, size),
+            filtered.size()
+        );
     }
 }

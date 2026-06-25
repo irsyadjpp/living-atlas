@@ -1,12 +1,13 @@
 package id.livingatlas.identityservice.user.application;
+import id.livingatlas.sharedweb.exception.ApiException;
 
-import id.livingatlas.identityservice.model.Role;
-import id.livingatlas.identityservice.model.Tenant;
-import id.livingatlas.identityservice.model.TenantType;
-import id.livingatlas.identityservice.model.User;
-import id.livingatlas.identityservice.model.UserRole;
-import id.livingatlas.identityservice.model.UserStatus;
-import id.livingatlas.identityservice.model.Workspace;
+import id.livingatlas.identityservice.rbac.domain.model.Role;
+import id.livingatlas.identityservice.tenant.domain.model.Tenant;
+import id.livingatlas.identityservice.tenant.domain.model.TenantType;
+import id.livingatlas.identityservice.user.domain.model.User;
+import id.livingatlas.identityservice.user.domain.model.UserRole;
+import id.livingatlas.identityservice.user.domain.model.UserStatus;
+import id.livingatlas.identityservice.tenant.domain.model.Workspace;
 import id.livingatlas.identityservice.rbac.domain.RoleRepository;
 import id.livingatlas.identityservice.rbac.domain.UserRoleRepository;
 import id.livingatlas.identityservice.tenant.domain.TenantRepository;
@@ -47,10 +48,10 @@ public class UserService {
     @Transactional
     public User register(RegisterRequest request) {
         if (userRepository.existsByEmail(request.getEmail())) {
-            throw new IllegalArgumentException("Registration failed");
+            throw ApiException.badRequest("Registration failed");
         }
         if (userRepository.existsByUsername(request.getUsername())) {
-            throw new IllegalArgumentException("Registration failed");
+            throw ApiException.badRequest("Registration failed");
         }
 
         User user = new User(request.getEmail(), request.getUsername());
@@ -98,7 +99,7 @@ public class UserService {
 
         User user = userRepository.findByEmail(request.getEmailOrUsername())
                 .orElseGet(() -> userRepository.findByUsername(request.getEmailOrUsername())
-                        .orElseThrow(() -> new IllegalArgumentException("Invalid credentials")));
+                        .orElseThrow(() -> ApiException.unauthorized("Invalid credentials")));
 
         user.setLastLoginAt(java.time.OffsetDateTime.now());
         userRepository.save(user);
@@ -125,7 +126,7 @@ public class UserService {
     @Transactional(readOnly = true)
     public UserProfile getProfile(UUID userId) {
         User user = userRepository.findById(userId)
-                .orElseThrow(() -> new IllegalArgumentException("User not found"));
+                .orElseThrow(() -> ApiException.notFound("User not found"));
 
         List<UserRole> userRoles = userRoleRepository.findAllByUserId(userId);
         List<String> roleCodes = userRoles.stream()
@@ -170,7 +171,7 @@ public class UserService {
     @Transactional
     public User updateProfile(UUID userId, UpdateProfileRequest request) {
         User user = userRepository.findById(userId)
-                .orElseThrow(() -> new IllegalArgumentException("User not found"));
+                .orElseThrow(() -> ApiException.notFound("User not found"));
 
         if (request.getDisplayName() != null) {
             user.setDisplayName(request.getDisplayName());
@@ -185,10 +186,10 @@ public class UserService {
     @Transactional
     public void changePassword(UUID userId, ChangePasswordRequest request) {
         User user = userRepository.findById(userId)
-                .orElseThrow(() -> new IllegalArgumentException("User not found"));
+                .orElseThrow(() -> ApiException.notFound("User not found"));
 
         if (!passwordEncoder.matches(request.getOldPassword(), user.getPasswordHash())) {
-            throw new IllegalArgumentException("Current password is incorrect");
+            throw ApiException.badRequest("Current password is incorrect");
         }
 
         user.setPasswordHash(passwordEncoder.encode(request.getNewPassword()));
@@ -198,7 +199,7 @@ public class UserService {
     @Transactional
     public void blockUser(UUID userId, UUID adminId) {
         User user = userRepository.findById(userId)
-                .orElseThrow(() -> new IllegalArgumentException("User not found"));
+                .orElseThrow(() -> ApiException.notFound("User not found"));
         user.setStatus(UserStatus.blocked);
         user.setUpdatedBy(adminId);
         userRepository.save(user);
@@ -212,7 +213,7 @@ public class UserService {
     @Transactional
     public void deleteUser(UUID userId, UUID adminId) {
         User user = userRepository.findById(userId)
-                .orElseThrow(() -> new IllegalArgumentException("User not found"));
+                .orElseThrow(() -> ApiException.notFound("User not found"));
         user.setUpdatedBy(adminId);
         user.setDeletedBy(adminId);
         user.setDeletedAt(java.time.OffsetDateTime.now());

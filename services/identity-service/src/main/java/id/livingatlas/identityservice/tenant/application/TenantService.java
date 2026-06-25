@@ -1,8 +1,10 @@
 package id.livingatlas.identityservice.tenant.application;
+import id.livingatlas.sharedweb.exception.ApiException;
 
-import id.livingatlas.identityservice.model.Tenant;
-import id.livingatlas.identityservice.model.TenantStatus;
-import id.livingatlas.identityservice.model.Workspace;
+import id.livingatlas.identityservice.tenant.domain.model.Tenant;
+import id.livingatlas.identityservice.tenant.domain.model.TenantStatus;
+import id.livingatlas.identityservice.tenant.domain.model.TenantType;
+import id.livingatlas.identityservice.tenant.domain.model.Workspace;
 import id.livingatlas.identityservice.tenant.domain.TenantRepository;
 import id.livingatlas.identityservice.tenant.domain.WorkspaceRepository;
 import lombok.RequiredArgsConstructor;
@@ -22,10 +24,10 @@ public class TenantService {
     @Transactional
     public Tenant createTenant(String slug, String name, String tenantType, String description) {
         if (tenantRepository.findBySlug(slug).isPresent()) {
-            throw new IllegalArgumentException("Tenant slug already exists: " + slug);
+            throw ApiException.conflict("Tenant slug already exists: " + slug);
         }
 
-        var type = id.livingatlas.identityservice.model.TenantType.valueOf(tenantType);
+        var type = TenantType.valueOf(tenantType);
         Tenant tenant = new Tenant(slug, name, type);
         tenant.setDescription(description);
         return tenantRepository.save(tenant);
@@ -34,13 +36,13 @@ public class TenantService {
     @Transactional(readOnly = true)
     public Tenant getTenantBySlug(String slug) {
         return tenantRepository.findBySlug(slug)
-                .orElseThrow(() -> new IllegalArgumentException("Tenant not found: " + slug));
+                .orElseThrow(() -> ApiException.notFound("Tenant not found: " + slug));
     }
 
     @Transactional(readOnly = true)
     public Tenant getTenantById(UUID tenantId) {
         return tenantRepository.findById(tenantId)
-                .orElseThrow(() -> new IllegalArgumentException("Tenant not found: " + tenantId));
+                .orElseThrow(() -> ApiException.notFound("Tenant not found: " + tenantId));
     }
 
     @Transactional
@@ -75,7 +77,7 @@ public class TenantService {
     public Workspace getWorkspace(UUID tenantId, UUID workspaceId) {
         return workspaceRepository.findById(workspaceId)
                 .filter(w -> w.getTenant().getId().equals(tenantId))
-                .orElseThrow(() -> new IllegalArgumentException("Workspace not found"));
+                .orElseThrow(() -> ApiException.notFound("Workspace not found"));
     }
 
     @Transactional

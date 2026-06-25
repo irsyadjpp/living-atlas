@@ -1,7 +1,8 @@
 package id.livingatlas.identityservice.security;
 
-import id.livingatlas.identityservice.model.User;
-import id.livingatlas.identityservice.model.UserRole;
+import id.livingatlas.identityservice.user.domain.model.User;
+import id.livingatlas.identityservice.user.domain.model.UserRole;
+import id.livingatlas.identityservice.user.domain.model.UserStatus;
 import id.livingatlas.identityservice.rbac.domain.UserRoleRepository;
 import id.livingatlas.identityservice.user.domain.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -39,10 +40,10 @@ public class CustomUserDetailsService implements UserDetailsService {
         return new org.springframework.security.core.userdetails.User(
                 user.getId().toString(),
                 user.getPasswordHash(),
-                user.getStatus() == id.livingatlas.identityservice.model.UserStatus.active,
+                user.getStatus() == UserStatus.active,
                 true,
                 true,
-                user.getStatus() != id.livingatlas.identityservice.model.UserStatus.blocked,
+                user.getStatus() != UserStatus.blocked,
                 authorities
         );
     }

@@ -1,6 +1,6 @@
 package id.livingatlas.identityservice.user.application.dto;
 
-import id.livingatlas.identityservice.model.UserStatus;
+import id.livingatlas.identityservice.user.domain.model.UserStatus;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

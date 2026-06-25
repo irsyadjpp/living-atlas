@@ -2,7 +2,7 @@
 # Living Atlas — Python AI Service (Generic)
 # ============================================================
 # Build:
-#   podman build -f infrastructure/docker/python.Dockerfile \
+#   docker build -f infrastructure/docker/python.Dockerfile \
 #     --build-arg SERVICE_DIR=ingestion-service \
 #     -t living-atlas/ingestion-service .
 #

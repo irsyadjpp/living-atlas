@@ -1,6 +1,6 @@
 # Deployment Report
 
-## Living Atlas — Podman Infrastructure
+## Living Atlas — Docker Infrastructure
 
 **Date:** June 21, 2026  
 **Status:** ✅ Infrastructure Running  
@@ -34,9 +34,9 @@
 
 ## Service Configuration Files
 
-All `application-podman.yaml` files have been populated (previously 0 bytes):
+All `application-Docker.yaml` files have been populated (previously 0 bytes):
 
-| Service | Podman Config | Size |
+| Service | Docker Config | Size |
 |---------|--------------|------|
 | identity-service | ✅ Completed | 651 bytes |
 | content-service | ✅ Completed | 736 bytes |
@@ -128,7 +128,7 @@ infrastructure/
 
 3. **Start backend services:**
    ```bash
-   podman build -f infrastructure/docker/spring.Dockerfile \
+   Docker build -f infrastructure/docker/spring.Dockerfile \
      --build-arg SERVICE_DIR=identity-service \
      -t living-atlas/identity-service .
    # Repeat for: content-service, knowledge-service, research-service, workflow-service, gateway-services
@@ -136,7 +136,7 @@ infrastructure/
 
 4. **Start AI platform services:**
    ```bash
-   podman build -f infrastructure/docker/python.Dockerfile \
+   Docker build -f infrastructure/docker/python.Dockerfile \
      --build-arg SERVICE_DIR=orchestration-service \
      -t living-atlas/orchestration-service .
    # Repeat for all 8 Python services
@@ -144,10 +144,10 @@ infrastructure/
 
 5. **Launch all services:**
    ```bash
-   python3 -m podman_compose -f infrastructure/compose.yml up -d
+   python3 -m Docker_compose -f infrastructure/compose.yml up -d
    ```
 
 6. **Test end-to-end flow:**
    - Register user via gateway: `POST http://localhost:8080/api/v1/auth/register`
    - Submit YouTube URL: `POST http://localhost:8080/api/v1/sources/`
-   - Track pipeline: monitor logs with `podman logs -f ai-orchestration`
+   - Track pipeline: monitor logs with `Docker logs -f ai-orchestration`
