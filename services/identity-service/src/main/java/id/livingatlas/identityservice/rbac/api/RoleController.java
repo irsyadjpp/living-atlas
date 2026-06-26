@@ -76,7 +76,7 @@ public class RoleController {
 
     @GetMapping("/{id}/permissions")
     public ResponseEntity<ApiResponse<List<Permission>>> getRolePermissions(@PathVariable UUID id) {
-        List<Permission> permissions = rolePermissionRepo.findByRoleId(id).stream()
+        List<Permission> permissions = rolePermissionRepo.findAllByRoleId(id).stream()
                 .map(rp -> rp.getPermission())
                 .collect(Collectors.toList());
         return ResponseEntity.ok(ApiResponse.success(permissions));
@@ -90,7 +90,7 @@ public class RoleController {
         List<Permission> permissions = permissionRepo.findAllById(permissionIds);
 
         // Clear existing and assign new (simplified)
-        rolePermissionRepo.deleteByRoleId(id);
+        rolePermissionRepo.deleteAll(rolePermissionRepo.findAllByRoleId(id));
         permissions.forEach(permission -> {
             rolePermissionRepo.save(new id.livingatlas.identityservice.rbac.domain.model.RolePermission(role, permission));
         });

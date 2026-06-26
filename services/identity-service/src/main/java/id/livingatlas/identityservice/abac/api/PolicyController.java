@@ -1,7 +1,7 @@
 package id.livingatlas.identityservice.abac.api;
 
 import id.livingatlas.identityservice.abac.application.AbacService;
-import id.livingatlas.identityservice.abac.domain.model.Policy;
+import id.livingatlas.sharedweb.abac.model.Policy;
 import id.livingatlas.sharedweb.response.ApiResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

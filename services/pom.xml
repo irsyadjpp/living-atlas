@@ -21,7 +21,7 @@
 
     <properties>
         <java.version>25</java.version>
-        <lombok.version>1.18.38</lombok.version>
+        <lombok.version>1.18.46</lombok.version>
         <springdoc.version>3.0.2</springdoc.version>
         <jjwt.version>0.13.0</jjwt.version>
         <spring-cloud.version>2025.1.2</spring-cloud.version>

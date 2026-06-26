@@ -40,7 +40,7 @@ public class PermissionController {
         String resource = request.get("resource");
         String action = request.get("action");
 
-        Permission permission = new Permission(code, name, resource, action);
+        Permission permission = new Permission(code, resource, action);
         permission.setDescription(description);
         Permission saved = permissionRepo.save(permission);
 
@@ -53,7 +53,7 @@ public class PermissionController {
                 .orElseThrow(() -> ApiException.notFound("Permission not found"));
 
         if (request.containsKey("name")) {
-            permission.setName(request.get("name"));
+            permission.setResourceType(request.get("name"));
         }
         if (request.containsKey("description")) {
             permission.setDescription(request.get("description"));

@@ -3,11 +3,11 @@ import id.livingatlas.sharedweb.exception.ApiException;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import id.livingatlas.identityservice.abac.domain.PolicyRepository;
-import id.livingatlas.identityservice.abac.domain.PolicyRuleRepository;
-import id.livingatlas.identityservice.abac.domain.model.AccessDecision;
-import id.livingatlas.identityservice.abac.domain.model.Policy;
-import id.livingatlas.identityservice.abac.domain.model.PolicyRule;
+import id.livingatlas.sharedweb.abac.PolicyRepository;
+import id.livingatlas.sharedweb.abac.PolicyRuleRepository;
+import id.livingatlas.sharedweb.abac.model.AccessDecision;
+import id.livingatlas.sharedweb.abac.model.Policy;
+import id.livingatlas.sharedweb.abac.model.PolicyRule;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

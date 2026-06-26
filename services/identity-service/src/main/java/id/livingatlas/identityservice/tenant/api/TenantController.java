@@ -77,7 +77,7 @@ public class TenantController {
 
     @GetMapping("/{tenantId}/workspaces")
     public ResponseEntity<ApiResponse<List<Workspace>>> listWorkspaces(@PathVariable UUID tenantId) {
-        List<Workspace> workspaces = workspaceRepo.findByTenantId(tenantId);
+        List<Workspace> workspaces = workspaceRepo.findAllByTenantId(tenantId);
         return ResponseEntity.ok(ApiResponse.success(workspaces));
     }
 }
