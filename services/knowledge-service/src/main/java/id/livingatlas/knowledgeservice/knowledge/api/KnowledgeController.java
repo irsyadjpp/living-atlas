@@ -1,12 +1,11 @@
 package id.livingatlas.knowledgeservice.knowledge.api;
 
-import id.livingatlas.sharedweb.response.ApiResponse;
-import id.livingatlas.sharedweb.response.PagedResponse;
-import id.livingatlas.sharedweb.exception.ApiException;
 import id.livingatlas.knowledgeservice.knowledge.application.KnowledgeObjectService;
 import id.livingatlas.knowledgeservice.knowledge.domain.KnowledgeObject;
+import id.livingatlas.knowledgeservice.themes.domain.Theme;
+import id.livingatlas.sharedweb.response.ApiResponse;
+import id.livingatlas.sharedweb.response.PagedResponse;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -40,14 +39,14 @@ public class KnowledgeController {
     }
 
     @GetMapping("/themes")
-    public ResponseEntity<PagedResponse<Object>> listThemes(
+    public ResponseEntity<PagedResponse<Theme>> listThemes(
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "20") int size) {
         return ResponseEntity.ok(PagedResponse.from(knowledgeService.listThemes(page, size)));
     }
 
     @GetMapping("/search")
-    public ResponseEntity<PagedResponse<Object>> search(
+    public ResponseEntity<PagedResponse<KnowledgeObject>> search(
             @RequestParam String q,
             @RequestParam(defaultValue = "all") String type,
             @RequestParam(defaultValue = "0") int page,

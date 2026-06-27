@@ -1,11 +1,10 @@
 package id.livingatlas.knowledgeservice.knowledge.application;
-import id.livingatlas.sharedweb.exception.ApiException;
 
 import id.livingatlas.knowledgeservice.knowledge.domain.KnowledgeObject;
 import id.livingatlas.knowledgeservice.knowledge.infrastructure.KnowledgeObjectRepository;
-import id.livingatlas.knowledgeservice.shared.event.KnowledgeDomainEvent;
 import id.livingatlas.knowledgeservice.themes.domain.Theme;
 import id.livingatlas.knowledgeservice.themes.infrastructure.ThemeRepository;
+import id.livingatlas.sharedweb.exception.ApiException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
@@ -82,22 +81,22 @@ public class KnowledgeObjectService {
         if (query == null || query.isEmpty()) {
             return knowledgeObjectRepository.findAll(PageRequest.of(page, size));
         }
-        
+
         // Simple LIKE search as placeholder
         // In production, this should use PostgreSQL tsvector or Weaviate vector search
         List<KnowledgeObject> results = knowledgeObjectRepository.findAll();
         List<KnowledgeObject> filtered = results.stream()
                 .filter(obj -> obj.getCanonicalName().toLowerCase().contains(query.toLowerCase()) ||
-                              (obj.getSummary() != null && obj.getSummary().toLowerCase().contains(query.toLowerCase())))
+                        (obj.getSummary() != null && obj.getSummary().toLowerCase().contains(query.toLowerCase())))
                 .toList();
-        
+
         int start = Math.min(page * size, filtered.size());
         int end = Math.min(start + size, filtered.size());
-        
+
         return new org.springframework.data.domain.PageImpl<>(
-            filtered.subList(start, end),
-            PageRequest.of(page, size),
-            filtered.size()
+                filtered.subList(start, end),
+                PageRequest.of(page, size),
+                filtered.size()
         );
     }
 }

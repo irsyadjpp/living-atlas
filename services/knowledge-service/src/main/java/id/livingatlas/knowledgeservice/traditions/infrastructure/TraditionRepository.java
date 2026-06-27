@@ -8,5 +8,6 @@ import java.util.UUID;
 
 public interface TraditionRepository extends JpaRepository<Tradition, UUID> {
     Optional<Tradition> findBySlug(String slug);
+
     Optional<Tradition> findByObjectId(UUID objectId);
 }

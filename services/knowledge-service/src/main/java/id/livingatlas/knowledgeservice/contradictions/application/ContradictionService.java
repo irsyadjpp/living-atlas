@@ -1,8 +1,8 @@
 package id.livingatlas.knowledgeservice.contradictions.application;
-import id.livingatlas.sharedweb.exception.ApiException;
 
 import id.livingatlas.knowledgeservice.contradictions.domain.Contradiction;
 import id.livingatlas.knowledgeservice.contradictions.infrastructure.ContradictionRepository;
+import id.livingatlas.sharedweb.exception.ApiException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
@@ -21,7 +21,7 @@ public class ContradictionService {
 
     @Transactional
     public Contradiction createContradiction(Contradiction contradiction) {
-        contradiction.setStatus("active");
+//        contradiction.setStatus("active");
         Contradiction saved = contradictionRepository.save(contradiction);
         log.info("Contradiction created: id={}, title={}", saved.getId(), saved.getTitle());
         return saved;

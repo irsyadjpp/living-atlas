@@ -1,14 +1,14 @@
 package id.livingatlas.knowledgeservice.contradictions.api;
 
-import id.livingatlas.sharedweb.response.ApiResponse;
-import id.livingatlas.sharedweb.response.PagedResponse;
 import id.livingatlas.knowledgeservice.contradictions.application.ContradictionService;
 import id.livingatlas.knowledgeservice.contradictions.domain.Contradiction;
+import id.livingatlas.sharedweb.response.ApiResponse;
+import id.livingatlas.sharedweb.response.PagedResponse;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.UUID;
 
 @RestController

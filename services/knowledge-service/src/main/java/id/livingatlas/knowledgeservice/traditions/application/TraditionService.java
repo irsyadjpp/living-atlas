@@ -1,8 +1,8 @@
 package id.livingatlas.knowledgeservice.traditions.application;
-import id.livingatlas.sharedweb.exception.ApiException;
 
 import id.livingatlas.knowledgeservice.traditions.domain.Tradition;
 import id.livingatlas.knowledgeservice.traditions.infrastructure.TraditionRepository;
+import id.livingatlas.sharedweb.exception.ApiException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
@@ -21,7 +21,7 @@ public class TraditionService {
 
     @Transactional
     public Tradition createTradition(Tradition tradition) {
-        tradition.setStatus("active");
+//        tradition.setStatus("active");
         Tradition saved = traditionRepository.save(tradition);
         log.info("Tradition created: id={}, name={}", saved.getId(), saved.getName());
         return saved;

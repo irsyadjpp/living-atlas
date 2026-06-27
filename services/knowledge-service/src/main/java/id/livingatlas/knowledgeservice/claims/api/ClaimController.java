@@ -1,11 +1,10 @@
 package id.livingatlas.knowledgeservice.claims.api;
 
-import id.livingatlas.sharedweb.response.ApiResponse;
-import id.livingatlas.sharedweb.response.PagedResponse;
 import id.livingatlas.knowledgeservice.claims.application.ClaimService;
 import id.livingatlas.knowledgeservice.claims.domain.Claim;
+import id.livingatlas.sharedweb.response.ApiResponse;
+import id.livingatlas.sharedweb.response.PagedResponse;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

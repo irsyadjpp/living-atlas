@@ -6,6 +6,7 @@ import id.livingatlas.researchservice.notes.infrastructure.NoteRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -36,10 +37,10 @@ public class NoteService {
     @Transactional(readOnly = true)
     public Page<Note> listNotes(int page, int size, UUID collectionId) {
         if (collectionId != null) {
-            return new org.springframework.data.domain.PageImpl<>(
-                noteRepository.findByCollectionId(collectionId),
+            return new PageImpl<>(
+                noteRepository.findByCollectionId(collectionId).stream().toList(),
                 PageRequest.of(page, size),
-                noteRepository.findByCollectionId(collectionId).size()
+                noteRepository.findByCollectionId(collectionId).stream().count()
             );
         }
         return noteRepository.findAll(PageRequest.of(page, size));

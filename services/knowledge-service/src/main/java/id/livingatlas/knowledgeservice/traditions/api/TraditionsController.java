@@ -1,14 +1,14 @@
 package id.livingatlas.knowledgeservice.traditions.api;
 
-import id.livingatlas.sharedweb.response.ApiResponse;
-import id.livingatlas.sharedweb.response.PagedResponse;
 import id.livingatlas.knowledgeservice.traditions.application.TraditionService;
 import id.livingatlas.knowledgeservice.traditions.domain.Tradition;
+import id.livingatlas.sharedweb.response.ApiResponse;
+import id.livingatlas.sharedweb.response.PagedResponse;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.UUID;
 
 @RestController

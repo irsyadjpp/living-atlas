@@ -8,5 +8,6 @@ import java.util.UUID;
 
 public interface ContradictionRepository extends JpaRepository<Contradiction, UUID> {
     Optional<Contradiction> findBySlug(String slug);
+
     Optional<Contradiction> findByClaimId1OrClaimId2(UUID claimId1, UUID claimId2);
 }

@@ -1,8 +1,8 @@
 package id.livingatlas.knowledgeservice.beliefs.application;
-import id.livingatlas.sharedweb.exception.ApiException;
 
 import id.livingatlas.knowledgeservice.beliefs.domain.Belief;
 import id.livingatlas.knowledgeservice.beliefs.infrastructure.BeliefRepository;
+import id.livingatlas.sharedweb.exception.ApiException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
@@ -21,7 +21,7 @@ public class BeliefService {
 
     @Transactional
     public Belief createBelief(Belief belief) {
-        belief.setStatus("active");
+//        belief.setStatus("active");
         Belief saved = beliefRepository.save(belief);
         log.info("Belief created: id={}, name={}", saved.getId(), saved.getName());
         return saved;

@@ -1,4 +1,5 @@
 package id.livingatlas.contentservice.story.application;
+import id.livingatlas.contentservice.story.domain.StoryStatus;
 import id.livingatlas.sharedweb.exception.ApiException;
 
 import id.livingatlas.contentservice.story.domain.Story;
@@ -28,7 +29,7 @@ public class StoryService {
 
     @Transactional
     public Story createStory(Story story) {
-        story.setStatus("draft");
+        story.setStatus(StoryStatus.DRAFT);
         Story saved = storyRepository.save(story);
         log.info("Story created: id={}, title={}", saved.getId(), saved.getTitle());
         return saved;

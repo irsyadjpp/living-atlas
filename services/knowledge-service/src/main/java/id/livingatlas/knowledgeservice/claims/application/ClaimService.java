@@ -1,8 +1,8 @@
 package id.livingatlas.knowledgeservice.claims.application;
-import id.livingatlas.sharedweb.exception.ApiException;
 
 import id.livingatlas.knowledgeservice.claims.domain.Claim;
 import id.livingatlas.knowledgeservice.claims.infrastructure.ClaimRepository;
+import id.livingatlas.sharedweb.exception.ApiException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;

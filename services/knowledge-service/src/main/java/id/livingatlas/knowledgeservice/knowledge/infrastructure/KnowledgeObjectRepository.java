@@ -12,7 +12,10 @@ import java.util.UUID;
 @Repository
 public interface KnowledgeObjectRepository extends JpaRepository<KnowledgeObject, UUID> {
     Optional<KnowledgeObject> findBySlug(String slug);
+
     Page<KnowledgeObject> findByObjectType(String objectType, Pageable pageable);
+
     Page<KnowledgeObject> findByStatus(String status, Pageable pageable);
+
     Page<KnowledgeObject> findByTenantId(UUID tenantId, Pageable pageable);
 }

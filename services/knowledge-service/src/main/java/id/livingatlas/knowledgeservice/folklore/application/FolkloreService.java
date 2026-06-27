@@ -1,8 +1,8 @@
 package id.livingatlas.knowledgeservice.folklore.application;
-import id.livingatlas.sharedweb.exception.ApiException;
 
 import id.livingatlas.knowledgeservice.folklore.domain.Folklore;
 import id.livingatlas.knowledgeservice.folklore.infrastructure.FolkloreRepository;
+import id.livingatlas.sharedweb.exception.ApiException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
@@ -21,7 +21,7 @@ public class FolkloreService {
 
     @Transactional
     public Folklore createFolklore(Folklore folklore) {
-        folklore.setStatus("active");
+//        folklore.setStatus("active");
         Folklore saved = folkloreRepository.save(folklore);
         log.info("Folklore created: id={}, name={}", saved.getId(), saved.getName());
         return saved;

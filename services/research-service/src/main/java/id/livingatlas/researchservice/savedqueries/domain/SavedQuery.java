@@ -1,15 +1,14 @@
 package id.livingatlas.researchservice.savedqueries.domain;
 
 import jakarta.persistence.*;
+import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.SQLDelete;
-import org.hibernate.annotations.SQLRestriction;
-import org.hibernate.annotations.UpdateTimestamp;
+import org.hibernate.annotations.*;
 
 import java.time.OffsetDateTime;
+import java.util.Map;
 import java.util.UUID;
 
 @Entity
@@ -39,7 +38,7 @@ public class SavedQuery {
 
     @JdbcTypeCode(org.hibernate.type.SqlTypes.JSON)
     @Column(columnDefinition = "jsonb")
-    private java.util.Map<String, Object> parameters;
+    private Map<String, Object> parameters;
 
     @Column(name = "is_public")
     private Boolean isPublic = false;

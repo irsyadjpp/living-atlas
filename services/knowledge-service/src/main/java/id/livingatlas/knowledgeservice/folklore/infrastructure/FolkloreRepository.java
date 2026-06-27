@@ -8,5 +8,6 @@ import java.util.UUID;
 
 public interface FolkloreRepository extends JpaRepository<Folklore, UUID> {
     Optional<Folklore> findBySlug(String slug);
+
     Optional<Folklore> findByObjectId(UUID objectId);
 }

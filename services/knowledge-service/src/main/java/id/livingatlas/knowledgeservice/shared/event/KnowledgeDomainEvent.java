@@ -4,16 +4,16 @@ import java.time.OffsetDateTime;
 import java.util.UUID;
 
 public record KnowledgeDomainEvent(
-    UUID eventId,
-    String eventType,
-    int eventVersion,
-    OffsetDateTime occurredAt,
-    String producer,
-    String aggregateType,
-    UUID aggregateId,
-    Object data,
-    UUID tenantId,
-    UUID correlationId
+        UUID eventId,
+        String eventType,
+        int eventVersion,
+        OffsetDateTime occurredAt,
+        String producer,
+        String aggregateType,
+        UUID aggregateId,
+        Object data,
+        UUID tenantId,
+        UUID correlationId
 ) {
     public KnowledgeDomainEvent {
         eventId = UUID.randomUUID();

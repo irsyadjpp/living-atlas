@@ -7408,7 +7408,7 @@ Related Knowledge
 Academic References
 ```
 
-Readers should control how deeply they explore.
+Users should control how deeply they explore.
 
 ---
 
@@ -10742,3 +10742,3710 @@ In The Living Atlas, podcasts are not isolated media products—they are entry p
 
 ---
 
+# Expected Features
+
+The Podcast Audience requires features that seamlessly connect audio consumption with structured knowledge exploration.
+
+Unlike traditional podcast platforms that end the experience when an episode finishes, The Living Atlas should transform every listening session into the beginning of a deeper learning journey.
+
+Every feature should reduce the gap between:
+
+```text
+Listening
+
+↓
+
+Understanding
+
+↓
+
+Exploration
+
+↓
+
+Knowledge Building
+```
+
+---
+
+# Feature Category 1 — Audio Experience
+
+Audio should be treated as a first-class knowledge medium.
+
+---
+
+## Integrated Podcast Player
+
+The platform should provide a modern podcast experience including:
+
+- Playback speed (0.5×–3×)
+- Sleep timer
+- Skip silence
+- Chapter navigation
+- Continue listening
+- Cross-device synchronization
+- Offline download (future)
+- Picture-in-picture playback
+- Background playback
+
+Listening should remain uninterrupted while users explore related knowledge.
+
+---
+
+## Chapter-Based Navigation
+
+Every podcast episode should be divided into semantic chapters rather than fixed timestamps.
+
+Example:
+
+```text
+00:00 Introduction
+
+↓
+
+05:20 Srivijaya Kingdom
+
+↓
+
+18:40 Maritime Trade
+
+↓
+
+31:10 Buddhist Influence
+
+↓
+
+45:50 Historical Sources
+
+↓
+
+57:30 Modern Legacy
+```
+
+Users should be able to jump directly to knowledge-rich sections.
+
+---
+
+## Interactive Transcript
+
+Every episode should include a searchable transcript.
+
+Capabilities include:
+
+- Word-level timestamps
+- Search within transcript
+- Click-to-play synchronization
+- Highlight current sentence
+- Named entity highlighting
+- Speaker identification
+- Translation (future)
+
+The transcript becomes another entry point into the knowledge graph.
+
+---
+
+## Smart Bookmarks
+
+Instead of bookmarking only timestamps, users should bookmark knowledge.
+
+Example:
+
+```text
+Timestamp
+
+↓
+
+Knowledge Object
+
+↓
+
+Historical Figure
+
+↓
+
+Region
+
+↓
+
+Topic
+
+↓
+
+Personal Note
+```
+
+Bookmarks should remain useful even if episode timestamps change.
+
+---
+
+# Feature Category 2 — Knowledge Integration
+
+Audio should never exist independently from the knowledge platform.
+
+---
+
+## Episode Knowledge Panel
+
+Every episode should automatically display:
+
+- Historical figures mentioned
+- Locations
+- Stories
+- Cultures
+- Kingdoms
+- Traditions
+- Artifacts
+- Books
+- Museums
+- Academic references
+
+This panel transforms passive listening into active exploration.
+
+---
+
+## Knowledge Timeline
+
+Generate an interactive timeline from episode content.
+
+Example:
+
+```text
+Episode
+
+↓
+
+Timeline
+
+↓
+
+Historical Events
+
+↓
+
+Political Changes
+
+↓
+
+Cultural Development
+
+↓
+
+Modern Influence
+```
+
+Users should understand chronology without manually reconstructing it.
+
+---
+
+## Interactive Atlas
+
+Every place mentioned during an episode should appear on an interactive map.
+
+Possible interactions:
+
+Click Province
+
+↓
+
+Historical Site
+
+↓
+
+Local Culture
+
+↓
+
+Related Stories
+
+↓
+
+Nearby Knowledge
+
+↓
+
+Traditional Communities
+
+Geography should reinforce storytelling.
+
+---
+
+## Knowledge Graph Integration
+
+Every discussed concept should connect into the platform-wide Knowledge Graph.
+
+Example:
+
+```text
+Episode
+
+↓
+
+Majapahit
+
+↓
+
+Gajah Mada
+
+↓
+
+Palapa Oath
+
+↓
+
+Trade Routes
+
+↓
+
+Neighboring Kingdoms
+
+↓
+
+Related Sources
+```
+
+This encourages exploration beyond the original episode.
+
+---
+
+# Feature Category 3 — AI Companion
+
+AI should extend—not replace—the educational value of podcast episodes.
+
+---
+
+## Episode Summary
+
+Generate layered summaries:
+
+- 1 sentence
+- 1 minute read
+- 5 minute read
+- Detailed overview
+- Research summary
+
+Users choose the level of detail appropriate to their needs.
+
+---
+
+## Ask About This Episode
+
+Provide contextual AI conversations such as:
+
+> Explain the political background.
+
+> Compare with Srivijaya.
+
+> Show related archaeological evidence.
+
+> What happened afterward?
+
+The assistant should maintain awareness of the currently playing episode.
+
+---
+
+## Personalized Learning Path
+
+After finishing an episode AI may recommend:
+
+Next story
+
+↓
+
+Historical article
+
+↓
+
+Timeline
+
+↓
+
+Atlas
+
+↓
+
+Museum
+
+↓
+
+Research paper
+
+↓
+
+Related podcast
+
+Learning becomes continuous rather than episodic.
+
+---
+
+## Terminology Assistant
+
+Automatically explain:
+
+- ancient terminology,
+- regional languages,
+- traditional titles,
+- religious concepts,
+- historical institutions.
+
+Definitions should appear inline without interrupting listening.
+
+---
+
+# Feature Category 4 — Personal Knowledge Management
+
+Podcast Audiences frequently accumulate knowledge over long periods.
+
+The platform should support long-term organization.
+
+---
+
+## Listening History
+
+Maintain a searchable listening history including:
+
+- Completed episodes
+- Progress
+- Last played position
+- Topics explored
+- Knowledge discovered
+
+History should connect with reading history.
+
+---
+
+## Knowledge Collections
+
+Users should organize discoveries into collections.
+
+Examples:
+
+Ancient Kingdoms
+
+↓
+
+Sea Trade
+
+↓
+
+Indonesian Folklore
+
+↓
+
+Sacred Mountains
+
+↓
+
+Temple Architecture
+
+↓
+
+Museum Visits
+
+Collections become personal knowledge libraries rather than simple playlists.
+
+---
+
+## Learning Progress
+
+Track:
+
+Topics explored
+
+Cultures visited
+
+Historical periods covered
+
+Knowledge relationships discovered
+
+Reading completion
+
+Podcast completion
+
+The emphasis should remain educational rather than gamified.
+
+---
+
+## Personal Notes
+
+Allow listeners to create notes linked to:
+
+Episode
+
+↓
+
+Timestamp
+
+↓
+
+Knowledge Object
+
+↓
+
+Research Source
+
+↓
+
+Collection
+
+Notes should remain searchable across the platform.
+
+---
+
+# Feature Category 5 — Discovery
+
+Discovery should continue after every episode.
+
+---
+
+## Related Episodes
+
+Recommendations should prioritize semantic similarity rather than popularity.
+
+Relationships may include:
+
+Shared people
+
+Shared places
+
+Shared historical period
+
+Shared culture
+
+Shared traditions
+
+Shared themes
+
+Knowledge relationships are more valuable than engagement metrics.
+
+---
+
+## Continue Exploring
+
+Suggested exploration paths include:
+
+Timeline
+
+Atlas
+
+Knowledge Graph
+
+Artifacts
+
+Museum
+
+Research
+
+Books
+
+Videos
+
+AI Discussion
+
+Every recommendation should deepen understanding.
+
+---
+
+## Topic Explorer
+
+Generate topic pages directly from podcast discussions.
+
+Example:
+
+```text
+Episode
+
+↓
+
+Topic
+
+↓
+
+Knowledge Object
+
+↓
+
+Related Stories
+
+↓
+
+Evidence
+
+↓
+
+Further Reading
+```
+
+---
+
+# Feature Category 6 — Accessibility
+
+Podcast experiences should be accessible to everyone.
+
+Capabilities include:
+
+- Full transcripts
+- Closed captions
+- Screen reader compatibility
+- Adjustable playback speed
+- Keyboard shortcuts
+- Dyslexia-friendly typography
+- High contrast mode
+- Offline transcript access (future)
+
+Accessibility should be built into the core experience rather than added afterward.
+
+---
+
+# Feature Category 7 — Community
+
+Podcast Audiences often enjoy collaborative learning.
+
+Possible features include:
+
+Episode discussions
+
+Community questions
+
+Recommended books
+
+Regional corrections
+
+Additional references
+
+Contributor acknowledgements
+
+Shared collections
+
+Expert commentary
+
+All community content should remain clearly distinguished from canonical knowledge.
+
+---
+
+# Feature Prioritization
+
+| Priority | Capability | Importance |
+|-----------|------------|------------|
+| P0 | Podcast Player | Critical |
+| P0 | Interactive Transcript | Critical |
+| P0 | Episode Knowledge Panel | Critical |
+| P0 | AI Episode Assistant | Critical |
+| P0 | Knowledge Graph Integration | Critical |
+| P1 | Timeline Generation | High |
+| P1 | Interactive Atlas | High |
+| P1 | Smart Bookmarks | High |
+| P1 | Personal Notes | High |
+| P1 | Learning Collections | High |
+| P2 | Community Discussion | Medium |
+| P2 | Collaborative Notes | Medium |
+| P2 | Offline Playback | Medium |
+| P3 | Voice Conversation with AI | Future |
+| P3 | Real-Time Podcast Annotation | Future |
+
+The overall objective is to ensure that podcast listening continuously expands into meaningful knowledge exploration.
+
+---
+
+# Key Metrics (KPIs)
+
+Success for the Podcast Audience should be evaluated by measuring how effectively listening leads to learning.
+
+---
+
+# Listening Metrics
+
+---
+
+## Episode Completion Rate
+
+Percentage of episodes listened to completion.
+
+Higher completion generally indicates engaging and well-structured content.
+
+---
+
+## Average Listening Duration
+
+Average listening time per session.
+
+Unlike entertainment metrics, longer listening should correlate with educational engagement.
+
+---
+
+## Resume Rate
+
+Percentage of interrupted sessions successfully resumed.
+
+Supports real-world multitasking behavior.
+
+---
+
+## Chapter Navigation Usage
+
+Frequency of chapter navigation.
+
+Indicates whether semantic chaptering improves usability.
+
+---
+
+# Knowledge Transition Metrics
+
+---
+
+## Audio-to-Article Conversion Rate
+
+Percentage of listeners opening related knowledge articles after listening.
+
+This is one of the platform's most important metrics.
+
+---
+
+## Knowledge Object Click Rate
+
+Average number of knowledge objects opened per episode.
+
+Measures curiosity generated by the podcast.
+
+---
+
+## Timeline Interaction Rate
+
+Percentage of listeners exploring generated timelines.
+
+---
+
+## Atlas Interaction Rate
+
+Percentage of listeners opening geographic views.
+
+---
+
+## Knowledge Graph Exploration Depth
+
+Average number of connected nodes explored after listening.
+
+Relationship exploration is a key indicator of successful learning.
+
+---
+
+# AI Metrics
+
+---
+
+## Episode AI Usage
+
+Percentage of listeners asking follow-up questions.
+
+---
+
+## AI Recommendation Acceptance
+
+Percentage of AI recommendations resulting in meaningful exploration.
+
+---
+
+## AI Summary Usage
+
+Frequency of generated summaries.
+
+Users may choose between quick summaries and detailed explanations.
+
+---
+
+## AI Citation Interaction
+
+Measures how often users inspect AI-provided sources.
+
+Transparency builds trust.
+
+---
+
+# Collection Metrics
+
+---
+
+## Bookmark Creation Rate
+
+Number of bookmarks created per listening session.
+
+---
+
+## Collection Growth
+
+Average number of knowledge objects added to collections.
+
+---
+
+## Personal Notes Created
+
+Measures deeper engagement with educational content.
+
+---
+
+## Returning Collection Usage
+
+Frequency of revisiting saved collections.
+
+Long-term reuse is more valuable than one-time interaction.
+
+---
+
+# Retention Metrics
+
+---
+
+## Weekly Active Podcast Learners
+
+Percentage of listeners returning weekly.
+
+---
+
+## Cross-Media Engagement
+
+Measures transitions between:
+
+Podcast
+
+↓
+
+Article
+
+↓
+
+Timeline
+
+↓
+
+Atlas
+
+↓
+
+Knowledge Graph
+
+↓
+
+AI
+
+Higher diversity indicates richer learning.
+
+---
+
+## Long-Term Learning Continuity
+
+Average number of consecutive weeks users continue learning through podcasts.
+
+---
+
+# North Star Metric
+
+The most important KPI for Podcast Audiences is:
+
+> **Knowledge Exploration Rate After Listening**
+
+Definition:
+
+The percentage of completed podcast sessions that lead to meaningful exploration of canonical knowledge within The Living Atlas.
+
+A successful journey looks like:
+
+```text
+Podcast Episode
+
+↓
+
+Knowledge Object
+
+↓
+
+Timeline
+
+↓
+
+Atlas
+
+↓
+
+Knowledge Graph
+
+↓
+
+Evidence
+
+↓
+
+Collection
+
+↓
+
+Return Visit
+```
+
+This metric reflects the platform's mission of transforming passive listening into active knowledge acquisition.
+
+---
+
+# Design Implications
+
+The Podcast Audience significantly influences the architecture of The Living Atlas.
+
+Their behavior demonstrates that learning is no longer confined to reading—it increasingly begins through conversation and audio.
+
+The platform should therefore be designed around the principle:
+
+> **Audio is a gateway to knowledge, not a separate product.**
+
+---
+
+# Product Design
+
+Podcast functionality should never exist as an isolated media feature.
+
+Instead, every episode should behave as another representation of canonical knowledge.
+
+Knowledge remains the primary asset.
+
+Media formats—including podcasts—are simply different ways of accessing it.
+
+---
+
+# User Experience Design
+
+The listening experience should feel:
+
+- uninterrupted,
+- contextual,
+- educational,
+- immersive,
+- discoverable,
+- synchronized across devices.
+
+Interactions during playback should remain lightweight, allowing users to continue listening while easily capturing important moments.
+
+---
+
+# Information Architecture
+
+Podcast episodes should connect directly to the platform's knowledge model.
+
+Relationships should include:
+
+- Stories
+- Historical Figures
+- Places
+- Cultures
+- Artifacts
+- Events
+- Timelines
+- Museums
+- Academic Sources
+- Related Episodes
+
+Episodes become navigational hubs within the broader knowledge ecosystem.
+
+---
+
+# Search Design
+
+Search should support conversational memory.
+
+Users may search using:
+
+- partially remembered names,
+- spoken phrases,
+- episode context,
+- themes,
+- approximate pronunciation,
+- natural language.
+
+The search engine should resolve ambiguity and guide users toward the correct knowledge object.
+
+---
+
+# Reading Experience
+
+Reading should complement listening rather than compete with it.
+
+Articles should provide:
+
+- concise summaries,
+- expandable explanations,
+- rich media,
+- contextual references,
+- interactive visualizations,
+- primary sources.
+
+The transition from listening to reading should feel seamless.
+
+---
+
+# AI Experience
+
+AI should operate as a persistent learning companion.
+
+Its responsibilities include:
+
+- explaining discussions,
+- summarizing episodes,
+- connecting related knowledge,
+- answering contextual questions,
+- generating personalized learning paths,
+- recommending additional exploration.
+
+Every AI response must remain grounded in canonical knowledge with transparent citations.
+
+---
+
+# Backend Implications
+
+The backend must support:
+
+- transcript indexing,
+- timestamp-to-knowledge mapping,
+- semantic chaptering,
+- cross-media synchronization,
+- recommendation services,
+- personalized collections,
+- listening history,
+- AI retrieval pipelines.
+
+Episodes should function as structured knowledge entities rather than static audio files.
+
+---
+
+# Analytics Implications
+
+Analytics should prioritize educational outcomes instead of consumption alone.
+
+Key indicators include:
+
+- audio-to-knowledge conversion,
+- relationship exploration,
+- article continuation,
+- AI engagement,
+- collection growth,
+- long-term retention,
+- knowledge diversity explored.
+
+These metrics better reflect the platform's mission than download counts or play duration.
+
+---
+
+# Future Evolution
+
+Podcast Audiences often evolve into highly engaged lifelong learners.
+
+A typical progression may resemble:
+
+```text
+Podcast Listener
+
+↓
+
+Knowledge Explorer
+
+↓
+
+History Enthusiast
+
+↓
+
+Collection Builder
+
+↓
+
+Community Contributor
+
+↓
+
+Research-Oriented Learner
+
+↓
+
+Knowledge Curator
+```
+
+This evolution demonstrates the transformative potential of audio-first education.
+
+Rather than remaining passive consumers, Podcast Audiences become active participants in preserving, understanding, and sharing humanity's cultural heritage.
+
+For The Living Atlas, the podcast experience is therefore not an endpoint—it is the beginning of an ever-expanding journey through interconnected knowledge.
+
+---
+
+# 2.4 Folklore Enthusiast
+
+---
+
+# Name
+
+**Folklore Enthusiast**
+
+---
+
+# Overview
+
+The **Folklore Enthusiast** represents individuals whose primary interest lies in the preservation, exploration, comparison, and understanding of folklore as a cultural heritage rather than as mere entertainment.
+
+Unlike the **Horror Fan**, whose curiosity is often initiated by supernatural narratives and emotional experiences, the Folklore Enthusiast is motivated by the richness of traditional stories, oral traditions, myths, legends, local beliefs, customs, symbols, rituals, and cultural identities.
+
+Their fascination extends far beyond ghosts or mystical beings.
+
+They seek to understand:
+
+- how stories evolve,
+- why communities preserve them,
+- what values they carry,
+- how different regions interpret similar narratives,
+- and what folklore reveals about human civilization.
+
+For them, folklore is one of humanity's oldest knowledge systems.
+
+---
+
+Folklore Enthusiasts frequently consume diverse forms of cultural material including:
+
+- oral traditions,
+- myths,
+- legends,
+- fairy tales,
+- epic literature,
+- indigenous knowledge,
+- traditional ceremonies,
+- symbolic practices,
+- local proverbs,
+- folk songs,
+- ritual performances,
+- historical storytelling.
+
+Their interests often span multiple countries and cultures.
+
+A single exploration may begin in Indonesia and naturally expand toward:
+
+- Malay folklore,
+- Japanese yokai,
+- Celtic mythology,
+- Slavic legends,
+- African oral traditions,
+- Native American storytelling,
+- Polynesian mythology,
+- Norse legends,
+- Greek mythology.
+
+The Living Atlas should support this naturally interconnected worldview.
+
+---
+
+Unlike casual readers, Folklore Enthusiasts rarely consume stories independently.
+
+Instead they continuously ask questions such as:
+
+> Where did this story originate?
+
+> Why does another region tell the same story differently?
+
+> Which historical event influenced this legend?
+
+> What cultural values are preserved inside this myth?
+
+> Which neighboring cultures share similar traditions?
+
+Curiosity is almost always relationship-driven.
+
+---
+
+One defining characteristic of this user group is appreciation for **variation**.
+
+Folklore rarely exists in a single authoritative version.
+
+Different villages, ethnic groups, families, religious traditions, and historical periods often preserve different versions of the same narrative.
+
+Rather than searching for one "correct" story, Folklore Enthusiasts want to understand:
+
+- variations,
+- evolution,
+- transmission,
+- adaptation,
+- cultural exchange.
+
+The Living Atlas should therefore preserve diversity instead of forcing canonical simplification.
+
+---
+
+Another important characteristic is respect for authenticity.
+
+Folklore Enthusiasts generally distinguish between:
+
+Traditional folklore
+
+↓
+
+Modern adaptations
+
+↓
+
+Commercial reinterpretations
+
+↓
+
+Popular entertainment
+
+They appreciate adaptations but do not want them to replace original traditions.
+
+The platform should clearly distinguish historical documentation from modern creative works.
+
+---
+
+Many Folklore Enthusiasts also become informal educators.
+
+They frequently:
+
+- tell stories to children,
+- organize community discussions,
+- participate in cultural events,
+- recommend books,
+- visit museums,
+- join heritage communities,
+- preserve local traditions.
+
+The Living Atlas should empower this educational role.
+
+---
+
+# Characteristics
+
+Folklore Enthusiasts share several defining characteristics.
+
+---
+
+## Culture-Oriented
+
+Their primary interest is culture itself.
+
+Stories are valuable because they preserve:
+
+beliefs,
+
+values,
+
+identity,
+
+memory,
+
+traditions,
+
+language,
+
+and worldview.
+
+Entertainment is secondary.
+
+---
+
+## Relationship Thinkers
+
+They naturally connect knowledge.
+
+For example:
+
+```text
+Legend
+
+↓
+
+Region
+
+↓
+
+Kingdom
+
+↓
+
+Religion
+
+↓
+
+Migration
+
+↓
+
+Trade Route
+
+↓
+
+Modern Community
+```
+
+Every story becomes part of a larger cultural network.
+
+---
+
+## Curious About Origins
+
+One of the most common questions is:
+
+> "Where did this come from?"
+
+Origin matters.
+
+Historical evolution matters.
+
+Transmission matters.
+
+---
+
+## Comfortable With Complexity
+
+Unlike casual audiences, Folklore Enthusiasts generally accept that:
+
+- multiple interpretations exist,
+- conflicting versions coexist,
+- historical evidence may be incomplete,
+- oral traditions evolve over generations.
+
+They value nuance over certainty.
+
+---
+
+## Comparative Learners
+
+Comparison is one of their primary learning strategies.
+
+Examples include:
+
+- Indonesian dragons vs Chinese dragons.
+- Nyi Roro Kidul vs sea goddesses from other cultures.
+- Rice goddess traditions across Southeast Asia.
+- Flood myths around the world.
+- Creation myths from different civilizations.
+
+The Living Atlas should make comparative exploration effortless.
+
+---
+
+## Preservation Mindset
+
+Many users feel personally responsible for protecting cultural heritage.
+
+They are motivated not only to consume knowledge but also to ensure that traditions survive for future generations.
+
+---
+
+# Primary Goals
+
+Folklore Enthusiasts visit The Living Atlas with goals centered on understanding and preserving traditional knowledge.
+
+---
+
+## Goal 1 — Explore Authentic Folklore
+
+Users seek trustworthy documentation of:
+
+- myths,
+- legends,
+- oral traditions,
+- folktales,
+- ceremonial narratives,
+- indigenous stories.
+
+Authenticity is more important than popularity.
+
+---
+
+## Goal 2 — Understand Cultural Meaning
+
+Stories are only the beginning.
+
+Users also want to understand:
+
+- symbolism,
+- rituals,
+- moral lessons,
+- social values,
+- historical significance,
+- religious influence,
+- environmental relationships.
+
+The Living Atlas should consistently expose these deeper layers.
+
+---
+
+## Goal 3 — Compare Regional Variants
+
+Folklore rarely exists in isolation.
+
+Users expect to compare:
+
+different villages,
+
+different islands,
+
+different ethnic groups,
+
+different historical periods,
+
+different countries.
+
+Comparative knowledge is one of the platform's strongest opportunities.
+
+---
+
+## Goal 4 — Discover Relationships
+
+Rather than consuming isolated stories, users want to understand how folklore connects with:
+
+- history,
+- archaeology,
+- anthropology,
+- language,
+- migration,
+- trade,
+- religion,
+- geography,
+- ecology.
+
+Knowledge relationships should be highly visible.
+
+---
+
+## Goal 5 — Preserve Cultural Heritage
+
+Many users are motivated by preservation.
+
+They hope future generations will continue to know:
+
+traditional stories,
+
+local customs,
+
+indigenous wisdom,
+
+ritual practices,
+
+traditional values,
+
+oral history.
+
+The platform should reinforce this mission.
+
+---
+
+## Goal 6 — Share Knowledge
+
+Folklore Enthusiasts often introduce traditional stories to:
+
+children,
+
+students,
+
+friends,
+
+communities,
+
+online audiences,
+
+research groups.
+
+They value tools that support responsible sharing.
+
+---
+
+# Success Definition
+
+A Folklore Enthusiast succeeds when they leave the platform with a deeper understanding of both the stories themselves and the cultures that created them.
+
+A successful experience enables them to:
+
+- discover authentic folklore,
+- understand historical origins,
+- compare multiple traditions,
+- explore cultural relationships,
+- appreciate regional diversity,
+- identify reliable sources,
+- continue learning through connected knowledge.
+
+Success is measured by expanded cultural understanding rather than the number of stories consumed.
+
+---
+
+## Platform Success
+
+The Living Atlas succeeds for this persona when users:
+
+- regularly explore new cultural traditions,
+- compare folklore across regions,
+- revisit collections over time,
+- trust the editorial process,
+- contribute local knowledge,
+- recommend the platform to other heritage enthusiasts,
+- use it as a long-term cultural reference.
+
+The ultimate success is achieved when The Living Atlas becomes the preferred destination for anyone seeking to understand the world's folklore as living cultural knowledge rather than isolated tales.
+
+---
+
+# Pain Points
+
+Despite their passion, Folklore Enthusiasts face numerous obstacles when attempting to study traditional knowledge in depth.
+
+---
+
+## Fragmented Information
+
+Folklore is scattered across:
+
+- books,
+- museums,
+- oral traditions,
+- academic journals,
+- documentaries,
+- blogs,
+- local communities,
+- personal collections.
+
+Finding comprehensive information requires significant effort.
+
+---
+
+## Loss Of Cultural Context
+
+Many modern publications retell stories without explaining:
+
+historical background,
+
+traditional beliefs,
+
+ritual significance,
+
+community practices,
+
+symbolic meaning.
+
+Without context, folklore becomes disconnected from its cultural roots.
+
+---
+
+## Entertainment Bias
+
+Popular media often prioritize dramatic storytelling over authenticity.
+
+Folklore is frequently simplified, sensationalized, or modified for commercial appeal.
+
+Users struggle to distinguish between:
+
+traditional versions,
+
+modern adaptations,
+
+fictional reinterpretations.
+
+---
+
+## Limited Comparative Resources
+
+Very few platforms allow users to compare:
+
+regional variants,
+
+historical evolution,
+
+shared motifs,
+
+cross-cultural influences,
+
+symbolic similarities.
+
+Comparison often requires consulting numerous independent sources.
+
+---
+
+## Inconsistent Documentation
+
+Different publications may:
+
+contradict each other,
+
+omit sources,
+
+lack citations,
+
+ignore regional diversity,
+
+or oversimplify oral traditions.
+
+Evaluating reliability becomes difficult.
+
+---
+
+## Declining Oral Traditions
+
+Many stories are preserved only through aging storytellers.
+
+Without systematic documentation, valuable cultural knowledge risks disappearing permanently.
+
+---
+
+# Knowledge Level
+
+Folklore Enthusiasts generally possess an **intermediate to advanced** understanding of traditional culture.
+
+Their expertise varies by region and personal interests but often exceeds that of casual readers.
+
+---
+
+## Typical Knowledge Profile
+
+Most users are already familiar with:
+
+- major myths,
+- well-known legends,
+- iconic folklore figures,
+- famous rituals,
+- regional traditions,
+- commonly discussed cultural themes.
+
+However, they often seek deeper knowledge regarding:
+
+- historical transmission,
+- manuscript traditions,
+- linguistic evolution,
+- archaeological evidence,
+- anthropological interpretation,
+- comparative mythology,
+- cultural diffusion,
+- editorial confidence.
+
+Their curiosity continually expands rather than reaches a fixed endpoint.
+
+---
+
+## Expected Learning Progression
+
+The Living Atlas should support a gradual evolution.
+
+```text
+Folklore Enthusiast
+
+↓
+
+Regional Explorer
+
+↓
+
+Comparative Learner
+
+↓
+
+Cultural Preservation Advocate
+
+↓
+
+Knowledge Collector
+
+↓
+
+Community Contributor
+
+↓
+
+Independent Researcher
+
+↓
+
+Cultural Knowledge Curator
+```
+
+The platform should encourage users to move beyond consuming folklore toward actively preserving and enriching humanity's shared cultural memory.
+
+---
+
+# Typical Workflow
+
+The workflow of a Folklore Enthusiast is driven by curiosity, comparison, and cultural understanding rather than simple content consumption.
+
+Unlike Readers, whose journey often ends after reading an article, or Horror Fans, whose primary objective may be entertainment, Folklore Enthusiasts continuously move from one piece of knowledge to another, gradually constructing a broader understanding of traditions, cultures, and civilizations.
+
+Their workflow is iterative rather than linear.
+
+Every answer usually generates several new questions.
+
+The Living Atlas should therefore be designed around the philosophy:
+
+> **Discover → Understand → Compare → Connect → Preserve → Share**
+
+The platform should encourage continuous exploration rather than isolated reading sessions.
+
+---
+
+# High-Level Workflow
+
+```text
+Discover Story
+
+↓
+
+Read Story Overview
+
+↓
+
+Understand Cultural Context
+
+↓
+
+Explore Historical Background
+
+↓
+
+Compare Regional Variants
+
+↓
+
+Explore Related Traditions
+
+↓
+
+Study Connected Cultures
+
+↓
+
+Review Sources & Evidence
+
+↓
+
+Save Collection
+
+↓
+
+Share or Continue Exploration
+```
+
+Knowledge exploration should feel like navigating an interconnected cultural landscape instead of browsing disconnected articles.
+
+---
+
+# Stage 1 — Discovery
+
+Most journeys begin through an initial point of curiosity.
+
+Discovery sources include:
+
+- Search engines
+- Social media
+- Podcasts
+- Books
+- Museums
+- Academic references
+- Community discussions
+- Family storytelling
+- Travel experiences
+- AI recommendations
+- Related knowledge suggestions
+
+Unlike Researchers, Folklore Enthusiasts rarely begin with a formal research question.
+
+Instead, curiosity naturally emerges from stories they encounter.
+
+---
+
+# Stage 2 — Story Exploration
+
+Users first read a concise overview.
+
+Typical questions include:
+
+- What is this story?
+- Who are the main characters?
+- Where did it originate?
+- Which community tells this story?
+- Is this myth, legend, or oral tradition?
+
+At this stage users establish a basic understanding before exploring deeper cultural relationships.
+
+---
+
+# Stage 3 — Cultural Understanding
+
+Once familiar with the story, attention shifts toward its cultural meaning.
+
+Users begin asking:
+
+Why is this story important?
+
+What values does it teach?
+
+Which traditions preserve it?
+
+How is it practiced today?
+
+Which ceremonies are associated with it?
+
+This stage transforms storytelling into cultural learning.
+
+---
+
+# Stage 4 — Historical Exploration
+
+Folklore rarely develops independently.
+
+Users naturally investigate:
+
+Historical period
+
+↓
+
+Political environment
+
+↓
+
+Religious influence
+
+↓
+
+Migration
+
+↓
+
+Trade
+
+↓
+
+Language evolution
+
+↓
+
+Social change
+
+Stories become historical entry points.
+
+---
+
+# Stage 5 — Comparative Exploration
+
+One defining characteristic of Folklore Enthusiasts is comparison.
+
+Typical comparisons include:
+
+```text
+Story
+
+↓
+
+Regional Variant
+
+↓
+
+Neighboring Culture
+
+↓
+
+Shared Motifs
+
+↓
+
+Historical Differences
+
+↓
+
+Modern Interpretation
+```
+
+Comparison strengthens cultural understanding while preserving regional diversity.
+
+---
+
+# Stage 6 — Knowledge Relationship Exploration
+
+Rather than stopping after one article, users continue following relationships.
+
+Example:
+
+```text
+Malin Kundang
+
+↓
+
+West Sumatra
+
+↓
+
+Minangkabau
+
+↓
+
+Matrilineal Culture
+
+↓
+
+Maritime Trade
+
+↓
+
+Oral Tradition
+
+↓
+
+Related Legends
+```
+
+Every knowledge object becomes another gateway into the Living Atlas.
+
+---
+
+# Stage 7 — Source Verification
+
+Folklore Enthusiasts often examine supporting evidence.
+
+Typical activities include:
+
+Reading manuscripts
+
+Reviewing academic papers
+
+Checking museum collections
+
+Comparing oral traditions
+
+Viewing archaeological findings
+
+Examining editorial notes
+
+Understanding evidence increases confidence.
+
+---
+
+# Stage 8 — Knowledge Organization
+
+Interesting discoveries are organized into personal collections.
+
+Examples include:
+
+Sea Legends
+
+↓
+
+Rice Goddess Traditions
+
+↓
+
+Mountain Spirits
+
+↓
+
+Creation Myths
+
+↓
+
+Traditional Heroes
+
+↓
+
+Sacred Forests
+
+Collections evolve into personal cultural libraries.
+
+---
+
+# Stage 9 — Sharing & Preservation
+
+Many users conclude by sharing knowledge.
+
+Possible activities include:
+
+Discussing with communities
+
+Teaching children
+
+Writing articles
+
+Creating videos
+
+Planning museum visits
+
+Organizing cultural events
+
+Recommending stories
+
+Knowledge preservation naturally extends beyond the platform.
+
+---
+
+# Daily Activities
+
+Folklore Enthusiasts usually engage with cultural knowledge consistently rather than only during dedicated study sessions.
+
+Their activities are diverse and often connected to broader cultural interests.
+
+---
+
+# Morning
+
+Morning sessions are generally brief.
+
+Activities include:
+
+Reading newly published stories
+
+Checking recommended knowledge
+
+Saving interesting articles
+
+Reviewing collections
+
+Reading daily cultural highlights
+
+Sessions usually last:
+
+10–20 minutes.
+
+---
+
+# Afternoon
+
+Afternoon engagement is often triggered by work or study.
+
+Activities may include:
+
+Searching for specific traditions
+
+Reading historical context
+
+Comparing folklore
+
+Reviewing references
+
+Discussing stories online
+
+Many users discover new topics through external conversations.
+
+---
+
+# Evening
+
+Evening represents the deepest exploration period.
+
+Typical activities include:
+
+Reading complete stories
+
+Studying cultural relationships
+
+Exploring timelines
+
+Viewing interactive maps
+
+Investigating historical figures
+
+Following Knowledge Graph connections
+
+Watching supporting media
+
+Asking AI questions
+
+Sessions commonly range from:
+
+30–90 minutes.
+
+---
+
+# Weekend
+
+Weekend sessions often become long-form cultural exploration.
+
+Activities include:
+
+Reading multiple related stories
+
+Comparing regional traditions
+
+Researching indigenous cultures
+
+Planning travel destinations
+
+Exploring museum collections
+
+Studying archaeological findings
+
+Organizing personal collections
+
+Some users spend several hours exploring interconnected knowledge.
+
+---
+
+# Long-Term Activities
+
+Over months or years, users naturally develop specialized interests.
+
+Examples include:
+
+Indonesian folklore
+
+↓
+
+Malay traditions
+
+↓
+
+Southeast Asian mythology
+
+↓
+
+Comparative mythology
+
+↓
+
+Oral history
+
+↓
+
+Traditional ceremonies
+
+↓
+
+Indigenous cultures
+
+↓
+
+Global folklore
+
+The platform should support increasingly sophisticated learning journeys.
+
+---
+
+# Discovery Journey
+
+Discovery for Folklore Enthusiasts is relationship-driven rather than keyword-driven.
+
+They rarely seek only one story.
+
+Instead, every discovery expands into an interconnected exploration of culture, history, and society.
+
+---
+
+# Discovery Philosophy
+
+Discovery follows several core principles.
+
+---
+
+## Stories Lead To Culture
+
+Users may initially search for a story.
+
+However, they ultimately seek to understand the culture behind that story.
+
+Stories function as cultural gateways.
+
+---
+
+## Context Creates Understanding
+
+Every folklore narrative should expose:
+
+Historical context
+
+↓
+
+Geographic context
+
+↓
+
+Social context
+
+↓
+
+Religious context
+
+↓
+
+Linguistic context
+
+↓
+
+Cultural context
+
+Context transforms entertainment into education.
+
+---
+
+## Comparison Generates Insight
+
+One story becomes more meaningful when viewed alongside similar traditions.
+
+The Living Atlas should encourage comparative discovery rather than isolated reading.
+
+---
+
+## Relationships Encourage Exploration
+
+Knowledge should continuously connect users toward:
+
+People
+
+Places
+
+Artifacts
+
+Events
+
+Communities
+
+Languages
+
+Religions
+
+Traditional practices
+
+The richer the relationships, the more valuable the platform becomes.
+
+---
+
+## Preservation Through Discovery
+
+Every newly discovered tradition contributes to preserving cultural heritage.
+
+Learning itself becomes an act of preservation.
+
+---
+
+# Discovery Entry Points
+
+Folklore Enthusiasts commonly begin exploration through several paths.
+
+---
+
+## Story-Based Discovery
+
+```text
+Legend
+
+↓
+
+Story Page
+
+↓
+
+Historical Context
+
+↓
+
+Regional Variants
+
+↓
+
+Knowledge Graph
+
+↓
+
+Related Traditions
+```
+
+---
+
+## Region-Based Discovery
+
+```text
+Province
+
+↓
+
+Traditional Culture
+
+↓
+
+Folklore
+
+↓
+
+Language
+
+↓
+
+Historical Kingdom
+
+↓
+
+Related Communities
+```
+
+---
+
+## Theme-Based Discovery
+
+```text
+Water Spirits
+
+↓
+
+Sea Legends
+
+↓
+
+Coastal Communities
+
+↓
+
+Fishing Rituals
+
+↓
+
+Maritime Trade
+
+↓
+
+Related Beliefs
+```
+
+---
+
+## Historical Discovery
+
+```text
+Ancient Kingdom
+
+↓
+
+Historical Events
+
+↓
+
+Folklore
+
+↓
+
+Cultural Development
+
+↓
+
+Modern Traditions
+```
+
+---
+
+## AI-Assisted Discovery
+
+Users may ask:
+
+> Show similar stories from other islands.
+
+↓
+
+AI Suggestions
+
+↓
+
+Knowledge Graph
+
+↓
+
+Comparative Reading
+
+↓
+
+Atlas
+
+↓
+
+Timeline
+
+↓
+
+Further Exploration
+
+AI should accelerate cultural discovery while remaining grounded in canonical knowledge.
+
+---
+
+# Discovery Success
+
+Discovery succeeds when users leave the platform with a broader understanding than the single story they originally intended to explore.
+
+The ideal journey resembles:
+
+```text
+Story
+
+↓
+
+Culture
+
+↓
+
+History
+
+↓
+
+Region
+
+↓
+
+People
+
+↓
+
+Traditions
+
+↓
+
+Knowledge Graph
+
+↓
+
+Evidence
+
+↓
+
+Collections
+
+↓
+
+Lifelong Learning
+```
+
+Every exploration should naturally reveal additional connections, demonstrating that folklore is not merely a collection of isolated tales but part of a vast and interconnected network of human civilization.
+
+The Living Atlas should make every story feel like the entrance to an ever-expanding cultural atlas rather than the endpoint of a reading session.
+
+---
+
+# Search Behaviour
+
+Folklore Enthusiasts exhibit one of the richest search behaviors among all user groups.
+
+Unlike Readers who primarily search for information, or Horror Fans who often search for entertainment-driven topics, Folklore Enthusiasts search to construct a complete understanding of culture.
+
+Their searches are rarely isolated.
+
+Instead, every search becomes the starting point for a network of connected discoveries.
+
+Their search pattern typically follows:
+
+```text
+Question
+
+↓
+
+Story
+
+↓
+
+Culture
+
+↓
+
+History
+
+↓
+
+Relationships
+
+↓
+
+Comparison
+
+↓
+
+Evidence
+
+↓
+
+New Questions
+```
+
+Search should therefore function as a knowledge exploration engine rather than a document retrieval system.
+
+---
+
+# Search Philosophy
+
+Search for Folklore Enthusiasts should support five objectives:
+
+- Discover authentic folklore.
+- Understand cultural context.
+- Compare traditions.
+- Explore relationships.
+- Continue lifelong learning.
+
+The platform should encourage curiosity instead of merely returning search results.
+
+---
+
+# Search Motivation
+
+Users usually search because they want to answer broader cultural questions.
+
+---
+
+## 1. Discover Traditional Stories
+
+The most common searches involve finding folklore itself.
+
+Examples:
+
+> Stories from West Sumatra
+
+> Legends from Kalimantan
+
+> Dayak mythology
+
+> Acehnese folklore
+
+> Balinese traditional stories
+
+Users expect complete cultural collections rather than isolated articles.
+
+---
+
+## 2. Understand Origins
+
+Many searches focus on origins.
+
+Examples:
+
+> Where did this legend originate?
+
+> Oldest version of this story
+
+> Historical source
+
+> Original manuscript
+
+> Earliest documentation
+
+Origin information significantly increases trust.
+
+---
+
+## 3. Compare Variants
+
+Comparison is one of the defining behaviors of this user group.
+
+Examples:
+
+> Malin Kundang vs Si Tanggang
+
+> Flood myths around Southeast Asia
+
+> Rice goddess traditions
+
+> Dragon legends in Asia
+
+> Sea spirit folklore
+
+Search should recognize comparative intent automatically.
+
+---
+
+## 4. Explore Themes
+
+Many users think thematically rather than geographically.
+
+Examples:
+
+Mountain myths
+
+↓
+
+Water spirits
+
+↓
+
+Ancestor worship
+
+↓
+
+Sacred forests
+
+↓
+
+Creation myths
+
+↓
+
+Hero legends
+
+↓
+
+Transformation stories
+
+Theme-based exploration often leads to unexpected discoveries.
+
+---
+
+## 5. Verify Authenticity
+
+Users frequently distinguish between:
+
+Traditional folklore
+
+↓
+
+Modern adaptation
+
+↓
+
+Popular fiction
+
+↓
+
+Commercial reinterpretation
+
+Search results should clearly identify editorial confidence and cultural authenticity.
+
+---
+
+# Search Style
+
+Folklore Enthusiasts use multiple search styles.
+
+---
+
+## Natural Language
+
+Examples:
+
+> Stories about sacred mountains.
+
+> Traditional legends from Sulawesi.
+
+> Myths explaining volcanic eruptions.
+
+Natural language should always be supported.
+
+---
+
+## Cultural Search
+
+Examples:
+
+Minangkabau
+
+Batak
+
+Toraja
+
+Baduy
+
+Maori
+
+Ainu
+
+Celtic
+
+Maya
+
+Search should understand cultures as first-class entities.
+
+---
+
+## Geographic Search
+
+Examples:
+
+West Java
+
+↓
+
+Bali
+
+↓
+
+Papua
+
+↓
+
+Borneo
+
+↓
+
+Southeast Asia
+
+↓
+
+Oceania
+
+↓
+
+Europe
+
+↓
+
+Africa
+
+Geographic exploration frequently expands into cultural exploration.
+
+---
+
+## Relationship Search
+
+Users often search using relationships.
+
+Examples:
+
+Stories connected to Borobudur
+
+↓
+
+Traditions influenced by Hinduism
+
+↓
+
+Legends from Majapahit
+
+↓
+
+Folklore about volcanoes
+
+↓
+
+Stories involving sea spirits
+
+Relationship search should be one of the platform's strengths.
+
+---
+
+# Search Filters
+
+Useful filters include:
+
+Story Type
+
+Culture
+
+Region
+
+Historical Period
+
+Kingdom
+
+Language
+
+Ethnic Group
+
+Tradition
+
+Theme
+
+Belief System
+
+Artifact
+
+Evidence Level
+
+Editorial Confidence
+
+Search filters should reflect knowledge rather than database structure.
+
+---
+
+# Search Result Expectations
+
+Every result should immediately communicate:
+
+## What Is It?
+
+A concise explanation.
+
+---
+
+## Why Is It Important?
+
+Explain cultural significance.
+
+---
+
+## Where Does It Come From?
+
+Display:
+
+Region
+
+Community
+
+Historical period
+
+Language
+
+Source
+
+---
+
+## Related Knowledge
+
+Show immediate relationships.
+
+Examples:
+
+Related stories
+
+↓
+
+Related cultures
+
+↓
+
+Timeline
+
+↓
+
+Atlas
+
+↓
+
+Knowledge Graph
+
+↓
+
+Artifacts
+
+↓
+
+Academic references
+
+---
+
+## Editorial Confidence
+
+Users appreciate transparency.
+
+Possible indicators:
+
+Strong historical evidence
+
+↓
+
+Well documented
+
+↓
+
+Multiple oral traditions
+
+↓
+
+Limited evidence
+
+↓
+
+Modern interpretation
+
+Confidence improves trust.
+
+---
+
+# Search Success Definition
+
+Search succeeds when users:
+
+- discover authentic traditions,
+- understand cultural context,
+- compare multiple perspectives,
+- continue exploration,
+- trust editorial quality,
+- expand their understanding of human culture.
+
+The goal is to encourage continuous cultural discovery rather than one-time information retrieval.
+
+---
+
+# Reading Behaviour
+
+Reading for Folklore Enthusiasts is immersive, exploratory, and highly contextual.
+
+Unlike casual Readers who may stop after understanding a story, Folklore Enthusiasts continuously expand outward from one narrative into broader cultural systems.
+
+Reading sessions often resemble cultural journeys.
+
+---
+
+# Reading Philosophy
+
+Stories introduce.
+
+Culture explains.
+
+History contextualizes.
+
+Relationships connect.
+
+Evidence validates.
+
+Reading should naturally follow this progression.
+
+---
+
+# Typical Reading Flow
+
+```text
+Story Overview
+
+↓
+
+Narrative
+
+↓
+
+Cultural Meaning
+
+↓
+
+Historical Background
+
+↓
+
+Regional Variants
+
+↓
+
+Timeline
+
+↓
+
+Knowledge Graph
+
+↓
+
+Evidence
+
+↓
+
+Primary Sources
+
+↓
+
+Related Reading
+```
+
+Every section should encourage deeper exploration.
+
+---
+
+# Reading Style
+
+Folklore Enthusiasts enjoy layered reading.
+
+Preferred order:
+
+Quick Summary
+
+↓
+
+Complete Story
+
+↓
+
+Cultural Analysis
+
+↓
+
+Historical Context
+
+↓
+
+Regional Comparison
+
+↓
+
+Anthropological Discussion
+
+↓
+
+Primary Sources
+
+↓
+
+Academic References
+
+This aligns perfectly with the platform's progressive disclosure philosophy.
+
+---
+
+# Long Reading Sessions
+
+Many users spend significant time reading interconnected articles.
+
+Typical session:
+
+45–120 minutes.
+
+Common behavior includes:
+
+Opening numerous tabs,
+
+following Knowledge Graph links,
+
+comparing multiple traditions,
+
+reading references,
+
+exploring maps,
+
+reviewing timelines.
+
+The platform should optimize for sustained exploration.
+
+---
+
+# Preferred Reading Elements
+
+Highly valued components include:
+
+- Story variants
+- Historical maps
+- Cultural photographs
+- Ritual descriptions
+- Audio pronunciation
+- Indigenous language terms
+- Knowledge Graph visualizations
+- Timeline visualizations
+- Artifact galleries
+- Manuscript images
+- Oral tradition recordings
+- Editorial notes
+
+Rich contextual information greatly enhances engagement.
+
+---
+
+# Reading Retention
+
+Folklore Enthusiasts frequently revisit articles.
+
+Typical reasons include:
+
+Teaching
+
+Writing
+
+Content creation
+
+Research
+
+Travel planning
+
+Museum visits
+
+Community events
+
+Personal interest
+
+Reading history and saved collections should therefore remain easily accessible.
+
+---
+
+# Reading Success
+
+Reading succeeds when users move beyond remembering a story to understanding the civilization that produced it.
+
+Success is achieved when they appreciate not only the narrative but also its historical, cultural, social, linguistic, and symbolic significance.
+
+---
+
+# Content Contribution
+
+Folklore Enthusiasts represent one of the platform's most valuable contributor communities.
+
+Many possess local knowledge unavailable in books or academic publications.
+
+The Living Atlas should empower them while preserving rigorous editorial standards.
+
+---
+
+# Community Contributions
+
+Users frequently contribute:
+
+Local story variants
+
+↓
+
+Regional terminology
+
+↓
+
+Traditional pronunciation
+
+↓
+
+Festival documentation
+
+↓
+
+Photographs
+
+↓
+
+Oral history
+
+↓
+
+Community practices
+
+↓
+
+Historical corrections
+
+These contributions enrich canonical knowledge after verification.
+
+---
+
+# Knowledge Preservation
+
+Many users actively document traditions that risk disappearing.
+
+Possible contributions include:
+
+Village folklore
+
+↓
+
+Family traditions
+
+↓
+
+Local rituals
+
+↓
+
+Traditional songs
+
+↓
+
+Ceremonial practices
+
+↓
+
+Storytelling recordings
+
+↓
+
+Indigenous language terms
+
+The platform should facilitate responsible cultural preservation.
+
+---
+
+# Editorial Collaboration
+
+Advanced contributors may evolve into trusted collaborators.
+
+Possible roles include:
+
+Regional reviewer
+
+↓
+
+Folklore curator
+
+↓
+
+Community liaison
+
+↓
+
+Translation contributor
+
+↓
+
+Source verifier
+
+↓
+
+Knowledge editor
+
+Every contribution remains subject to transparent editorial review.
+
+---
+
+# Contribution Workflow
+
+```text
+Community Submission
+
+↓
+
+Editorial Review
+
+↓
+
+Evidence Verification
+
+↓
+
+Expert Consultation
+
+↓
+
+Version Creation
+
+↓
+
+Publication
+
+↓
+
+Contributor Attribution
+```
+
+The workflow ensures both openness and quality.
+
+---
+
+# Contribution Success
+
+Contribution succeeds when community knowledge strengthens the platform without compromising authenticity, transparency, or editorial integrity.
+
+Users should feel that their cultural heritage is respected, accurately represented, and preserved for future generations.
+
+---
+
+# AI Usage
+
+Folklore Enthusiasts expect AI to function as an intelligent cultural guide rather than a storytelling generator.
+
+Their objective is not simply to hear another version of a story—they want deeper understanding grounded in trustworthy knowledge.
+
+AI should accelerate discovery while remaining faithful to canonical information.
+
+---
+
+# Primary AI Roles
+
+For this persona, AI serves as:
+
+- Cultural Guide
+- Comparative Assistant
+- Knowledge Navigator
+- Historical Explainer
+- Relationship Explorer
+- Research Assistant
+- Preservation Companion
+
+AI complements human expertise rather than replacing it.
+
+---
+
+# Typical AI Questions
+
+Examples include:
+
+> Compare this legend with similar stories from other islands.
+
+> Explain the symbolism of this ritual.
+
+> Show every version of this folklore.
+
+> Why do these communities tell different stories?
+
+> Which historical events influenced this myth?
+
+> Which manuscripts document this tradition?
+
+> Show related indigenous beliefs.
+
+These questions demonstrate a desire for depth rather than quick answers.
+
+---
+
+# AI Expectations
+
+Users expect AI to:
+
+- explain complex cultural concepts,
+- compare traditions objectively,
+- reveal hidden relationships,
+- summarize academic discussions,
+- identify reliable sources,
+- recommend further exploration,
+- preserve cultural nuance,
+- acknowledge uncertainty when evidence is limited.
+
+AI should never fabricate missing historical information.
+
+---
+
+# Explainability
+
+Every AI-generated explanation should expose:
+
+Canonical knowledge used
+
+↓
+
+Primary sources
+
+↓
+
+Editorial references
+
+↓
+
+Alternative interpretations
+
+↓
+
+Evidence confidence
+
+↓
+
+Related knowledge objects
+
+Transparency is essential when discussing cultural heritage.
+
+---
+
+# Personalization
+
+Over time AI should understand user interests such as:
+
+favorite cultures,
+
+favorite regions,
+
+preferred folklore themes,
+
+reading depth,
+
+favorite historical periods,
+
+museum interests,
+
+research preferences.
+
+However, recommendations should continue exposing users to unfamiliar cultures rather than reinforcing narrow interests.
+
+---
+
+# Future AI Capabilities
+
+Potential future features include:
+
+- Comparative folklore analysis.
+- Cross-cultural motif discovery.
+- Oral tradition visualization.
+- AI-generated relationship maps.
+- Story evolution timelines.
+- Ritual explanation assistant.
+- Indigenous language pronunciation support.
+- Personalized cultural learning paths.
+- Museum itinerary generation.
+- Research recommendation engine.
+
+These capabilities strengthen exploration while remaining grounded in verified knowledge.
+
+---
+
+# AI Success Definition
+
+AI succeeds when Folklore Enthusiasts gain a broader, more nuanced understanding of traditional culture without losing sight of authenticity and evidence.
+
+The ideal learning journey becomes:
+
+```text
+Folklore
+
+↓
+
+AI Explanation
+
+↓
+
+Cultural Context
+
+↓
+
+Historical Background
+
+↓
+
+Regional Variants
+
+↓
+
+Knowledge Graph
+
+↓
+
+Evidence
+
+↓
+
+Primary Sources
+
+↓
+
+Long-Term Cultural Understanding
+```
+
+Ultimately, AI should inspire users to explore further—not replace the stories, communities, scholars, or traditions that give folklore its enduring meaning.
+
+For The Living Atlas, AI is not the storyteller.
+
+It is the knowledgeable guide that helps users navigate humanity's vast and interconnected cultural heritage.
+
+---
+
+# Expected Features
+
+The Folklore Enthusiast expects far more than a digital library of traditional stories.
+
+They expect an interconnected knowledge platform capable of explaining not only *what* a story is, but also *why* it exists, *how* it evolved, *who* preserved it, and *what relationships* it shares with the wider cultural landscape.
+
+Unlike casual audiences, they value **depth over quantity**, **relationships over isolation**, and **authenticity over entertainment**.
+
+Every feature should reinforce the following learning philosophy:
+
+```text
+Story
+
+↓
+
+Context
+
+↓
+
+Culture
+
+↓
+
+History
+
+↓
+
+Comparison
+
+↓
+
+Evidence
+
+↓
+
+Preservation
+```
+
+---
+
+# Feature Category 1 — Story Exploration
+
+The storytelling experience should go far beyond displaying narrative text.
+
+Every folklore page should become a complete knowledge hub.
+
+---
+
+## Canonical Story Page
+
+Each folklore entry should include:
+
+- Story overview
+- Full narrative
+- Story type
+- Origin region
+- Community
+- Traditional language
+- Historical background
+- Cultural meaning
+- Symbolism
+- Moral values
+- Modern relevance
+
+The page should function as the definitive knowledge object for that tradition.
+
+---
+
+## Story Variants
+
+Because folklore naturally evolves, every story should preserve multiple documented versions.
+
+Example:
+
+```text
+Malin Kundang
+
+↓
+
+West Sumatra Version
+
+↓
+
+Riau Version
+
+↓
+
+Malay Version
+
+↓
+
+Academic Reconstruction
+
+↓
+
+Modern Adaptation
+```
+
+Users should clearly understand that multiple authentic traditions may coexist.
+
+---
+
+## Oral Tradition Archive
+
+Whenever available, stories should include:
+
+- Audio recordings
+- Local storytellers
+- Traditional narration
+- Indigenous pronunciation
+- Regional dialects
+- Community documentation
+
+This preserves not only stories, but also the way communities tell them.
+
+---
+
+## Story Evolution
+
+Users should be able to understand how a story changed over time.
+
+Possible timeline:
+
+```text
+Oral Tradition
+
+↓
+
+Earliest Manuscript
+
+↓
+
+Colonial Documentation
+
+↓
+
+Modern Publication
+
+↓
+
+Contemporary Adaptation
+```
+
+Story evolution becomes part of cultural history.
+
+---
+
+# Feature Category 2 — Cultural Context
+
+Stories should always be accompanied by their cultural ecosystem.
+
+---
+
+## Cultural Context Panel
+
+Each story should explain:
+
+- Cultural background
+- Religious influence
+- Social function
+- Traditional beliefs
+- Ritual connection
+- Community identity
+- Historical significance
+
+Understanding culture is more important than memorizing plot.
+
+---
+
+## Traditional Practices
+
+Whenever applicable, users should discover:
+
+- Ceremonies
+- Festivals
+- Performances
+- Songs
+- Dances
+- Sacred locations
+- Traditional clothing
+- Ritual objects
+
+Folklore should never become detached from living tradition.
+
+---
+
+## Symbolism Explorer
+
+Every major symbol should be documented.
+
+Examples:
+
+Dragon
+
+↓
+
+Water
+
+↓
+
+Mountain
+
+↓
+
+Tree
+
+↓
+
+Snake
+
+↓
+
+Rice
+
+↓
+
+Ocean
+
+↓
+
+Ancestor
+
+↓
+
+Fire
+
+Users should understand how symbols differ across cultures.
+
+---
+
+# Feature Category 3 — Relationship Discovery
+
+Relationships are the defining strength of The Living Atlas.
+
+---
+
+## Knowledge Graph
+
+Every folklore object should connect with:
+
+- Historical figures
+- Places
+- Kingdoms
+- Traditions
+- Artifacts
+- Languages
+- Rituals
+- Books
+- Museums
+- Academic papers
+
+Knowledge relationships should be immediately visible.
+
+---
+
+## Comparative View
+
+Users should compare:
+
+Story A
+
+↓
+
+Story B
+
+↓
+
+Shared Themes
+
+↓
+
+Differences
+
+↓
+
+Historical Influence
+
+↓
+
+Regional Context
+
+↓
+
+Evidence
+
+Comparison should become one of the platform's signature capabilities.
+
+---
+
+## Related Knowledge
+
+Automatically recommend:
+
+Similar stories
+
+↓
+
+Neighboring cultures
+
+↓
+
+Historical events
+
+↓
+
+Artifacts
+
+↓
+
+Museums
+
+↓
+
+Research
+
+↓
+
+Podcasts
+
+↓
+
+Videos
+
+↓
+
+Collections
+
+Discovery should remain continuous.
+
+---
+
+# Feature Category 4 — Geographic Experience
+
+Folklore is deeply connected to place.
+
+---
+
+## Interactive Atlas
+
+Every story should appear geographically.
+
+Possible exploration:
+
+```text
+Indonesia
+
+↓
+
+Province
+
+↓
+
+Regency
+
+↓
+
+Village
+
+↓
+
+Sacred Site
+
+↓
+
+Traditional Community
+
+↓

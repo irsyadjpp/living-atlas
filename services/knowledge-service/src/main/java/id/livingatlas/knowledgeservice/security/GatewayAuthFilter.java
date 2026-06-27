@@ -1,6 +1,6 @@
 package id.livingatlas.knowledgeservice.security;
 
-import jakarta.servlet.*;
+import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Configuration;
@@ -21,12 +21,12 @@ public class GatewayAuthFilter extends OncePerRequestFilter {
     @Override
     protected boolean shouldNotFilter(HttpServletRequest request) {
         String path = request.getRequestURI();
-        return path.startsWith("/api-docs") || 
-               path.startsWith("/v3/api-docs") || 
-               path.startsWith("/swagger-ui") || 
-               path.startsWith("/swagger-resources") ||
-               path.equals("/swagger-ui.html") ||
-               path.startsWith("/actuator/health");
+        return path.startsWith("/api-docs") ||
+                path.startsWith("/v3/api-docs") ||
+                path.startsWith("/swagger-ui") ||
+                path.startsWith("/swagger-resources") ||
+                path.equals("/swagger-ui.html") ||
+                path.startsWith("/actuator/health");
     }
 
     @Override
@@ -45,18 +45,18 @@ public class GatewayAuthFilter extends OncePerRequestFilter {
             List<SimpleGrantedAuthority> authorities = List.of();
             if (roles != null && !roles.isEmpty()) {
                 authorities = Arrays.stream(roles.split(","))
-                    .map(String::trim)
-                    .filter(r -> !r.isEmpty())
-                    .map(r -> new SimpleGrantedAuthority("ROLE_" + r.toUpperCase()))
-                    .collect(Collectors.toList());
+                        .map(String::trim)
+                        .filter(r -> !r.isEmpty())
+                        .map(r -> new SimpleGrantedAuthority("ROLE_" + r.toUpperCase()))
+                        .collect(Collectors.toList());
             }
 
-            UsernamePasswordAuthenticationToken auth = 
-                new UsernamePasswordAuthenticationToken(userId, null, authorities);
+            UsernamePasswordAuthenticationToken auth =
+                    new UsernamePasswordAuthenticationToken(userId, null, authorities);
             auth.setDetails(java.util.Map.of(
-                "userId", userId,
-                "tenantId", tenantId != null ? tenantId : "",
-                "authenticated", true
+                    "userId", userId,
+                    "tenantId", tenantId != null ? tenantId : "",
+                    "authenticated", true
             ));
 
             SecurityContextHolder.getContext().setAuthentication(auth);
