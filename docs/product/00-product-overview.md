@@ -2320,3 +2320,3457 @@ To transform fragmented cultural content into an interconnected body of living k
 
 ---
 
+# Core Concepts
+
+## Introduction
+
+The Living Atlas is built upon a small number of fundamental concepts.
+
+These concepts are intentionally technology-independent.
+
+They define how knowledge is understood before determining how knowledge is stored, processed, visualized, searched, or generated.
+
+Every component of the platform—including databases, APIs, AI pipelines, editorial workflows, search experiences, and visualization systems—implements these concepts.
+
+They form the ubiquitous language shared across product, engineering, AI, research, and editorial teams.
+
+---
+
+# Knowledge
+
+Knowledge is the primary asset of the platform.
+
+Knowledge is not synonymous with content.
+
+Content is created.
+
+Knowledge is discovered, connected, refined, and expanded over time.
+
+Knowledge represents structured understanding about Indonesian mystery culture.
+
+Examples include:
+
+* a ritual
+* a location
+* a folklore figure
+* a historical event
+* a supernatural belief
+* a community tradition
+* a recurring motif
+* a symbolic object
+
+Knowledge is designed to evolve without losing historical context.
+
+---
+
+# Story
+
+A Story is the primary narrative representation of one investigation, testimony, folklore account, documentary, or historical record.
+
+A Story is **not** equivalent to a YouTube video.
+
+Multiple videos may describe one Story.
+
+One Story may appear across:
+
+* podcasts
+* books
+* documentaries
+* oral traditions
+* interviews
+* articles
+* historical manuscripts
+
+A Story acts as the canonical narrative layer that connects multiple pieces of evidence.
+
+---
+
+# Source
+
+A Source is the original origin of information.
+
+Sources are immutable.
+
+Examples include:
+
+* YouTube videos
+* podcast episodes
+* books
+* academic papers
+* museum collections
+* interviews
+* oral history recordings
+* manuscripts
+* newspaper articles
+
+Sources are never modified.
+
+They remain the permanent record from which knowledge is extracted.
+
+---
+
+# Evidence
+
+Evidence is a verifiable observation extracted from one or more sources.
+
+Evidence supports knowledge.
+
+Examples include:
+
+* transcript quotations
+* timestamps
+* photographs
+* witness statements
+* historical references
+* archaeological records
+* field observations
+
+Knowledge without evidence becomes opinion.
+
+Evidence without knowledge remains isolated.
+
+---
+
+# Entity
+
+Entities represent identifiable objects inside the knowledge graph.
+
+Examples include:
+
+* Person
+* Place
+* Creature
+* Ritual
+* Mountain
+* Village
+* River
+* Temple
+* Artifact
+* Organization
+* Community
+* Event
+
+Entities are reusable.
+
+The same entity may appear across thousands of stories.
+
+---
+
+# Relationship
+
+Relationships connect entities.
+
+Relationships are first-class knowledge.
+
+Examples include:
+
+* located in
+* performed at
+* investigated by
+* inspired by
+* originated from
+* contradicts
+* supports
+* precedes
+* references
+* related to
+* influenced by
+
+Relationships transform isolated information into knowledge.
+
+---
+
+# Knowledge Object
+
+A Knowledge Object is any structured object managed by the platform.
+
+Examples include:
+
+* Story
+* Entity
+* Relationship
+* Event
+* Timeline
+* Theme
+* Motif
+* Ritual
+* Location
+* Creator
+* Collection
+
+Every knowledge object has:
+
+* identity
+* metadata
+* provenance
+* version history
+* relationships
+
+Knowledge Objects become the building blocks of the platform.
+
+---
+
+# Canonical Representation
+
+Multiple sources often describe the same concept differently.
+
+The platform creates a Canonical Representation.
+
+For example:
+
+One folklore may appear under:
+
+* different spellings
+* regional names
+* historical names
+* local dialects
+
+Rather than creating duplicates, the platform creates one canonical knowledge object while preserving all original variations.
+
+Nothing is lost.
+
+Everything remains traceable.
+
+---
+
+# Provenance
+
+Every knowledge object records where it originated.
+
+Provenance answers:
+
+* Who contributed this knowledge?
+* Which source supports it?
+* Which AI extraction generated it?
+* Which editor approved it?
+* When was it introduced?
+* What changed over time?
+
+Provenance is never optional.
+
+Transparency is a fundamental design principle.
+
+---
+
+# Version
+
+Knowledge evolves.
+
+Nothing is overwritten.
+
+Corrections,
+
+new discoveries,
+
+editorial improvements,
+
+additional evidence,
+
+and changing interpretations create new versions.
+
+Historical understanding remains accessible.
+
+Knowledge becomes cumulative.
+
+---
+
+# Confidence
+
+Not every knowledge claim carries equal certainty.
+
+Each extracted fact is associated with confidence.
+
+Confidence may be derived from:
+
+* source quality
+* editorial review
+* AI extraction certainty
+* evidence quantity
+* corroboration
+* historical verification
+
+Confidence communicates reliability without suppressing uncertainty.
+
+---
+
+# Knowledge Graph
+
+The Knowledge Graph is the structural representation of all knowledge objects and their relationships.
+
+Unlike traditional databases that emphasize storage, the graph emphasizes meaning.
+
+The graph answers questions such as:
+
+* What is connected?
+
+* How are they connected?
+
+* Why are they connected?
+
+* What evidence supports the connection?
+
+The graph continuously grows as knowledge expands.
+
+---
+
+# Semantic Knowledge
+
+Knowledge extends beyond explicit relationships.
+
+Semantic similarity allows the platform to discover hidden connections between stories that may never reference each other directly.
+
+Examples include:
+
+* similar rituals
+
+* related themes
+
+* matching narrative structures
+
+* comparable folklore
+
+* shared symbolism
+
+Semantic understanding complements explicit graph relationships.
+
+---
+
+# Narrative
+
+Narratives are human-readable representations of knowledge.
+
+Narrative Articles preserve storytelling.
+
+Knowledge Articles explain understanding.
+
+News Articles describe ongoing developments.
+
+Creative Articles generate fictional entertainment inspired by knowledge.
+
+Knowledge remains the foundation.
+
+Narratives become one way of presenting it.
+
+---
+
+# Atlas
+
+The Atlas is the primary exploration interface.
+
+Rather than navigating through menus, users explore knowledge spatially.
+
+Relationships become visible.
+
+Patterns emerge.
+
+Hidden connections become discoverable.
+
+The Atlas transforms static knowledge into an explorable landscape.
+
+---
+
+# Discovery
+
+Discovery is the process of finding previously unknown relationships.
+
+Unlike traditional search, discovery encourages exploration.
+
+Examples include:
+
+* finding recurring motifs
+
+* identifying regional variations
+
+* comparing creator investigations
+
+* tracing historical evolution
+
+Discovery is one of the platform's defining experiences.
+
+---
+
+# Collection
+
+Collections allow users to organize knowledge without duplicating it.
+
+A Collection may contain:
+
+* stories
+* entities
+* creators
+* locations
+* rituals
+* timelines
+* notes
+
+Collections become reusable research workspaces.
+
+Knowledge remains shared.
+
+Organization becomes personal.
+
+---
+
+# Annotation
+
+Annotations allow users to contribute additional understanding without modifying original knowledge.
+
+Researchers,
+
+editors,
+
+and collaborators may add:
+
+* notes
+
+* observations
+
+* hypotheses
+
+* references
+
+* comments
+
+Annotations preserve collaboration while protecting canonical knowledge.
+
+---
+
+# AI Extraction
+
+Artificial Intelligence assists in transforming unstructured sources into structured knowledge.
+
+AI performs tasks such as:
+
+* transcription analysis
+* entity extraction
+* relationship extraction
+* motif detection
+* timeline generation
+* semantic summarization
+* article drafting
+
+Every AI contribution remains reviewable, versioned, and attributable.
+
+AI accelerates knowledge creation.
+
+Humans preserve knowledge quality.
+
+---
+
+# Knowledge Lifecycle
+
+Every piece of knowledge progresses through a lifecycle.
+
+The simplified conceptual flow is:
+
+```text
+Source
+    ↓
+Evidence
+    ↓
+Extraction
+    ↓
+Knowledge Object
+    ↓
+Relationships
+    ↓
+Editorial Review
+    ↓
+Publication
+    ↓
+Discovery
+    ↓
+Expansion
+    ↓
+New Evidence
+    ↓
+New Version
+```
+
+Knowledge is never considered complete.
+
+Every publication becomes the starting point for future understanding.
+
+---
+
+# Living Knowledge
+
+The most important concept within the platform is that knowledge is alive.
+
+Stories evolve.
+
+Interpretations change.
+
+Evidence accumulates.
+
+Communities contribute.
+
+Researchers challenge assumptions.
+
+Creators discover new perspectives.
+
+Rather than freezing knowledge at publication time, The Living Atlas continuously integrates new understanding while preserving every previous state.
+
+The platform therefore behaves less like a traditional archive and more like a living ecosystem whose value increases through connection, transparency, and continuous refinement.
+
+---
+
+# Summary
+
+The concepts defined in this document form the conceptual language of The Living Atlas.
+
+Everything that follows—whether technical architecture, AI pipelines, database schemas, APIs, editorial workflows, or user experiences—must implement these concepts consistently.
+
+Technology may change over time.
+
+Programming languages, databases, AI models, and user interfaces will evolve.
+
+These concepts should remain stable.
+
+They represent the enduring intellectual foundation of the platform and ensure that every future capability contributes to a single, coherent body of living cultural knowledge.
+
+---
+
+# Platform Capabilities
+
+## Introduction
+
+The Living Atlas is not defined by its individual features.
+
+Features evolve.
+
+User interfaces change.
+
+Technologies improve.
+
+Artificial intelligence advances.
+
+What remains stable are the platform's core capabilities.
+
+A capability represents a fundamental ability that the platform possesses regardless of how users interact with it.
+
+Multiple user experiences may rely on the same capability.
+
+Likewise, one capability may power dozens of visible features.
+
+Together, these capabilities form the foundation of the entire ecosystem.
+
+---
+
+# Capability 1 — Source Acquisition
+
+The platform continuously acquires knowledge sources from diverse origins.
+
+Examples include:
+
+* YouTube videos
+* Podcast transcripts
+* Books
+* Research papers
+* Historical documents
+* Interviews
+* Community submissions
+* Museum archives
+* Oral traditions
+* Editorial uploads
+
+Source acquisition focuses on preserving original materials rather than transforming them.
+
+Every source receives:
+
+* permanent identity
+* metadata
+* provenance
+* ownership information
+* licensing information
+* ingestion history
+* processing state
+
+Sources remain immutable.
+
+They become the permanent foundation for every future knowledge extraction.
+
+---
+
+# Capability 2 — Knowledge Extraction
+
+The platform transforms unstructured information into structured knowledge.
+
+Extraction identifies:
+
+* entities
+* relationships
+* rituals
+* locations
+* communities
+* beliefs
+* supernatural beings
+* events
+* themes
+* motifs
+* archetypes
+* timelines
+* symbolic objects
+
+Extraction may be performed by AI, humans, or both.
+
+Every extracted object remains reviewable and traceable.
+
+---
+
+# Capability 3 — Knowledge Modeling
+
+Extracted information becomes structured knowledge objects.
+
+Knowledge modeling defines:
+
+* identity
+* canonical representation
+* metadata
+* relationships
+* provenance
+* confidence
+* evidence
+* lifecycle
+* version history
+
+Rather than storing isolated facts, the platform models cultural understanding.
+
+---
+
+# Capability 4 — Relationship Intelligence
+
+The platform continuously discovers and manages relationships between knowledge objects.
+
+Examples include:
+
+* historical influence
+* regional variation
+* symbolic similarity
+* ritual association
+* geographical proximity
+* creator references
+* evidence overlap
+* temporal relationships
+* cultural lineage
+
+Relationships become reusable knowledge.
+
+The value of the platform grows as relationship density increases.
+
+---
+
+# Capability 5 — Knowledge Preservation
+
+Knowledge is preserved permanently.
+
+Nothing is overwritten.
+
+Every modification creates:
+
+* new versions
+* editorial history
+* provenance updates
+* relationship evolution
+* evidence history
+
+Historical understanding remains accessible.
+
+Knowledge becomes cumulative rather than destructive.
+
+---
+
+# Capability 6 — Editorial Governance
+
+Knowledge quality is maintained through structured editorial workflows.
+
+Editors review:
+
+* AI extraction
+* relationships
+* articles
+* canonical stories
+* evidence
+* confidence
+* conflicts
+* historical interpretations
+
+Editorial governance ensures transparency without slowing knowledge growth.
+
+Humans remain responsible for publication decisions.
+
+---
+
+# Capability 7 — Knowledge Publishing
+
+Knowledge can be published through multiple representations.
+
+Examples include:
+
+Narrative Articles
+
+Knowledge Articles
+
+News Articles
+
+Story Pages
+
+Knowledge Pages
+
+Entity Pages
+
+Creator Pages
+
+Culture Pages
+
+Atlas Views
+
+Timeline Views
+
+Collections
+
+The underlying knowledge remains identical.
+
+Only the presentation changes.
+
+---
+
+# Capability 8 — Semantic Search
+
+The platform supports knowledge-oriented search rather than document retrieval.
+
+Users may search using:
+
+keywords
+
+natural language
+
+concepts
+
+similar stories
+
+related entities
+
+themes
+
+motifs
+
+rituals
+
+beliefs
+
+Search combines:
+
+* lexical retrieval
+* semantic retrieval
+* graph traversal
+* AI reasoning
+
+The objective is discovery rather than simple retrieval.
+
+---
+
+# Capability 9 — Knowledge Exploration
+
+Users explore knowledge through interconnected experiences.
+
+Examples include:
+
+Atlas
+
+Relationship Graph
+
+Timeline
+
+Geographic Exploration
+
+Creator Networks
+
+Knowledge Paths
+
+Evidence Trails
+
+Story Connections
+
+Rather than navigating menus, users navigate knowledge.
+
+---
+
+# Capability 10 — AI-Assisted Discovery
+
+Artificial intelligence assists users in understanding complex cultural relationships.
+
+Examples include:
+
+finding similar stories
+
+summarizing investigations
+
+explaining relationships
+
+identifying recurring patterns
+
+comparing folklore
+
+suggesting unexplored connections
+
+AI functions as an exploration assistant rather than an authority.
+
+---
+
+# Capability 11 — Research Workspace
+
+Researchers can organize knowledge into reusable workspaces.
+
+Capabilities include:
+
+collections
+
+annotations
+
+comparison tables
+
+knowledge bookmarking
+
+relationship inspection
+
+citation management
+
+export preparation
+
+Research becomes cumulative rather than document-based.
+
+---
+
+# Capability 12 — Creator Intelligence
+
+Creators can transform existing cultural knowledge into new creative inspiration.
+
+Examples include:
+
+finding mythological creatures
+
+discovering regional rituals
+
+identifying symbolic patterns
+
+comparing folklore evolution
+
+building fictional universes grounded in authentic culture
+
+The platform supports creativity without replacing creators.
+
+---
+
+# Capability 13 — Cultural Preservation
+
+The platform preserves cultural knowledge beyond individual publications.
+
+Preservation includes:
+
+regional terminology
+
+local language
+
+historical context
+
+multiple interpretations
+
+traditional practices
+
+community perspectives
+
+editorial history
+
+original evidence
+
+Knowledge remains accessible for future generations.
+
+---
+
+# Capability 14 — Knowledge Analytics
+
+The platform continuously analyzes the evolution of its own knowledge.
+
+Examples include:
+
+knowledge growth
+
+graph density
+
+relationship completeness
+
+evidence coverage
+
+regional coverage
+
+editorial quality
+
+AI extraction quality
+
+semantic similarity distribution
+
+Analytics measure knowledge quality rather than user engagement alone.
+
+---
+
+# Capability 15 — Knowledge Interoperability
+
+Knowledge is designed to be reusable beyond the website itself.
+
+Future consumers include:
+
+mobile applications
+
+museum installations
+
+educational platforms
+
+government initiatives
+
+research institutions
+
+creative studios
+
+AI assistants
+
+public APIs
+
+Knowledge becomes infrastructure rather than application data.
+
+---
+
+# Capability 16 — Human–AI Collaboration
+
+Throughout the platform, humans and artificial intelligence collaborate.
+
+AI performs repetitive and computationally intensive tasks.
+
+Humans provide:
+
+judgment
+
+context
+
+editorial review
+
+ethical oversight
+
+cultural sensitivity
+
+publication approval
+
+The platform is intentionally designed so that AI accelerates expertise without replacing it.
+
+---
+
+# Capability 17 — Continuous Knowledge Evolution
+
+The platform treats knowledge as continuously evolving.
+
+Every new source may:
+
+introduce new evidence
+
+challenge existing assumptions
+
+expand historical understanding
+
+strengthen relationships
+
+create new canonical objects
+
+improve semantic understanding
+
+Knowledge never reaches a final state.
+
+Instead, every contribution increases the richness of the overall cultural graph.
+
+---
+
+# Capability Map
+
+The capabilities are not independent.
+
+They form a continuous lifecycle.
+
+```text
+Source Acquisition
+        │
+        ▼
+Knowledge Extraction
+        │
+        ▼
+Knowledge Modeling
+        │
+        ▼
+Relationship Intelligence
+        │
+        ▼
+Knowledge Preservation
+        │
+        ▼
+Editorial Governance
+        │
+        ▼
+Knowledge Publishing
+        │
+        ├─────────────► Semantic Search
+        │
+        ├─────────────► Knowledge Exploration
+        │
+        ├─────────────► AI Discovery
+        │
+        ├─────────────► Research Workspace
+        │
+        ├─────────────► Creator Intelligence
+        │
+        └─────────────► Public APIs
+                       │
+                       ▼
+Continuous Knowledge Evolution
+```
+
+Every capability contributes to the same underlying knowledge foundation.
+
+No capability exists in isolation.
+
+Each strengthens the value of every other capability.
+
+---
+
+# Summary
+
+The Living Atlas is best understood as a platform of capabilities rather than a collection of features.
+
+Features will change as user needs evolve.
+
+Capabilities remain stable because they represent the enduring competencies of the platform.
+
+Together, these capabilities enable The Living Atlas to transform fragmented cultural content into a living, interconnected, evidence-backed body of knowledge that can be preserved, explored, expanded, and reused across research, education, creative industries, public institutions, and future AI systems.
+
+The website is one manifestation of these capabilities.
+
+The knowledge platform is the enduring product.
+
+---
+
+# Knowledge Types
+
+## Introduction
+
+The Living Atlas is fundamentally a knowledge platform.
+
+Consequently, the primary responsibility of the platform is not managing articles, videos, or web pages, but managing different kinds of knowledge.
+
+Not every piece of knowledge serves the same purpose.
+
+A story is different from a ritual.
+
+A ritual is different from a location.
+
+A location is different from evidence.
+
+Evidence is different from an interpretation.
+
+An interpretation is different from a relationship.
+
+To preserve these distinctions, the platform organizes all knowledge into a structured taxonomy known as **Knowledge Types**.
+
+Every object managed by the platform belongs to exactly one primary Knowledge Type while remaining connected to many others through the knowledge graph.
+
+This taxonomy forms the conceptual foundation for the database schema, AI extraction pipeline, editorial workflow, semantic search, graph visualization, and future APIs.
+
+---
+
+# Knowledge Layer Architecture
+
+The platform groups knowledge into several conceptual layers.
+
+```text
+Knowledge Sources
+        │
+        ▼
+Knowledge Evidence
+        │
+        ▼
+Knowledge Objects
+        │
+        ▼
+Knowledge Relationships
+        │
+        ▼
+Knowledge Intelligence
+        │
+        ▼
+Knowledge Experiences
+```
+
+Each layer represents a different level of abstraction.
+
+The same knowledge may participate in multiple layers without duplication.
+
+---
+
+# Layer 1 — Source Knowledge
+
+Source Knowledge represents the original origin of information.
+
+Sources remain immutable.
+
+Nothing extracted by AI or edited by humans may modify the original source.
+
+Examples include:
+
+* YouTube Video
+* Podcast Episode
+* Book
+* Research Paper
+* Historical Manuscript
+* Museum Archive
+* Interview Recording
+* Oral Tradition Recording
+* Community Submission
+* Newspaper
+* Documentary
+* Website
+
+Every source contains metadata such as:
+
+* creator
+* publication date
+* publisher
+* language
+* license
+* transcript
+* duration
+* processing history
+* ingestion history
+
+Sources answer one question:
+
+> Where did this knowledge originate?
+
+---
+
+# Layer 2 — Evidence Knowledge
+
+Evidence represents verifiable observations extracted from sources.
+
+Evidence supports knowledge without becoming knowledge itself.
+
+Examples include:
+
+* transcript quotations
+* timestamps
+* witness statements
+* photographs
+* field notes
+* historical citations
+* geographical observations
+* inscriptions
+* archaeological findings
+* official records
+
+Evidence always maintains provenance.
+
+Multiple pieces of evidence may support one knowledge object.
+
+One piece of evidence may support multiple knowledge objects.
+
+---
+
+# Layer 3 — Narrative Knowledge
+
+Narrative Knowledge represents complete human-readable stories.
+
+Stories preserve chronology, context, uncertainty, and cultural meaning.
+
+Examples include:
+
+* Mystery Investigation
+* Folklore Story
+* Historical Narrative
+* Oral Tradition
+* Documentary Story
+* Community Testimony
+* Expedition Report
+
+Narrative Knowledge emphasizes storytelling.
+
+It is optimized for readers.
+
+---
+
+# Layer 4 — Entity Knowledge
+
+Entity Knowledge represents identifiable things.
+
+Entities become reusable building blocks across the platform.
+
+Examples include:
+
+### People
+
+* Witness
+* Investigator
+* Researcher
+* Creator
+* Historian
+* Religious Figure
+* Community Elder
+
+### Places
+
+* Village
+* Forest
+* Mountain
+* River
+* Cave
+* Sacred Site
+* Temple
+* Island
+* Cemetery
+
+### Living Beings
+
+* Human
+* Animal
+* Mythological Creature
+* Supernatural Entity
+* Guardian Spirit
+
+### Objects
+
+* Artifact
+* Weapon
+* Manuscript
+* Sacred Object
+* Symbol
+* Traditional Clothing
+* Musical Instrument
+
+Entities possess identity independent of any single story.
+
+---
+
+# Layer 5 — Cultural Knowledge
+
+This layer captures cultural understanding rather than physical objects.
+
+Examples include:
+
+* Ritual
+* Ceremony
+* Belief
+* Tradition
+* Custom
+* Myth
+* Taboo
+* Local Wisdom
+* Oral Practice
+* Spiritual Practice
+* Sacred Rule
+
+Cultural Knowledge often evolves across regions and generations.
+
+The platform preserves both similarities and differences.
+
+---
+
+# Layer 6 — Conceptual Knowledge
+
+Conceptual Knowledge represents abstract ideas that appear repeatedly across stories.
+
+Examples include:
+
+* Theme
+* Motif
+* Archetype
+* Symbolism
+* Narrative Pattern
+* Emotional Tone
+* Cultural Value
+* Moral Lesson
+* Fear Pattern
+* Sacred Symbol
+* Transformation Pattern
+
+Conceptual Knowledge enables semantic understanding beyond explicit facts.
+
+---
+
+# Layer 7 — Temporal Knowledge
+
+Temporal Knowledge describes how knowledge changes over time.
+
+Examples include:
+
+* Historical Period
+* Timeline
+* Era
+* Dynasty
+* Migration
+* Cultural Evolution
+* Story Evolution
+* Version History
+* Editorial History
+
+Time becomes a first-class dimension of knowledge.
+
+---
+
+# Layer 8 — Geographic Knowledge
+
+Geography is more than coordinates.
+
+It represents cultural context.
+
+Examples include:
+
+* Province
+* Regency
+* District
+* Village
+* Traditional Territory
+* Ethnic Region
+* Sacred Landscape
+* Cultural Zone
+* Historical Kingdom
+* Migration Route
+
+Geographic Knowledge powers the Atlas experience.
+
+---
+
+# Layer 9 — Relationship Knowledge
+
+Relationships are themselves knowledge.
+
+The platform does not treat them merely as database connections.
+
+Examples include:
+
+* located in
+* originated from
+* inspired by
+* related to
+* contradicts
+* supports
+* evolved into
+* performed by
+* protects
+* worships
+* belongs to
+* references
+* investigated by
+* documented by
+
+Relationships possess:
+
+* provenance
+* evidence
+* confidence
+* version history
+
+Relationships may change independently of the connected entities.
+
+---
+
+# Layer 10 — Editorial Knowledge
+
+Editorial Knowledge records how knowledge has been curated.
+
+Examples include:
+
+* Editorial Review
+* Approval
+* Rejection
+* Revision
+* Conflict Resolution
+* Quality Assessment
+* Canonical Decision
+* Merge Decision
+
+Editorial Knowledge ensures transparency.
+
+Nothing appears without an audit trail.
+
+---
+
+# Layer 11 — AI Knowledge
+
+This layer captures knowledge generated by artificial intelligence.
+
+Examples include:
+
+* AI Summary
+* AI Entity Extraction
+* AI Relationship Extraction
+* AI Classification
+* AI Confidence
+* AI Recommendation
+* AI Generated Questions
+* AI Suggested Connections
+
+AI-generated knowledge is never considered authoritative until reviewed.
+
+It always records:
+
+* model
+* prompt version
+* execution time
+* confidence
+* reviewer
+
+---
+
+# Layer 12 — User Knowledge
+
+Users continuously enrich the platform.
+
+Examples include:
+
+* Annotation
+* Collection
+* Bookmark
+* Research Note
+* Comparison
+* Personal Tag
+* Workspace
+* Citation
+
+User Knowledge never alters canonical knowledge.
+
+It exists as an additional layer.
+
+---
+
+# Layer 13 — Publication Knowledge
+
+Knowledge may be published through different representations.
+
+Examples include:
+
+* Narrative Article
+* Knowledge Article
+* News Article
+* Story Page
+* Knowledge Page
+* Timeline Page
+* Atlas Page
+* Creator Profile
+* Region Profile
+
+Publication is only a representation.
+
+The underlying knowledge remains unchanged.
+
+---
+
+# Layer 14 — Analytical Knowledge
+
+Analytical Knowledge describes knowledge about the platform itself.
+
+Examples include:
+
+* Popular Themes
+* Knowledge Growth
+* Graph Density
+* Regional Coverage
+* Evidence Completeness
+* Relationship Completeness
+* Editorial Quality
+* AI Performance
+* Source Distribution
+
+Analytics help improve the platform without modifying cultural knowledge.
+
+---
+
+# Knowledge Type Hierarchy
+
+The complete conceptual hierarchy can be summarized as follows.
+
+```text
+Sources
+│
+├── Videos
+├── Podcasts
+├── Books
+├── Papers
+└── Archives
+
+Evidence
+│
+├── Transcript
+├── Quote
+├── Photograph
+├── Citation
+└── Observation
+
+Knowledge Objects
+│
+├── Stories
+├── Entities
+├── Cultural Objects
+├── Concepts
+├── Geography
+├── Timeline
+└── Events
+
+Relationships
+│
+├── Explicit
+├── Semantic
+├── Historical
+└── Editorial
+
+Publication
+│
+├── Narrative Article
+├── Knowledge Article
+├── News Article
+└── Atlas
+
+User Layer
+│
+├── Collections
+├── Notes
+├── Annotations
+└── Research
+
+Analytics
+│
+└── Platform Intelligence
+```
+
+---
+
+# Why This Classification Matters
+
+This taxonomy is not merely documentation.
+
+Every subsystem within The Living Atlas depends on it.
+
+The PostgreSQL database stores canonical knowledge objects.
+
+Neo4j projects entities and relationships into a traversable graph.
+
+Weaviate indexes semantic representations for similarity search.
+
+The AI Platform extracts, enriches, and classifies knowledge according to these types.
+
+The Editorial Platform validates and publishes them.
+
+The Atlas visualizes them.
+
+The Search Engine retrieves them.
+
+The API exposes them.
+
+Future applications consume them.
+
+A shared taxonomy ensures that every layer of the platform speaks the same conceptual language.
+
+---
+
+# Summary
+
+Knowledge Types define the vocabulary of The Living Atlas.
+
+They separate raw information from evidence, evidence from structured knowledge, structured knowledge from relationships, and relationships from user experiences.
+
+By distinguishing these categories explicitly, the platform can preserve cultural complexity without sacrificing consistency.
+
+Every future capability—whether an AI model, a visualization, a research tool, or an educational application—builds upon the same stable knowledge taxonomy.
+
+In this way, the platform remains extensible while maintaining a coherent understanding of Indonesian mystery culture across decades of continuous growth.
+
+---
+
+# Primary User Journeys
+
+## Introduction
+
+The Living Atlas serves a diverse community of users, each with different objectives, expertise, and ways of interacting with cultural knowledge.
+
+A casual reader, an anthropologist, a documentary filmmaker, and an editor may all access the same underlying knowledge, yet each follows a fundamentally different journey.
+
+Rather than designing separate systems for each audience, The Living Atlas provides a shared knowledge foundation with experiences tailored to individual goals.
+
+This section defines the primary value journeys that the platform must support.
+
+These journeys are conceptual rather than interface-specific.
+
+They describe how users transform an intention into understanding, research, creativity, or contribution.
+
+---
+
+# Journey Principles
+
+Every user journey follows several common principles.
+
+* Users interact with knowledge rather than isolated content.
+* Discovery is encouraged over linear navigation.
+* Every page provides opportunities for deeper exploration.
+* Knowledge remains connected across experiences.
+* Provenance and evidence are always accessible.
+* Users can progressively move from simple reading to advanced exploration.
+* The same knowledge powers every journey.
+
+Regardless of the entry point, users should never encounter dead ends.
+
+Every interaction should reveal new relationships and new paths for exploration.
+
+---
+
+# Journey 1 — Casual Reader
+
+## Goal
+
+"I want to read an interesting mystery story."
+
+This is the most common entry point into the platform.
+
+The reader usually arrives from:
+
+* Search engines
+* Social media
+* Shared links
+* Creator recommendations
+* News articles
+
+The initial expectation is to consume a story.
+
+However, the platform gradually introduces deeper knowledge without interrupting the reading experience.
+
+### Typical Journey
+
+```text
+Landing Page
+      ↓
+Narrative Story
+      ↓
+Related Stories
+      ↓
+Related Locations
+      ↓
+Timeline
+      ↓
+Atlas Exploration
+      ↓
+Knowledge Article
+```
+
+The journey transforms entertainment into curiosity and eventually into understanding.
+
+---
+
+# Journey 2 — Knowledge Explorer
+
+## Goal
+
+"I want to understand this topic."
+
+Unlike casual readers, knowledge explorers intentionally investigate broader cultural context.
+
+They frequently navigate between:
+
+* Stories
+* Knowledge Articles
+* Entities
+* Timelines
+* Cultural Concepts
+* Evidence
+* Related Topics
+
+### Typical Journey
+
+```text
+Knowledge Article
+        ↓
+Entity
+        ↓
+Relationships
+        ↓
+Evidence
+        ↓
+Timeline
+        ↓
+Atlas
+        ↓
+Additional Stories
+```
+
+The objective is not merely reading but building mental connections.
+
+---
+
+# Journey 3 — Atlas Explorer
+
+## Goal
+
+"I want to explore cultural relationships."
+
+These users think spatially rather than linearly.
+
+They often begin with:
+
+* Province
+* Region
+* Mountain
+* Sacred Place
+* Cultural Zone
+
+From there they navigate through connected knowledge.
+
+### Typical Journey
+
+```text
+Atlas
+      ↓
+Region
+      ↓
+Stories
+      ↓
+Communities
+      ↓
+Rituals
+      ↓
+Related Regions
+```
+
+The Atlas becomes a visual interface for cultural exploration.
+
+---
+
+# Journey 4 — AI Discovery User
+
+## Goal
+
+"I want AI to help me discover something I don't know."
+
+Rather than searching by keywords, users ask questions in natural language.
+
+Examples include:
+
+* Which stories involve sacred rivers?
+* Show folklore related to volcanic mountains.
+* Compare guardian spirits across Sumatra.
+* Which rituals appear before entering forests?
+
+AI retrieves knowledge from:
+
+* PostgreSQL
+* Neo4j
+* Weaviate
+
+Responses always reference canonical knowledge and supporting evidence.
+
+### Typical Journey
+
+```text
+Question
+      ↓
+AI Understanding
+      ↓
+Knowledge Retrieval
+      ↓
+Evidence
+      ↓
+Graph Relationships
+      ↓
+Suggested Exploration
+```
+
+AI encourages exploration rather than replacing it.
+
+---
+
+# Journey 5 — Creator
+
+## Goal
+
+"I need inspiration for new creative work."
+
+Creators include:
+
+* Filmmakers
+* Novelists
+* Game Designers
+* Content Creators
+* Screenwriters
+* Illustrators
+
+Rather than consuming stories, creators seek reusable knowledge.
+
+Examples include:
+
+* recurring motifs
+* symbolic objects
+* supernatural beings
+* historical settings
+* regional traditions
+* narrative patterns
+
+### Typical Journey
+
+```text
+Theme
+     ↓
+Motif
+     ↓
+Stories
+     ↓
+Locations
+     ↓
+Timeline
+     ↓
+Creative Collection
+```
+
+The platform supports creativity while preserving cultural authenticity.
+
+---
+
+# Journey 6 — Researcher
+
+## Goal
+
+"I need evidence and relationships."
+
+Researchers require:
+
+* provenance
+* citations
+* conflicting perspectives
+* timeline evolution
+* canonical objects
+* relationship analysis
+
+Their workflow emphasizes verification rather than consumption.
+
+### Typical Journey
+
+```text
+Research Question
+        ↓
+Knowledge Search
+        ↓
+Evidence
+        ↓
+Relationship Analysis
+        ↓
+Collections
+        ↓
+Annotations
+        ↓
+Export
+```
+
+Research becomes cumulative rather than document-centric.
+
+---
+
+# Journey 7 — Editorial Team
+
+## Goal
+
+"I need to review and improve knowledge."
+
+Editors focus on quality rather than discovery.
+
+Responsibilities include:
+
+* reviewing AI extraction
+* validating entities
+* merging canonical objects
+* approving relationships
+* publishing articles
+* resolving conflicts
+
+### Typical Journey
+
+```text
+Review Queue
+      ↓
+Extraction Review
+      ↓
+Knowledge Validation
+      ↓
+Relationship Review
+      ↓
+Publication
+```
+
+Editorial work ensures long-term integrity of the knowledge graph.
+
+---
+
+# Journey 8 — AI Pipeline
+
+## Goal
+
+"Transform raw information into structured knowledge."
+
+Although not a human user, the AI Platform follows a well-defined journey.
+
+### Pipeline Journey
+
+```text
+Transcript
+      ↓
+Chunking
+      ↓
+Entity Extraction
+      ↓
+Relationship Extraction
+      ↓
+Canonical Resolution
+      ↓
+Knowledge Objects
+      ↓
+Editorial Review
+      ↓
+Publication
+```
+
+The AI Platform continuously enriches the knowledge base while remaining subject to human oversight.
+
+---
+
+# Journey 9 — Future Integrations
+
+## Goal
+
+"Consume knowledge programmatically."
+
+Future consumers include:
+
+* Educational platforms
+* Museum installations
+* Tourism systems
+* Government initiatives
+* Public APIs
+* AI Assistants
+* External research tools
+
+These systems interact with canonical knowledge rather than web pages.
+
+### Typical Journey
+
+```text
+API Request
+      ↓
+Knowledge API
+      ↓
+Canonical Objects
+      ↓
+Relationships
+      ↓
+Semantic Data
+```
+
+This ensures that the platform functions as infrastructure rather than merely a website.
+
+---
+
+# Journey Convergence
+
+Although users begin with different intentions, their journeys converge on the same knowledge foundation.
+
+```text
+Reader
+Creator
+Researcher
+Editor
+AI
+API Consumer
+Atlas Explorer
+Knowledge Explorer
+        │
+        ▼
+Canonical Knowledge
+        │
+        ▼
+Knowledge Graph
+        │
+        ▼
+Evidence
+        │
+        ▼
+Sources
+```
+
+This architecture allows every experience to benefit from continuous improvements to the shared knowledge base.
+
+A correction made by an editor immediately improves search results, AI responses, atlas visualizations, research workspaces, and future integrations.
+
+---
+
+# Journey Evolution
+
+The platform is designed so that users naturally progress toward deeper engagement.
+
+A typical evolution may look like:
+
+```text
+Reader
+   ↓
+Knowledge Explorer
+   ↓
+Atlas Explorer
+   ↓
+Collector
+   ↓
+Researcher
+   ↓
+Contributor
+```
+
+Similarly, creators may evolve into knowledge contributors, while researchers may become editorial reviewers.
+
+The platform encourages participation without requiring it.
+
+---
+
+# Summary
+
+The Living Atlas is not organized around pages or menus but around user intentions.
+
+Every primary journey begins with a different goal but converges on the same interconnected body of canonical knowledge.
+
+By separating the knowledge foundation from its many user experiences, the platform can support readers, creators, researchers, editors, AI systems, and future integrations without duplicating data or fragmenting understanding.
+
+This approach ensures that every improvement to the knowledge base benefits the entire ecosystem, regardless of how users choose to explore it.
+
+---
+
+# Long-term Vision
+
+## Introduction
+
+The Living Atlas is not conceived as a conventional software product.
+
+It is designed as a long-term knowledge infrastructure whose value compounds over decades rather than product release cycles.
+
+Most digital platforms optimize for engagement, growth, or monetization within a relatively short horizon.
+
+The Living Atlas optimizes for preservation, understanding, and cultural continuity across generations.
+
+Its ultimate success will not be measured by the number of users or articles, but by its ability to become the enduring foundation upon which future generations discover, understand, preserve, and expand Indonesian cultural knowledge.
+
+The website is only the first manifestation of this vision.
+
+The knowledge itself is intended to outlive every interface, every technology stack, and every generation of artificial intelligence.
+
+---
+
+# A Living Cultural Memory
+
+The long-term vision is to create a continuously evolving cultural memory for Indonesia.
+
+Rather than preserving isolated stories, the platform preserves:
+
+* people
+* places
+* traditions
+* rituals
+* folklore
+* beliefs
+* historical evolution
+* regional variations
+* evidence
+* relationships
+* scholarly interpretations
+* community perspectives
+
+Every new contribution strengthens the collective understanding of the culture instead of replacing previous knowledge.
+
+Knowledge becomes cumulative.
+
+Memory becomes permanent.
+
+---
+
+# Beyond Digital Archives
+
+Traditional archives preserve documents.
+
+Libraries preserve books.
+
+Museums preserve artifacts.
+
+The Living Atlas preserves relationships.
+
+It captures not only what exists, but also how cultural knowledge changes over time.
+
+Future generations should be able to answer questions such as:
+
+* How did this folklore evolve?
+* When did this ritual first appear?
+* Which regions share this belief?
+* Which creators documented this location?
+* How has scholarly interpretation changed over decades?
+
+The platform preserves cultural evolution rather than static snapshots.
+
+---
+
+# National Knowledge Infrastructure
+
+Over the next decade, The Living Atlas aims to become the canonical knowledge infrastructure for Indonesian mystery culture.
+
+This means becoming the trusted foundation used by:
+
+* researchers
+* universities
+* museums
+* documentary filmmakers
+* publishers
+* educators
+* students
+* cultural organizations
+* independent creators
+* public institutions
+
+Rather than replacing their work, the platform connects and amplifies it.
+
+Knowledge remains distributed.
+
+Understanding becomes unified.
+
+---
+
+# The Reference Layer for Indonesian Mystery Culture
+
+In the future, when someone asks:
+
+"What do we know about this place?"
+
+"What stories mention this ritual?"
+
+"Where did this legend originate?"
+
+"What evidence supports this belief?"
+
+The answer should originate from the shared knowledge maintained by The Living Atlas.
+
+The platform becomes the reference layer upon which countless applications can build.
+
+---
+
+# A Foundation for Artificial Intelligence
+
+Artificial intelligence is only as reliable as the knowledge it can access.
+
+One long-term objective is to provide structured, evidence-backed cultural knowledge that AI systems can retrieve, explain, compare, and reason about responsibly.
+
+Future AI assistants should not merely generate answers.
+
+They should cite:
+
+* sources
+* evidence
+* historical context
+* confidence
+* editorial history
+* regional differences
+
+The Living Atlas provides this foundation.
+
+AI becomes a consumer of knowledge rather than its sole creator.
+
+---
+
+# A Platform for Cultural Collaboration
+
+Knowledge should not belong to a single institution.
+
+The platform is envisioned as a collaborative ecosystem where different communities contribute complementary perspectives.
+
+Participants may include:
+
+* independent creators
+* anthropologists
+* historians
+* folklorists
+* universities
+* museums
+* local communities
+* indigenous organizations
+* documentary producers
+* government agencies
+
+Each contributor preserves ownership of their work while strengthening the collective knowledge graph.
+
+---
+
+# A Platform That Outlives Technology
+
+Programming languages will change.
+
+Databases will evolve.
+
+Artificial intelligence models will improve.
+
+User interfaces will be redesigned.
+
+Mobile devices may disappear.
+
+New computing paradigms will emerge.
+
+The Living Atlas is intentionally designed so that its conceptual knowledge model remains stable even as technology evolves.
+
+Canonical knowledge, provenance, relationships, and historical versions should remain valid regardless of future implementation technologies.
+
+The platform is built for longevity rather than technological trends.
+
+---
+
+# Enabling New Forms of Discovery
+
+Future generations should not be limited to reading articles.
+
+They may explore knowledge through:
+
+* immersive maps
+* augmented reality
+* virtual museums
+* conversational AI
+* educational simulations
+* knowledge graphs
+* spatial computing
+* intelligent research assistants
+* autonomous discovery agents
+
+Every new interface should connect to the same underlying knowledge foundation.
+
+Experiences evolve.
+
+Knowledge remains consistent.
+
+---
+
+# A Platform for Creative Industries
+
+Indonesian cultural knowledge represents an extraordinary source of inspiration.
+
+Over time, the platform should support creators across many industries, including:
+
+* novels
+* films
+* television
+* animation
+* games
+* comics
+* music
+* visual arts
+* theatre
+* digital experiences
+
+Creators should be able to discover authentic cultural references while respecting provenance and cultural context.
+
+The platform becomes a bridge between preservation and creativity.
+
+---
+
+# Supporting Research Across Disciplines
+
+Although initially focused on Indonesian mystery culture, the platform is designed to support interdisciplinary research.
+
+Future fields may include:
+
+* anthropology
+* archaeology
+* history
+* linguistics
+* religious studies
+* folklore studies
+* sociology
+* geography
+* cultural heritage
+* digital humanities
+
+The same knowledge infrastructure can serve multiple academic disciplines without changing its conceptual foundation.
+
+---
+
+# Toward a Southeast Asian Knowledge Network
+
+The conceptual architecture is intentionally extensible beyond Indonesia.
+
+In the future, neighboring cultures may be represented using the same knowledge model while preserving their unique identities.
+
+Possible expansions include:
+
+* Malay folklore
+* Javanese traditions
+* Dayak beliefs
+* Austronesian cultural migration
+* Southeast Asian mythology
+* regional oral traditions
+
+The platform could eventually support comparative cultural studies across Southeast Asia while maintaining clear provenance and regional context.
+
+---
+
+# Cultural Preservation Across Generations
+
+Many traditions survive only because they continue to be remembered.
+
+As communities change and oral traditions become increasingly fragile, the platform serves as a safeguard against irreversible cultural loss.
+
+Future generations should inherit not only stories, but also:
+
+* context
+* evidence
+* relationships
+* historical development
+* linguistic diversity
+* cultural meaning
+
+Preservation is not merely storing information.
+
+It is preserving understanding.
+
+---
+
+# The Knowledge Infrastructure Vision
+
+The ultimate vision is for The Living Atlas to become infrastructure rather than an application.
+
+Applications may come and go.
+
+Interfaces will continue to evolve.
+
+New technologies will emerge.
+
+Yet the underlying knowledge should remain continuously available through stable, interoperable, and well-governed foundations.
+
+Future educational systems, museum experiences, AI assistants, creative platforms, research tools, and public services should all be able to build upon the same canonical cultural knowledge.
+
+In this vision, the platform becomes part of Indonesia's long-term digital knowledge infrastructure.
+
+---
+
+# Fifty-Year Horizon
+
+Looking fifty years into the future, success is not measured by software metrics.
+
+Instead, success can be described through enduring outcomes.
+
+A student discovers forgotten regional traditions through interconnected knowledge.
+
+A researcher traces centuries of cultural evolution without reconstructing fragmented archives.
+
+A filmmaker creates authentic stories grounded in verified cultural context.
+
+A museum builds interactive exhibitions directly from living knowledge.
+
+An AI assistant explains folklore while transparently citing evidence and historical interpretations.
+
+A local community preserves traditions that might otherwise disappear.
+
+A new generation contributes additional knowledge without losing the work of previous generations.
+
+The platform becomes a living bridge between the past, the present, and the future.
+
+---
+
+# Vision Statement
+
+The long-term ambition of The Living Atlas is to become the living cultural memory of Indonesian mystery culture.
+
+Not simply a repository of stories.
+
+Not merely a collection of articles.
+
+Not only a knowledge graph.
+
+But a continuously evolving foundation where stories become knowledge, knowledge becomes relationships, relationships become understanding, and understanding becomes a shared cultural legacy that future generations can preserve, expand, and build upon.
+
+In this vision, every contribution strengthens not only today's platform, but also tomorrow's understanding of Indonesia's cultural heritage.
+
+---
+
+# Product Success Definition
+
+## Introduction
+
+The success of The Living Atlas cannot be measured solely by conventional software metrics.
+
+Page views, monthly active users, or session duration may indicate platform usage, but they do not necessarily reflect whether cultural knowledge is being preserved, expanded, or understood.
+
+The primary objective of the platform is to create a living body of interconnected cultural knowledge.
+
+Therefore, product success is defined by the long-term health, quality, accessibility, and sustainability of that knowledge ecosystem.
+
+---
+
+# Success Principle
+
+Every decision throughout the platform should contribute to at least one of the following outcomes:
+
+- More knowledge is preserved.
+- Existing knowledge becomes more trustworthy.
+- Relationships become richer.
+- Discovery becomes easier.
+- Contributors become more productive.
+- Readers gain deeper understanding.
+- Future generations inherit a stronger cultural record.
+
+If a feature improves engagement but weakens knowledge quality, it is considered unsuccessful.
+
+If a feature increases editorial effort while significantly improving long-term knowledge integrity, it may still be considered successful.
+
+Knowledge quality always takes precedence over engagement metrics.
+
+---
+
+# Success Dimension 1 — Knowledge Growth
+
+The platform should continuously expand its body of knowledge.
+
+Growth includes:
+
+- new stories
+- new entities
+- new relationships
+- new evidence
+- new regional coverage
+- new cultural traditions
+- new historical references
+
+Success is measured by meaningful expansion rather than raw content volume.
+
+Duplicate or low-quality information does not represent growth.
+
+---
+
+# Success Dimension 2 — Knowledge Quality
+
+Knowledge should become increasingly reliable over time.
+
+Indicators include:
+
+- higher evidence coverage
+- improved provenance
+- editorial validation
+- conflict resolution
+- canonical consistency
+- reduced duplication
+
+Knowledge quality is expected to improve continuously as additional evidence becomes available.
+
+---
+
+# Success Dimension 3 — Knowledge Connectivity
+
+The value of the platform increases as knowledge becomes more interconnected.
+
+Success includes:
+
+- richer relationship graphs
+- stronger semantic connections
+- improved entity linkage
+- complete timeline associations
+- geographic integration
+
+An isolated article provides information.
+
+An interconnected graph provides understanding.
+
+---
+
+# Success Dimension 4 — Discovery
+
+Users should consistently discover information they were not originally searching for.
+
+Examples include:
+
+- related folklore
+- similar rituals
+- nearby locations
+- historical evolution
+- recurring themes
+- creator networks
+
+The platform succeeds when curiosity naturally expands into broader exploration.
+
+---
+
+# Success Dimension 5 — Editorial Sustainability
+
+Editors should spend less time performing repetitive work and more time applying expertise.
+
+Artificial intelligence should reduce operational workload without reducing editorial oversight.
+
+Success includes:
+
+- faster review cycles
+- improved extraction quality
+- reduced manual duplication
+- transparent review history
+
+Editorial quality remains the final authority.
+
+---
+
+# Success Dimension 6 — Research Value
+
+Researchers should be able to produce deeper insights with less effort.
+
+The platform succeeds when researchers can:
+
+- trace evidence quickly
+- compare narratives
+- inspect relationships
+- analyze regional variations
+- export reliable references
+
+The goal is not replacing research but accelerating it.
+
+---
+
+# Success Dimension 7 — Creator Value
+
+Creators should discover authentic cultural inspiration efficiently.
+
+The platform succeeds when writers, filmmakers, artists, and designers can identify:
+
+- narrative structures
+- mythological beings
+- symbolic objects
+- historical settings
+- regional uniqueness
+
+Knowledge becomes reusable creative infrastructure.
+
+---
+
+# Success Dimension 8 — Cultural Preservation
+
+The platform succeeds when cultural knowledge that might otherwise disappear becomes permanently documented, interconnected, and understandable.
+
+Success includes preserving:
+
+- oral traditions
+- local terminology
+- community knowledge
+- regional perspectives
+- historical evolution
+- multiple interpretations
+
+Preservation is measured by cultural completeness rather than content quantity.
+
+---
+
+# Success Dimension 9 — AI Reliability
+
+Artificial intelligence should improve platform productivity while remaining transparent.
+
+Success includes:
+
+- explainable extraction
+- traceable provenance
+- confidence scoring
+- reproducible outputs
+- human verification
+
+AI never becomes the final authority.
+
+It remains an assistant within a governed workflow.
+
+---
+
+# Success Dimension 10 — Ecosystem Adoption
+
+The platform should become increasingly valuable beyond its own website.
+
+Long-term adoption includes:
+
+- universities
+- museums
+- cultural institutions
+- documentary producers
+- publishers
+- educators
+- government agencies
+- researchers
+- external AI systems
+
+Knowledge becomes reusable infrastructure rather than isolated application data.
+
+---
+
+# What Success Does Not Mean
+
+The Living Atlas does not define success by:
+
+- maximizing advertising revenue
+- maximizing screen time
+- encouraging addictive behavior
+- publishing the largest number of articles
+- replacing human expertise with AI
+- becoming another social media platform
+
+These outcomes may increase short-term engagement while weakening long-term knowledge quality.
+
+---
+
+# Long-Term Success
+
+In the long term, success is achieved when the platform becomes the trusted reference for Indonesian mystery culture.
+
+People no longer ask where to find information.
+
+They begin their exploration from The Living Atlas.
+
+Researchers build upon it.
+
+Creators draw inspiration from it.
+
+Museums integrate with it.
+
+Educational institutions reference it.
+
+Artificial intelligence retrieves knowledge from it.
+
+Communities preserve traditions through it.
+
+Future generations inherit a richer understanding because previous generations continuously contributed to it.
+
+---
+
+# Product Success Statement
+
+The Living Atlas is successful when it becomes a continuously evolving, evidence-backed, interconnected cultural knowledge infrastructure that enables readers, researchers, creators, educators, institutions, and future AI systems to preserve, discover, understand, and expand Indonesian mystery culture for generations to come.
+
+The success of the platform is measured not by the amount of content it publishes, but by the quality of knowledge it preserves and the understanding it enables.
+
+---
+
+# Success Definition
+
+## Introduction
+
+The Living Atlas is intended to become a long-lived knowledge platform rather than a short-lived software product.
+
+Its success therefore cannot be measured solely through traditional software metrics such as page views, monthly active users, or application downloads.
+
+While those metrics provide operational insight, they do not indicate whether the platform is successfully preserving, organizing, connecting, and expanding cultural knowledge.
+
+The primary measure of success is the long-term health of the knowledge ecosystem itself.
+
+---
+
+## Success Philosophy
+
+The platform is considered successful when every new contribution makes the entire ecosystem more valuable.
+
+Unlike traditional content platforms where value is proportional to the amount of published content, The Living Atlas gains value through cumulative understanding.
+
+Success is achieved when:
+
+- knowledge becomes richer,
+- relationships become denser,
+- evidence becomes stronger,
+- provenance becomes clearer,
+- discovery becomes easier,
+- and future generations inherit more understanding than previous generations.
+
+---
+
+## Product Success Dimensions
+
+Success is evaluated across multiple dimensions.
+
+### Knowledge Coverage
+
+The platform continuously expands the breadth of Indonesian mystery culture that has been documented.
+
+Coverage includes:
+
+- regions
+- ethnic groups
+- folklore
+- rituals
+- beliefs
+- supernatural entities
+- historical events
+- creators
+- investigations
+
+The objective is balanced representation rather than content quantity.
+
+---
+
+### Knowledge Quality
+
+Knowledge quality continuously improves through:
+
+- editorial review
+- additional evidence
+- provenance
+- canonical normalization
+- conflict resolution
+- version history
+
+Knowledge quality is always more important than publication speed.
+
+---
+
+### Knowledge Connectivity
+
+Knowledge becomes increasingly interconnected.
+
+Examples include:
+
+- stories linked to locations
+- rituals linked to communities
+- folklore linked to themes
+- themes linked to motifs
+- creators linked to investigations
+
+Every new relationship increases the overall value of the graph.
+
+---
+
+### Discovery
+
+Users consistently discover information they were not originally searching for.
+
+Discovery includes:
+
+- related stories
+
+- similar rituals
+
+- regional comparisons
+
+- historical evolution
+
+- hidden relationships
+
+The platform encourages exploration rather than navigation.
+
+---
+
+### Cultural Preservation
+
+Knowledge that would otherwise disappear becomes permanently documented.
+
+This includes:
+
+- oral traditions
+
+- local terminology
+
+- regional variations
+
+- community knowledge
+
+- historical context
+
+Preservation extends beyond documentation into contextual understanding.
+
+---
+
+### Research Enablement
+
+Researchers require less effort to discover evidence and more time to generate insight.
+
+The platform succeeds when research becomes:
+
+- reproducible
+
+- evidence-backed
+
+- interconnected
+
+- exportable
+
+- collaborative
+
+---
+
+### Creative Enablement
+
+Creators discover authentic cultural inspiration more efficiently.
+
+The platform supports:
+
+- writers
+
+- filmmakers
+
+- game designers
+
+- artists
+
+- educators
+
+Knowledge becomes reusable creative infrastructure.
+
+---
+
+### AI Reliability
+
+Artificial Intelligence increases productivity without replacing editorial judgment.
+
+Every AI-generated output remains:
+
+- explainable
+
+- reviewable
+
+- versioned
+
+- attributable
+
+Human expertise remains authoritative.
+
+---
+
+### Ecosystem Adoption
+
+The platform becomes reusable infrastructure for:
+
+- universities
+
+- museums
+
+- researchers
+
+- publishers
+
+- cultural institutions
+
+- government
+
+- educational platforms
+
+- future AI systems
+
+Applications consume knowledge rather than duplicate it.
+
+---
+
+## Success Statement
+
+The Living Atlas succeeds when it becomes the trusted, continuously evolving knowledge infrastructure for Indonesian mystery culture, enabling preservation, discovery, research, education, creativity, and future artificial intelligence while maintaining transparency, provenance, and cultural integrity.
+
+---
+
+# Scope & Out of Scope
+
+## Purpose
+
+Clearly defining scope prevents feature creep and ensures every implementation contributes directly to the long-term vision.
+
+This document distinguishes between what the platform is explicitly designed to solve and what it intentionally does not attempt to solve.
+
+---
+
+# In Scope
+
+The Living Atlas focuses on knowledge infrastructure.
+
+Primary responsibilities include:
+
+## Knowledge Acquisition
+
+- Source ingestion
+- Metadata preservation
+- Transcript acquisition
+- Provenance recording
+
+---
+
+## Knowledge Extraction
+
+- Entity extraction
+
+- Relationship extraction
+
+- Theme extraction
+
+- Motif extraction
+
+- Timeline extraction
+
+- Canonical story generation
+
+---
+
+## Knowledge Management
+
+- Canonical knowledge
+
+- Versioning
+
+- Editorial workflow
+
+- Approval
+
+- Evidence management
+
+- Provenance
+
+---
+
+## Knowledge Exploration
+
+- Search
+
+- Semantic discovery
+
+- Atlas
+
+- Timeline
+
+- Relationship graph
+
+- AI Discovery
+
+---
+
+## Knowledge Publication
+
+- Narrative Article
+
+- Knowledge Article
+
+- News Article
+
+- Creator Pages
+
+- Knowledge Pages
+
+---
+
+## Research Workspace
+
+- Collections
+
+- Notes
+
+- Annotation
+
+- Comparison
+
+- Export
+
+---
+
+## Creator Workspace
+
+- Creative inspiration
+
+- Story references
+
+- Knowledge exploration
+
+- Cultural references
+
+---
+
+## Platform APIs
+
+- Knowledge APIs
+
+- Search APIs
+
+- AI APIs
+
+- Export APIs
+
+---
+
+# Out of Scope
+
+The platform intentionally excludes several domains.
+
+## Social Media
+
+Not intended to become:
+
+- Facebook
+
+- Reddit
+
+- X
+
+- Instagram
+
+There are no public timelines or engagement-driven feeds.
+
+---
+
+## Video Hosting
+
+Videos remain on their original platforms.
+
+The Living Atlas stores metadata, provenance, and derived knowledge—not media content.
+
+---
+
+## Streaming Platform
+
+The platform does not replace YouTube or podcast providers.
+
+---
+
+## Digital Library
+
+Books, papers, and archival materials are referenced rather than redistributed unless licensing explicitly permits it.
+
+---
+
+## AI Chatbot Product
+
+AI Discovery assists exploration but is not designed as a general-purpose conversational assistant.
+
+---
+
+## Generative Fiction Platform
+
+Creative articles are supported, but they remain clearly separated from canonical knowledge.
+
+Generated fiction never modifies the knowledge graph.
+
+---
+
+## Wiki
+
+Unlike traditional wikis:
+
+- every fact has provenance
+
+- every change is versioned
+
+- editorial workflow is mandatory
+
+- relationships are first-class objects
+
+---
+
+## Academic Publisher
+
+The platform supports researchers but does not replace academic journals or peer review.
+
+---
+
+## Marketplace
+
+The platform is not designed for:
+
+- selling books
+
+- selling courses
+
+- advertising
+
+- creator subscriptions
+
+Commercial features may appear in the future but remain secondary to the knowledge mission.
+
+---
+
+## Summary
+
+Anything that strengthens long-term knowledge infrastructure belongs within scope.
+
+Anything focused primarily on entertainment, social networking, or unrelated commercial functionality remains outside the scope of this product.
+
+---
+
+# Technology Independence
+
+## Purpose
+
+The Living Atlas is designed around stable conceptual models rather than specific implementation technologies.
+
+Technology inevitably changes.
+
+Knowledge should not.
+
+---
+
+## Technology as an Implementation Detail
+
+Programming languages evolve.
+
+Frameworks become obsolete.
+
+Databases improve.
+
+Artificial Intelligence models rapidly change.
+
+None of these changes should affect the conceptual integrity of the platform.
+
+The architecture intentionally separates:
+
+Business Concepts
+
+from
+
+Technical Implementation.
+
+---
+
+## Stable Foundations
+
+The following concepts are expected to remain stable for decades:
+
+- Story
+
+- Knowledge Object
+
+- Entity
+
+- Relationship
+
+- Evidence
+
+- Provenance
+
+- Version
+
+- Collection
+
+- Annotation
+
+- Canonical Representation
+
+Implementation technologies may change without altering these concepts.
+
+---
+
+## Replaceable Technologies
+
+The following are implementation choices rather than product definitions:
+
+Backend Framework
+
+Database
+
+Graph Database
+
+Vector Database
+
+Queue
+
+LLM Provider
+
+Embedding Model
+
+Frontend Framework
+
+Cloud Provider
+
+Search Engine
+
+Each may be replaced independently.
+
+---
+
+## AI Model Independence
+
+The platform does not depend upon any specific AI vendor.
+
+Supported providers may change over time.
+
+Examples include:
+
+- OpenAI
+
+- Gemini
+
+- Claude
+
+- local models
+
+- future providers
+
+Prompt specifications remain stable while model implementations evolve.
+
+---
+
+## Database Independence
+
+Although PostgreSQL, Neo4j, and Weaviate are currently selected, the conceptual data model should remain portable.
+
+The product defines knowledge.
+
+Databases merely store it.
+
+---
+
+## API Independence
+
+Public APIs expose business capabilities rather than implementation details.
+
+Consumers should never depend upon:
+
+- internal database schemas
+
+- queue formats
+
+- service topology
+
+---
+
+## Long-Term Principle
+
+Every architectural decision should maximize the lifespan of the knowledge rather than the lifespan of any particular technology.
+
+---
+
+# Documentation Structure
+
+## Philosophy
+
+The documentation mirrors the architecture of the platform.
+
+Each document builds upon the concepts established by previous layers.
+
+Reading the documentation sequentially provides a complete understanding of the product.
+
+---
+
+## Documentation Layers
+
+The documentation is organized into the following layers.
+
+### Layer 1
+
+Product
+
+Defines why the platform exists.
+
+---
+
+### Layer 2
+
+Experience
+
+Defines how users interact with knowledge.
+
+---
+
+### Layer 3
+
+Frontend
+
+Defines presentation architecture.
+
+---
+
+### Layer 4
+
+Design System
+
+Defines visual language.
+
+---
+
+### Layer 5
+
+Backend
+
+Defines business capabilities.
+
+---
+
+### Layer 6
+
+AI Platform
+
+Defines knowledge extraction.
+
+---
+
+### Layer 7
+
+Database
+
+Defines persistence.
+
+---
+
+### Layer 8
+
+Architecture
+
+Defines system structure.
+
+---
+
+### Layer 9
+
+Workflows
+
+Defines operational processes.
+
+---
+
+### Layer 10
+
+API
+
+Defines platform interfaces.
+
+---
+
+### Layer 11
+
+Security
+
+Defines trust.
+
+---
+
+### Layer 12
+
+Deployment
+
+Defines operations.
+
+---
+
+### Layer 13
+
+Analytics
+
+Defines measurement.
+
+---
+
+### Layer 14
+
+Glossary
+
+Defines ubiquitous language.
+
+---
+
+### Layer 15
+
+ADR
+
+Documents major architectural decisions.
+
+---
+
+## Reading Order
+
+Readers are encouraged to follow the documentation in dependency order.
+
+Higher layers define concepts.
+
+Lower layers implement those concepts.
+
+---
+
+# Reading Guide
+
+## Who Should Read This Document
+
+This documentation serves multiple audiences.
+
+Different readers should begin from different entry points.
+
+---
+
+## Product Managers
+
+Recommended order:
+
+1. Product
+2. Experience
+3. Frontend
+4. Backend
+
+---
+
+## UX Designers
+
+Recommended order:
+
+1. Product
+2. Experience
+3. Frontend
+4. Design System
+
+---
+
+## Frontend Engineers
+
+Recommended order:
+
+1. Product
+2. Experience
+3. Frontend
+4. Design System
+5. API
+
+---
+
+## Backend Engineers
+
+Recommended order:
+
+1. Product
+2. Backend
+3. AI Platform
+4. Database
+5. Architecture
+
+---
+
+## AI Engineers
+
+Recommended order:
+
+1. Product
+2. Backend
+3. AI Platform
+4. Database
+5. Architecture
+
+---
+
+## Researchers
+
+Recommended order:
+
+1. Product
+2. Experience
+3. Knowledge Model
+4. Research Workspace
+
+---
+
+## Contributors
+
+Recommended order:
+
+1. Product Overview
+2. Glossary
+3. ADR
+4. Contribution Guidelines
+
+---
+
+## Final Note
+
+The Living Atlas is designed as a knowledge platform whose architecture, implementation, and user experience all derive from a single conceptual foundation.
+
+Every document within this repository exists to preserve that consistency.
+
+Readers are encouraged to understand the concepts first, the architecture second, and the implementation last.
+
+This order reflects the philosophy of the platform itself: knowledge precedes technology.
